@@ -1,0 +1,83 @@
+
+
+  data
+    √ debería exponer función computeUsersStats en objeto global
+    √ debería exponer función sortUsers en objeto global
+    1) debería exponer función filterUsers en objeto global
+    2) debería exponer función processCohortData en objeto global
+    computeUsersStats(users, progress, courses)
+      3) debería retornar arreglo de usuarios con propiedad stats
+      user.stats para el primer usuario en data de prueba - ver carpeta data/
+        4) debería tener propiedad percent con valor 53
+        5) debería tener propiedad exercises con valor {total: 2, completed: 0, percent: 0}
+        6) debería tener propiedad quizzes con valor {total: 3, completed: 2, percent: 67, scoreSum: 57, scoreAvg: 29}
+        7) debería tener propiedad reads con valor {total: 11, completed: 6, percent: 55}
+    sortUsers(users, orderBy, orderDirection)
+      - debería retornar arreglo de usuarios ordenado por nombre ASC
+      - debería retornar arreglo de usuarios ordenado por nombre DESC
+      - debería retornar arreglo de usuarios ordenado por porcentaje general ASC
+      - debería retornar arreglo de usuarios ordenado por porcentaje general DESC
+      - debería retornar arreglo de usuarios ordenado por ejercicios completados ASC
+      - debería retornar arreglo de usuarios ordenado por ejercicios completados DESC
+      - debería retornar arreglo de usuarios ordenado por quizzes completados ASC
+      - debería retornar arreglo de usuarios ordenado por quizzes completados DESC
+      - debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados ASC
+      - debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados DESC
+      - debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas ASC
+      - debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas DESC
+    filterUsers(users, filterBy)
+      - debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)
+    processCohortData({ cohortData, orderBy, orderDirection, filterBy })
+      - debería retornar arreglo de usuarios con propiedad stats y aplicar sort y filter
+
+
+  2 passing (20ms)
+  14 pending
+  7 failing
+
+  1) data
+       debería exponer función filterUsers en objeto global:
+     ReferenceError: filterUsers is not defined
+      at Context.it (test\data.spec.js:12:23)
+
+  2) data
+       debería exponer función processCohortData en objeto global:
+     ReferenceError: processCohortData is not defined
+      at Context.it (test\data.spec.js:16:23)
+
+  3) data
+       computeUsersStats(users, progress, courses)
+         debería retornar arreglo de usuarios con propiedad stats:
+     TypeError: Cannot read property 'length' of undefined
+      at Context.it (test\data.spec.js:28:44)
+
+  4) data
+       computeUsersStats(users, progress, courses)
+         user.stats para el primer usuario en data de prueba - ver carpeta data/
+           debería tener propiedad percent con valor 53:
+     TypeError: Cannot read property '0' of undefined
+      at Context.it (test\data.spec.js:45:37)
+
+  5) data
+       computeUsersStats(users, progress, courses)
+         user.stats para el primer usuario en data de prueba - ver carpeta data/
+           debería tener propiedad exercises con valor {total: 2, completed: 0, percent: 0}:
+     TypeError: Cannot read property '0' of undefined
+      at Context.it (test\data.spec.js:49:35)
+
+  6) data
+       computeUsersStats(users, progress, courses)
+         user.stats para el primer usuario en data de prueba - ver carpeta data/
+           debería tener propiedad quizzes con valor {total: 3, completed: 2, percent: 67, scoreSum: 57, scoreAvg: 29}:
+     TypeError: Cannot read property '0' of undefined
+      at Context.it (test\data.spec.js:57:35)
+
+  7) data
+       computeUsersStats(users, progress, courses)
+         user.stats para el primer usuario en data de prueba - ver carpeta data/
+           debería tener propiedad reads con valor {total: 11, completed: 6, percent: 55}:
+     TypeError: Cannot read property '0' of undefined
+      at Context.it (test\data.spec.js:66:35)
+
+
+
