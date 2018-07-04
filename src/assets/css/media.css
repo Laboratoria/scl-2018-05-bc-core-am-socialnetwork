@@ -1,0 +1,41 @@
+     /*
+Breakpoints:
+320px - 375px; green
+376px - 666px; red
+667px - 1024px; yellow
+1025px - 1600px; blue
+*/
+
+/* @media funciona como un if condicional */
+@media (min-width: 320px) and (max-width: 375px) {
+  body {
+    background-color: gold;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 376px) and (max-width: 666px) {
+  body {
+    background-color: magenta;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 667px) and (max-width: 1024px) {
+  body {
+    background-color: mediumspringgreen;
+  }
+  h1 {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1600px) {
+  body {
+    background-color:yellow;
+  }
+  h1 {
+    font-size: 60px;
+  }
+}
