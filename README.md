@@ -17,7 +17,7 @@ Con esta información podemos comenzar a identificar cuales son las necesidades 
 
 Para continuar conociendo a nuestros usuarios hicimos un <b>benchmark</b> de las prinicipales app y grupos en Facebook que trabajan el tema.
 
-![alt text](../anexos/benchmarks.jpg)
+![alt text](anexos/benchmarks.png)
 
 Además de realizar un formulario dirigido a personas que son celiacas. Para conocer el formulario [Click Aqui](https://goo.gl/forms/VBogzX7thPG66X622/)
 
