@@ -1,7 +1,13 @@
-# Red Social: CeliBook
-¡Bienvenidos a una red social creada especialmente para personas intolerantes el gluten y celiacos!. Aquí encontrarás lugares donde comprar, donde ir a comer, productos que puedes consumir y una gran comunidad en la que podrás compartir tus recetas, tus propios datos y conocer a más personas que viven como tu. 
+## PROYECTO N° 2: RED SOCIAL
 
-### Definición del producto
+![alt text](https://raw.githubusercontent.com/CamiRamirez/scl-2018-05-bc-core-am-socialnetwork/master/img/celiaco3%20verde%20icono.png)
+
+
+
+# Red Social: CeliBook
+¡Bienvenidos a una red social creada especialmente para personas intolerantes el gluten y celiacos!. Aquí encontrarás lugares donde comprar, donde ir a comer, productos que puedes consumir y una gran comunidad en la que podrás compartir tus recetas, tus propios datos y conocer a más personas que viven como tú. 
+
+### 1) Definición del producto
 
 Las redes sociales estan presentes en la vida de todas las personas: vivimos conectados hablando por Whatsapp, compartiendo publicaciones en Facebook, fotos en Instagram e informandonos al instante en Twitter. Todas estas redes nos permiten crear comunidad y comenzar agruparnos de acuerdo a nuestros interes y actividades. Tenemos amigos, seguidores, damos me gusta e incluso hacemos grupos de temas en específicos. 
 
@@ -19,7 +25,7 @@ Para continuar conociendo a nuestros usuarios hicimos un <b>benchmark</b> de las
 
 ![alt text](anexos/benchmarks.png)
 
-Además de realizar un formulario dirigido a personas que son celiacas. Para conocer el formulario [Click Aqui](https://goo.gl/forms/VBogzX7thPG66X622/)
+También realizamos un formulario dirigido a personas que son celiacas. Para conocer el formulario haz [click aquí.](https://goo.gl/forms/VBogzX7thPG66X622/)
 
 Con esto logramos concluir los elementos básicos de esta red social:
 *Generar una comunidad en la que las personas se puedan comunicar de manera rápida y fácil.
@@ -36,12 +42,12 @@ Con esto logramos concluir los elementos básicos de esta red social:
 
 ### El problema
 
-No existe una plataforma que reuna todas las caracteristicas que necesita y desea la comunidad celiaca q
+No existe una plataforma que reuna todas las caracteristicas que necesita y desea la comunidad celiaca, por lo que deben reunir información (aveces escasa) desde muchos lugares, siendo demoroso y poco eficiente.
 
 
 ### Objetivo
 
-Esta herramienta contribuye al bienestar de las personas porque les facilita la vida en cosas simples como ir al supermercado, querer salir a comer. 
+Esta herramienta desear contribuir al bienestar de las personas, facilitandoles la vida y  en cosas simples como ir al supermercado, querer salir a comer, saber donde comprar mas barato, buenos médicos, actividades, etc. 
 
 
 
@@ -52,3 +58,33 @@ Cuáles son las principales funcionalidades del producto y cuál es su prioridad
 Cómo verificaste que el producto les está resolviendo sus problemas
 Cómo te asegurarás que estos usuarios usen este producto
 Para poder llegar a estas definiciones te recomendamos ver: benchmarks, entrevistas con usuarios y tests de usabilidad.
+
+### 2) Diseño de Interfaz de usuario
+
+El diseño y los tópicos incluidos dentro de la plataforma, fueron en base a las necesidades del usuario, siendo obtenidos completamente mediante la investigación previa.
+La página consta de un login, que puede ser mediante registro directo o por medio de Facebook o Google+. Esto nos lleva a la página principal, formada por un menú "hamburguesa", galería de fotos, y una sección de comentarios abierto a toda la comunidad.
+Dentro del menú, incluimos los temas que -según encuestas y entrevistas- eran los más importantes de tomar en consideración. Estos son:
+* Mi perfil (que incluye los intereses del usuario, mensajes, amigos y cambio de contraseña)
+* ¿Qué es la celiaquía? (información sobre esta condición)
+* Quienes somos (nos presentamos frente a la comunidad y les contamos nuestro propósito).
+* Salud integral (información sobre medicos, medicinas, organizaciones, etc).
+* Alimentación (Datos sobre productos, locales guiados por maps para ver la cercanía, "picadas" de restaurantes, recetas de cocina, etc).
+* Actividades (Aquí es donde se organizan o se conocen ferias, reuniones, charlas y otros.)
+* Noticias
+* Preguntas frecuentes (Respecto al diagnóstico, al tratamiento, a los alimentos, etc.)
+
+#### Colores utilizados (Psicología del color)
+<b>El Color Verde</b>. El Color Verde es un color relajante y refrescante que induce a quién lo contempla sensaciones de serenidad y armonía. Está íntimamente relacionado con todo lo natural, simbolizando también la vida, la fertilidad y la <b>buena salud.</b>
+* Utilizado para: Login, barra superior, menú, logo.
+
+<b>El color morado/violeta</b>. El color morado sirve como representación de las acciones por venir, del futuro, aquello que va más allá de lo tangible, de la imaginación y los sueños. Es por ello que es un color que evoca a la espiritualidad, a la <b>calma</b>, a la <b>tranquilidad</b>, al <b>equilibrio de las emociones</b> y que por lo mismo promueve la expansión de la mente, lo intelectual y el sentido común.
+* Utilizado para: Botones, algunos subtítulos.
+
+Estos dos colores son utilizados sobre un fondo blanco, con letras grises oscuras. 
+
+
+### Visualización del prototipo
+Para ver el prototipo versión mobile realizado en Figma, haz [click aquí.](https://www.figma.com/proto/0rc4en5mN6XT8Ts4jB6Ejoll/Red-Social-Celiacos?scaling=min-zoom&node-id=124%3A6).
+
+
+### 3) Implementación de la interfaz de usuario
