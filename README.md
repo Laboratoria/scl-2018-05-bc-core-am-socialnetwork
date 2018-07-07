@@ -11,7 +11,7 @@
 
 Las redes sociales estan presentes en la vida de todas las personas: vivimos conectados hablando por Whatsapp, compartiendo publicaciones en Facebook, fotos en Instagram e informandonos al instante en Twitter. Todas estas redes nos permiten crear comunidad y comenzar agruparnos de acuerdo a nuestros interes y actividades. Tenemos amigos, seguidores, damos me gusta e incluso hacemos grupos de temas en específicos. 
 
-Es así como seleccionamos el tema de alimentación presentado en el proyecto y debido a la contigencia, nos enfocamos en un grupo en especifico que son las *personas celiaca e intolerantes al gluten*.
+Es así como seleccionamos el tema de alimentación presentado en el proyecto y debido a la contigencia, nos enfocamos en un grupo en especifico que son las *personas celiacas e intolerantes al gluten*.
 
 Se estima que en Chile el <b> 1% por ciento de la población padece de intolerancia al gluten,</b> que es la proteína presente en el trigo, centeno y cebada. Es decir más de 97 mil chilenos, esto según la Fundación Convivir. 
 
@@ -47,17 +47,8 @@ No existe una plataforma que reuna todas las caracteristicas que necesita y dese
 
 ### Objetivo
 
-Esta herramienta desear contribuir al bienestar de las personas, facilitandoles la vida y  en cosas simples como ir al supermercado, querer salir a comer, saber donde comprar mas barato, buenos médicos, actividades, etc. 
+Esta herramienta desear contribuir al bienestar de las personas, facilitandoles la vida y aportando en cosas simples como ir al supermercado, querer salir a comer, saber donde comprar mas barato, buenos médicos, actividades, etc. Todo esto mediante una plataforma sencilla, y que les genere confianza para pertenecer y participar de manera activa en la comunidad.
 
-
-
-
-Qué problema resuelve el producto para estos usuarios
-Cuáles son los objetivos de estos usuarios en relación con el producto
-Cuáles son las principales funcionalidades del producto y cuál es su prioridad
-Cómo verificaste que el producto les está resolviendo sus problemas
-Cómo te asegurarás que estos usuarios usen este producto
-Para poder llegar a estas definiciones te recomendamos ver: benchmarks, entrevistas con usuarios y tests de usabilidad.
 
 ### 2) Diseño de Interfaz de usuario
 
@@ -87,4 +78,3 @@ Estos dos colores son utilizados sobre un fondo blanco, con letras grises oscura
 Para ver el prototipo versión mobile realizado en Figma, haz [click aquí.](https://www.figma.com/proto/0rc4en5mN6XT8Ts4jB6Ejoll/Red-Social-Celiacos?scaling=min-zoom&node-id=124%3A6).
 
 
-### 3) Implementación de la interfaz de usuario
