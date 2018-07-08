@@ -9,13 +9,13 @@
 
 ### 1) Definición del producto
 
-Las redes sociales estan presentes en la vida de todas las personas: vivimos conectados hablando por Whatsapp, compartiendo publicaciones en Facebook, fotos en Instagram e informandonos al instante en Twitter. Todas estas redes nos permiten crear comunidad y comenzar agruparnos de acuerdo a nuestros interes y actividades. Tenemos amigos, seguidores, damos me gusta e incluso hacemos grupos de temas en específicos. 
+Las redes sociales estan presentes en la vida de todas las personas: vivimos conectados hablando por Whatsapp, compartiendo publicaciones en Facebook, fotos en Instagram e informándonos al instante en Twitter. Todas estas redes nos permiten crear comunidad y comenzar agruparnos de acuerdo a nuestros interes y actividades. Tenemos amigos, seguidores, damos me gusta e incluso hacemos grupos de temas en específicos. 
 
 Es así como seleccionamos el tema de alimentación presentado en el proyecto y debido a la contigencia, nos enfocamos en un grupo en especifico que son las *personas celiacas e intolerantes al gluten*.
 
-Se estima que en Chile el <b> 1% por ciento de la población padece de intolerancia al gluten,</b> que es la proteína presente en el trigo, centeno y cebada. Es decir más de 97 mil chilenos, esto según la Fundación Convivir. 
+Se estima que en Chile el <b> 1% de la población padece de intolerancia al gluten</b>, que es la proteína presente en el trigo, centeno y cebada. Es decir más de 97 mil chilenos, esto según la Fundación Convivir. 
 
-Esta se da con más frecuencia en mujeres que en hombres, no habiendo edades más vulnerables que otras. Según el doctor Dr. Juan Francisco Miquel, gastroenterólogo de la Pontificia Universidad Católica en entrevista para el diario La Tercera en enero del 2016.
+Esta condición se da con más frecuencia en mujeres que en hombres, no habiendo edades más vulnerables que otras. Según el doctor Dr. Juan Francisco Miquel, gastroenterólogo de la Pontificia Universidad Católica en entrevista para el diario La Tercera en enero del 2016.
 
 <b>Los alimentos para celiacos son tres veces más caros </b> (según el INTA), ejemplo de ello es que un paquete de fideos regular tiene un costo de 630 pesos, mientras que sin gluten, su valor asciende a 1.940 pesos. En tanto, para el pan de molde el precio regular es de 1.000 pesos, mientras que el que no tiene gluten sube a 3.049 pesos.
 
@@ -27,25 +27,25 @@ Para continuar conociendo a nuestros usuarios hicimos un <b>benchmark</b> de las
 
 También realizamos un formulario dirigido a personas que son celiacas. Para conocer el formulario haz [click aquí.](https://goo.gl/forms/VBogzX7thPG66X622/)
 
-Con esto logramos concluir los elementos básicos de esta red social:
-*Generar una comunidad en la que las personas se puedan comunicar de manera rápida y fácil.
-*Informar acerca de locales en los que las personas pueden comprar sus productos certificados.
-*Publicar al instante las preparaciones, ofertas, talleres o actividades que las personas van realizando/participando.
-*Informar sobre a que organizaciones y especialistas recurrir.
+Esta recolección de información previa e investigación del tema nos sirvió para luego entrevistar a cuatro personas que podian ser usuarios de nuestra aplicación 3 de ellos celiacos y 1 intolerante al gluten. 
 
-### Principales usuarios 
-*Audiencia Primaria: Personas entre 18 y 35 años. Estudiantes, profesionales, dueñas/os de casa u otro oficio. Con acceso a internet contante, usuario de redes sociales que tengan intolerancia al gluten, que desea y esta interesado en ser parte de una red social libre de Gluten.
+Con este analisis logramos concluir los elementos básicos que vamos a incluir en esta red social:
+* Generar una comunidad en la que las personas se puedan comunicar de manera rápida y fácil.
+* Los usuarios podran publicar al instante las preparaciones, ofertas, talleres o actividades que las personas van realizando y participando.
+*Secciones con información de locales en los que se pueden comprar sus productos cerficados, información de lugares donde ir a comer, picadas, noticias de la actualidad. 
+* Informar sobre a que organizaciones y especialistas recurrir, entre otras.
 
-*Audiencia Secundaria: Personas entre 20 y 49+ años,  que tiene un familiar con el que vive o esta a cargo de su alimentación y este padece de intolerancia al gluten. Con acceso a internet contante, con redes sociales. Que desea acceder a una red para compartir y conocer datos, recetas, doctores u otros para ayudar su cercano.
+<h3> Principales usuarios </h3>
 
-*Audiencia Terciaria: Hombre o mujer de entre 18 y 49+ años que esté interesado en la prevención y/o en el cuidado de su alimentación y desee dejar de consumir alimentos que contienen gluten porque sospecha que es intolerante/celiaco.
+* <b> Audiencia Primaria </b>: Personas entre 18 y 35 años. Estudiantes, profesionales, dueñas/os de casa u otro oficio. Con acceso a internet contante, usuario de redes sociales que tengan intolerancia al gluten o sean celiacos, que deseen y estan interesados en ser parte de una red social libre de Gluten.
 
-### El problema
+* <b> Audiencia Secundaria </b>: Personas entre 20 y 49+ años,  que tiene un familiar con el que vive o esta a cargo de su alimentación y este padece de intolerancia al gluten o es celiaco. Con acceso a internet contante, con redes sociales. Que desea acceder a una red para compartir y conocer datos, recetas, doctores u otros para ayudar su cercano.
 
 No existe una plataforma que reuna todas las caracteristicas que necesita y desea la comunidad celiaca, por lo que deben reunir información (aveces escasa) desde muchos lugares, siendo demoroso y poco eficiente.
 
+<h3> El problema </h3>
 
-### Objetivo
+Esta aplicación facilita la vida de las personas que son celiacas o intelorantes al gluten, en actividades de la vida diaria que a veces pueden resultar tediosas al no contar con una herramienta que les permita acceder de forma rápida por ejemplo a un mapa donde puedan ver que local es el más cercanos a su posición para poder ir a comprar el pan de la once. 
 
 Esta herramienta desear contribuir al bienestar de las personas, facilitandoles la vida y aportando en cosas simples como ir al supermercado, querer salir a comer, saber donde comprar mas barato, buenos médicos, actividades, etc. Todo esto mediante una plataforma sencilla, y que les genere confianza para pertenecer y participar de manera activa en la comunidad.
 
@@ -73,6 +73,7 @@ Dentro del menú, incluimos los temas que -según encuestas y entrevistas- eran 
 
 Estos dos colores son utilizados sobre un fondo blanco, con letras grises oscuras. 
 
+Esta herramienta <b> contribuye </b> al bienestar de las personas porque les facilita la vida en cosas simples, además les permite generar comunidad, ya que a través de la investigación notamos que cuando las personas son diagnosticadas celiacas o intolerantes al gluten se sienten solas porque su alimentación cambia en 180° y creen que todo les va a ser más dificil, por eso recurren a blogs o foros contando experiencias de "como se sienten" y siempre son agradecidos de encontrar que no son los únicos que pasan por esta situación. 
 
 ### Visualización del prototipo
 Para ver el prototipo versión mobile realizado en Figma, haz [click aquí.](https://www.figma.com/proto/0rc4en5mN6XT8Ts4jB6Ejoll/Red-Social-Celiacos?scaling=min-zoom&node-id=124%3A6).

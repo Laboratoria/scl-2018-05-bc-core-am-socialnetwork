@@ -1,0 +1,111 @@
+/* Pantalla inicio */
+
+body {
+    background-color: #99CE81;
+    text-align: center;
+}
+
+.logo {
+    width: 30px;
+}
+
+.btn-primary {
+    margin-top: 2em;
+    background-color: #9B369D;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+}
+
+#facebook {
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+    background: #3b5998;
+    color: white;
+    border: 0px transparent;
+    text-align: center;
+    margin: 5px;
+    display: inline-block;
+}
+
+#facebook:hover {
+    background: #3b5998;
+    opacity: 0.6;
+}
+
+#google {
+    margin: 5px;
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+    background: #db3236;
+    color: white;
+    border: 0px transparent;
+    text-align: center;
+}
+
+#google hover {
+    background: #3b5998;
+    opacity: 0.6;
+}
+
+/*unete - crear cuenta */
+
+
+#containerCrearcuenta {
+    background-color: white;
+    display: none;
+}
+
+
+
+/* barra lateral */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #99CE81;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color:white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* muro */
+
+#containerMuro {
+	display: none;
+}

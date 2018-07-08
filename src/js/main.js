@@ -1,0 +1,11 @@
+/*Iniciar sesion Facebook */
+
+/*Barra lateral */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
