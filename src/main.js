@@ -19,13 +19,13 @@ boton.addEventListener('click', () => { /*Es igual a function ()*/
     newComments.appendChild(contenedorElemento);
     cont.appendChild(newComments);
 
-    heart.addEventListener('click', ()=> {
+    heart.addEventListener('click', () => {
         heart.classList.toggle('red');
     })
-    trash.addEventListener('click', ()=> {
+    trash.addEventListener('click', () => {
         cont.removeChild(newComments);
     })
-    chck.addEventListener('click', ()=> {
+    chck.addEventListener('click', () => {
         contenedorElemento.classList.toggle('strike-out');//linea horizontal sobre el texto
     })
 }) 

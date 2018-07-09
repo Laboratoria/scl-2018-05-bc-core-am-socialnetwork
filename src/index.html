@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <title>Foodgram</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<title>Foodgram</title>
+	<!-- link de fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/grid.css"> -->
+	<!-- Mi estilo css -->
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
-<!-- Sección header -->
+	<!-- Sección header -->
 	<header>
 		<div class="container">
 			<div class="row">
@@ -19,7 +24,7 @@
 					<h1>Este es un título</h1>
 					<!--<button type="button" id="hide">Hide</button>
 					<button type="button" id="show">Show</button>-->
-				<img src="assets/img/instagram.png" alt="Instagram">
+					<img src="assets/img/instagram.png" alt="Instagram">
 				</div>
 			</div>
 		</div>
@@ -46,7 +51,8 @@
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<button type="submit" id="btn"><i class="fas fa-plus" aria-hidden="true"></i> Agregar</button>
+					<button type="submit" id="btn">
+						<i class="fas fa-plus" aria-hidden="true"></i> Agregar</button>
 				</div>
 			</div>
 			<!-- contenedor comentarios -->
@@ -56,24 +62,25 @@
 		</div>
 	</section>
 
-  <!-- Script Files -->
-  <script src="main.js"></script>
-  <script src="data.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDVXjRRiP1ahA3R3yVM7weYA-38mGoVMhg",
-      authDomain: "red-social-339b3.firebaseapp.com",
-      databaseURL: "https://red-social-339b3.firebaseio.com",
-      projectId: "red-social-339b3",
-      storageBucket: "red-social-339b3.appspot.com",
-      messagingSenderId: "649185128834"
-    };
-    firebase.initializeApp(config);
-  </script>
+	<!-- Script Files -->
+	<script src="main.js"></script>
+	<script src="data.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyDVXjRRiP1ahA3R3yVM7weYA-38mGoVMhg",
+			authDomain: "red-social-339b3.firebaseapp.com",
+			databaseURL: "https://red-social-339b3.firebaseio.com",
+			projectId: "red-social-339b3",
+			storageBucket: "red-social-339b3.appspot.com",
+			messagingSenderId: "649185128834"
+		};
+		firebase.initializeApp(config);
+	</script>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://use.fontawesome.com/7873633050.js"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>
 </body>
+
 </html>
