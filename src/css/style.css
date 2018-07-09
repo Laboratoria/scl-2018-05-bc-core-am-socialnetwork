@@ -5,10 +5,24 @@ body {
     text-align: center;
 }
 
-.logo {
-    width: 30px;
+#logoCelibook{
+    margin-top: 3em;
+    width: 35%;
 }
 
+#titleLogin{
+    color: white;
+    font-size: 2em;
+}
+.emailForgot{
+    color: white;
+    margin-left: 0%;
+}
+
+.bars{
+    width: 90%;
+    margin-left: 5%;
+}
 .btn-primary {
     margin-top: 2em;
     background-color: #9B369D;
@@ -17,8 +31,18 @@ body {
     width: 100%;
 }
 
+.registro{
+    color: white;
+    text-align: center;
+}
+
+#registroClick{
+    color: white;
+    cursor: pointer;
+}
+
 #facebook {
-    width: 100%;
+    width: 90%;
     height: 35px;
     border-radius: 4px;
     background: #3b5998;
@@ -36,17 +60,17 @@ body {
 
 #google {
     margin: 5px;
-    width: 100%;
+    width: 90%;
     height: 35px;
     border-radius: 4px;
-    background: #db3236;
-    color: white;
+    background: white;
+    color: #db3236;
     border: 0px transparent;
     text-align: center;
 }
 
-#google hover {
-    background: #3b5998;
+#google:hover {
+    color:#db3236 ;
     opacity: 0.6;
 }
 
