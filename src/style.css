@@ -1,0 +1,109 @@
+body {
+	margin: 0 auto;
+	background-color: #FAFAFA;
+}
+
+.center {
+	text-align: center;
+}
+
+header {
+	background-color: #FFF;
+	text-align: center;
+}
+
+header div img {
+	width: 10em;
+}
+
+.photo{
+	text-align: center;
+}
+
+img{
+	width: 100%;
+}
+
+.img {
+	text-align: center;
+	margin: 2em auto;
+	border: 5em solid #FFF;
+	box-shadow: 0 0 0.25em 0 rgba(50, 50, 50, 0.2);
+}
+
+textarea {
+	width: 70%;
+	height: 4em;
+	color: #4E4D53;
+	font-size: 15px;
+	padding: 1em;
+	border-radius: 1em;
+	border: none;
+	margin: 0 auto;
+}
+
+#btn {
+	background-color: #66AEC7;
+	border: 0px;
+	cursor: pointer;
+	text-align: center;
+	margin: 3em auto;
+	width: 130px;
+	height: 30px;
+	display: block;
+	color: #FFF;
+}
+
+#btn:hover {
+	background-color: #5590A6;
+}
+
+#btn:focus, textarea:focus{
+	outline: none;
+}
+
+#cont {
+	border-radius: 0.4em;
+	margin: 0 auto;
+	color: #4E4D53;
+	text-align: left;
+	margin-bottom: 6em;
+	padding: 0 16%;
+}
+
+#cont span {
+	margin-left: 1em;
+}
+
+#cont div {
+	padding: 1em 0.5em;
+	margin-bottom: 2em;
+	outline: 0.1em solid #E5E3F2;
+	background-color: #FFF;
+}
+
+.heart, .trash {
+	margin:1em;
+	float: right;
+	cursor: pointer;
+}
+
+.trash:hover {
+	color: #1DA1F2;
+	cursor: pointer;
+}
+
+.strike-out {
+	text-decoration: line-through;
+	color: #1DA1F2;
+}
+
+.red {
+	color: #FC1E26;
+	cursor: pointer;
+}
+
+p {
+	display: inline-block;
+	margin-left: 0.5em;
+}
