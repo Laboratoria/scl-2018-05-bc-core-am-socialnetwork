@@ -45,9 +45,9 @@ No existe una plataforma que reuna todas las caracteristicas que necesita y dese
 
 <h3> El problema </h3>
 
-Esta aplicación facilita la vida de las personas que son celiacas o intelorantes al gluten, en actividades de la vida diaria que a veces pueden resultar tediosas al no contar con una herramienta que les permita acceder de forma rápida por ejemplo a un mapa donde puedan ver que local es el más cercanos a su posición para poder ir a comprar el pan de la once. 
+Esta aplicación facilita la vida de las personas que son celiacas o intelorantes al gluten, en actividades de la vida diaria que a veces pueden resultar tediosas al no contar con una herramienta que les permita acceder de forma rápida a cierta información, como por ejemplo, a un mapa en donde puedan ver qué local es el más cercano a su ubicación para poder ir a comprar el pan de la once, o donde poder ir a comer un buen menú. Todo esto mediante una plataforma sencilla, que les genere confianza para pertenecer y participar de manera activa en la comunidad.
 
-Esta herramienta desear contribuir al bienestar de las personas, facilitandoles la vida y aportando en cosas simples como ir al supermercado, querer salir a comer, saber donde comprar mas barato, buenos médicos, actividades, etc. Todo esto mediante una plataforma sencilla, y que les genere confianza para pertenecer y participar de manera activa en la comunidad.
+También les permite generar redes de apoyo dentro de esta comunidad, ya que a través de la investigación notamos que muchas personas al ser diagnosticadas celiacas o intolerantes al gluten se sienten bastante solas, porque su alimentación y rutina cambia en 180° y creen que todo les va a ser más dificil, por eso recurren a blogs o foros contando experiencias de "como se sienten" y siempre son agradecidos de saber que no son los únicos que pasan por esta situación y que pueden encontrar apoyo y empatía.
 
 
 ### 2) Diseño de Interfaz de usuario
@@ -72,8 +72,6 @@ Dentro del menú, incluimos los temas que -según encuestas y entrevistas- eran 
 * Utilizado para: Botones, algunos subtítulos.
 
 Estos dos colores son utilizados sobre un fondo blanco, con letras grises oscuras. 
-
-Esta herramienta <b> contribuye </b> al bienestar de las personas porque les facilita la vida en cosas simples, además les permite generar comunidad, ya que a través de la investigación notamos que cuando las personas son diagnosticadas celiacas o intolerantes al gluten se sienten solas porque su alimentación cambia en 180° y creen que todo les va a ser más dificil, por eso recurren a blogs o foros contando experiencias de "como se sienten" y siempre son agradecidos de encontrar que no son los únicos que pasan por esta situación. 
 
 ### Visualización del prototipo
 Para ver el prototipo versión mobile realizado en Figma, haz [click aquí.](https://www.figma.com/proto/0rc4en5mN6XT8Ts4jB6Ejoll/Red-Social-Celiacos?scaling=min-zoom&node-id=124%3A6).
