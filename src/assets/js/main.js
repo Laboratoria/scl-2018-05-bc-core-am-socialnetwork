@@ -1,3 +1,19 @@
+    //corazon
+    const heart = document.createElement('i');
+    heart.classList.add('fa', 'fa-heart', 'heart');
+    //evento click corazon
+    heart.addEventListener('click', ()=> {
+      heart.classList.toggle('red');
+    })
+    
+    //Basura
+    const trash = document.createElement('i');
+    trash.classList.add('fa', 'fa-trash', 'trash');
+    //Evento click basura
+    trash.addEventListener('click', ()=> {
+      cont.removeChild(newComments);
+    })
+
 const boton = document.getElementById('btn');
 boton.addEventListener('click', () => { /*Es igual a function ()*/
     let comments = document.getElementById('comment').value;
