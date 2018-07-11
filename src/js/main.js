@@ -57,7 +57,6 @@ function loginFacebook() {
   });
   firebase.auth().signInWithPopup(provider)
     .then(() => {
-      console.log("Login con facebook");
     })
     .catch((error) => {
       console.log("Error de firebase > " + error.code);
