@@ -1,6 +1,6 @@
 window.onload = () => {
   //Función para reconocer si hay un usuario conectado e ingresar al perfil de éste
-  firebase.auth().onLogInOrUp((user) => {
+  firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       //Si nos logeamos, entramos al perfil del usuario
       logIn.style.display = "none";
