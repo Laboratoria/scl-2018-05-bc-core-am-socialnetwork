@@ -1,24 +1,25 @@
 window.onload = () => {
-  firebase.auth().onAuthStateChanged((user) => {
+  //Función para reconocer si hay un usuario conectado e ingresar al perfil de éste
+  firebase.auth().onLogInOrUp((user) => {
     if (user) {
-      //Si estamos logueados
-      loggedOut.style.display = "none";
-      loggedIn.style.display = "block";
-      console.log("User > " + JSON.stringify(user));
+      //Si nos logeamos, entramos al perfil del usuario
+      logIn.style.display = "none";
+      profile.style.display = "block";
     } else {
-      //No estamos logueados
-      loggedOut.style.display = "block";
-      loggedIn.style.display = "none";
+      //Si no logeamos, nos mantenemos en la página de sign in o sign up
+      logIn.style.display = "block";
+      profile.style.display = "none";
     }
-  });  
+  });
 };
 
+//Función para registrarse en la aplicación
 function signUp() {
   const emailValue = email.value;
   const passwordValue = password.value;
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
-      console.log("Usuario registrado");
+      alert('Usuario registrado con éxito.');
     })
     .catch((error) => {
       console.log("Error de firebase > " + error.code);
@@ -26,12 +27,12 @@ function signUp() {
     });
 }
 
+//Función para entrar a la aplicación por usuarios registrados
 function signIn() {
   const emailValue = email.value;
   const passwordValue = password.value;
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
-      console.log("Usuario con login exitoso");
     })
     .catch((error) => {
       console.log("Error de firebase > " + error.code);
@@ -39,6 +40,7 @@ function signIn() {
     });
 }
 
+//Función para salir de la aplicación
 function logOut() {
   firebase.auth().signOut()
     .then(() => {
@@ -47,6 +49,7 @@ function logOut() {
     .catch();
 }
 
+//Función para logear con FaceBook
 function loginFacebook() {
   const provider = new firebase.auth.FacebookAuthProvider();
   provider.setCustomParameters({
