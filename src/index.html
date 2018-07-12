@@ -29,14 +29,14 @@
     <div class="caja_registro">
       <form>
         <div class="form-group">
-          <input type="email" class="form-control email-login" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu e-mail">
+          <input type="email" class="form-control email-login" id="email_login" aria-describedby="emailHelp" placeholder="Ingresa tu e-mail">
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña">
+          <input type="password" class="form-control" id="password_login" placeholder="Ingresa tu contraseña">
         </div>
         <div class="row">
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn_ingresar">Ingresar</button>
+            <button id="btn_login" onclick="login()" type="button" class="btn btn-primary btn_ingresar">Ingresar</button>
           </div>
         </div>
       </form>
@@ -85,11 +85,11 @@
       <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Ingresa el e-mail con el cual quieres registrarte</label>
-          <input type="email" class="form-control" id="email_create_account" aria-describedby="emailHelp" placeholder="Ingresa e-mail...">
+          <input type="email" class="form-control" id="email_signUp" aria-describedby="emailHelp" placeholder="Ingresa e-mail...">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Ingresa una contraseña para tu cuenta</label>
-          <input type="password" class="form-control" id="password_create_account" placeholder="Ingresa contraseña...">
+          <input type="password" class="form-control" id="password_signUp" placeholder="Ingresa contraseña...">
         </div>
           <button id="btn_registrar" onclick="register()" type="button" class="btn btn-primary">Registrar</button>
       </form>

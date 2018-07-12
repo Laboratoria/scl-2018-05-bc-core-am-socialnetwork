@@ -1,16 +1,41 @@
 // Sección registrar
 function register() {
-  const emailValue = document.getElementById('email_create_account').value;
-  const passwordValue = document.getElementById('password_create_account').value;
+  const emailValue = document.getElementById('email_signUp').value;
+  const passwordValue = document.getElementById('password_signUp').value;
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(()=> {
       console.log('Usuario registrado');
     })
     .catch((error)=> {
-      console.log('Error de Firebase > ' + error.code);
-      console.log('Error de Firebase, mensaje > ' + error.message);
+      console.log('Error de Firebase: ' + error.code);
+      console.log('Error de Firebase, mensaje: ' + error.message);
     });
 }
+
+function login() {
+  const emailValue = document.getElementById('email_login').value;
+  const passwordValue = document.getElementById('password_login').value;
+  firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
+    .then(()=> {
+      console.log('Usuario con login exitoso');
+    })
+    .catch((error)=> {
+      console.log('Error de Firebase: ' + error.code);
+      console.log('Error de Firebase, mensaje: ' + error.mensaje);
+    });
+}
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    
+    // User is signed in.
+    console.log('User: ' + JSON.stringify(user));
+    // ...
+  } else {
+    // User is signed out.
+    // ...
+  }
+});
 
 
 /*  
