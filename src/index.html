@@ -11,25 +11,69 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
- 
+
     <!-- aquí va imagen de mascotas -->
+  <div class="container-fluid">
+   
     <div class="row">
-      <img src="..." class="img-fluid" alt="Responsive image">
+      <div class="col-12">
+      <img id="logo" src="assets/img/Screenshot_2018-07-05 Logojoy make a logo you’ll love.png" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="img_mascotas">
+        <img src="assets/img/cats-and-dogs-png-hd--1246.jpg" class="img-fluid" alt="Responsive image">
+      </div>
     </div>
 
     <!-- aquí va la caja de login y botón para registro -->
-    <div>
-      <form class="dropdown-menu p-4">
-        <div class="form-group">
-            <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Ingresa tu e-mail...">
-        </div>
-        <div class="form-group">
-          <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Ingresa tu contraseña...">
-        </div>
-        <button type="submit" class="btn btn-primary">Ingresar</button>
-      </form>  
-    </div>
 
+    <div class="caja_registro">
+      <form>
+        <div class="form-group">
+          <input type="email" class="form-control email-login" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu e-mail">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña">
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary btn_ingresar">Ingresar</button>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-12">
+          <button id="btn_facebook" type="button" class="btn btn-primary btn-lg"><i class="fab fa-facebook-square fa-lg"></i>
+              Iniciar sesión con Facebook
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button id="btn_google" type="button" class="btn btn-primary btn-lg"><i class="fab fa-google-plus-square fa-lg"></i>
+              Iniciar sesión con Google
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 no_tienes_cuenta">
+          <h5>¿No tienes cuenta?</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button type="button" class="btn btn-light btn_registrate"><h5>Regístrate</h5></button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+    
+ 
+    
+<!--
     <h4>Registro de usuarios</h4>
     <input id="email" type="email" placeholder="Ingresa e-mail">
     <input id="password" type="password" placeholder="Ingresa contraseña">
@@ -43,6 +87,7 @@
     <div id="contenido">
     </div>
   </div>
+-->
 
   
 

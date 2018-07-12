@@ -1,4 +1,4 @@
-const registrar = document.getElementById('registrar');
+/*const registrar = document.getElementById('registrar');
 const ingresar = document.getElementById('ingresar');
 let config = {
   apiKey: 'AIzaSyBqGOoPiGov2tepu9YuCb7KJ423HcTTUVE',
@@ -80,4 +80,4 @@ function cerrar() {
     .catch(function(error) {
       console.log(error);
     });
-}
+}*/
