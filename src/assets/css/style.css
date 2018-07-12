@@ -112,3 +112,78 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* pantalla 3*/
+.menu{
+  position: absolute;
+  top:0;
+  height: 50%;
+  width: 50vw;
+  transition: 0.5s ease-out
+}
+
+#menuColor {
+  background-color: #1E90D0;
+  height: 10%;
+}
+
+.iconMenu {
+  color: white;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.nav-link {
+  color: white;
+}
+
+#closingX {
+  color: black;
+  cursor: pointer;
+}
+
+#screen3 {
+  padding: 0;
+}
+
+.closingMenu{
+  left: -90vw;
+  background-color: #1E90D0;
+}
+
+.menu_open{
+  left: 0;
+}
+
+.close_button{ /* configurando boton de cierre del navbar*/
+  font-size: xx-large;
+  color: white;
+  position: absolute;
+  right: 10px;                   
+}
+
+.menu_content{
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.formPost{
+  margin: 5%;
+}
+
+#post {
+  resize: none;
+  width: 50%;
+  margin-left: 25%;
+}
+
+h5 {
+  text-align: center;
+}
+
+#btnImg {
+  margin-left: 10%;
+}
+/* cierre css pantalla 3*/
