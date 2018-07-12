@@ -1,0 +1,37 @@
+/*Cada cajita*/
+.card{
+  box-sizing: border-box;
+  margin-top: 2%;
+}
+.card-title{
+  display: inline;
+  margin-left: 2%;
+}
+.card-body{
+  background-color: white;
+}
+.card-text{
+  color:black;
+}
+.card-footer{
+  text-align: center;
+}
+.icon{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+textarea{
+  width: 100%;
+}
+/*Foto Perfil*/
+.card-img{
+  border: none;
+  border-radius: 50%;
+  width:30%;
+  display: inline;
+  float: left;
+} 
+
+.btn-success{
+  float: right;
+}
