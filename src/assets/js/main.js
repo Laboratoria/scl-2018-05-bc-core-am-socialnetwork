@@ -1,5 +1,10 @@
+//Me gusta publicacion
+const heart = document.getElementsByClassName('fa-heart');
+heart.addEventListener('click', ()=> {
+  heart.classList.toggle('red');
+})
 
-
+//Crear nuevo comentario, me gusta, eliminar
 const boton = document.getElementById('btn');
 boton.addEventListener('click', () => {
     let comments = document.getElementById('comment').value;
