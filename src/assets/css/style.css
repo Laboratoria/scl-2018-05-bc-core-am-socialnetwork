@@ -146,6 +146,7 @@ body {
 
 #screen3 {
   padding: 0;
+  display: none;
 }
 
 .closingMenu{
