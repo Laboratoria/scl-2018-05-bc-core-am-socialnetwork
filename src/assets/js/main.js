@@ -7,6 +7,6 @@ signUp.addEventListener('click', () => {
 });
 
 createAccount.addEventListener('click', () => {
-  document.getElementById('screen2').style.display = 'none';
-  console.log('Aquí se abrirá pantalla 3, para publicaciones de usuarios');
+  //document.getElementById('screen2').style.display = 'none';
+  console.log('evento click de botón registrar funcionando');
 });

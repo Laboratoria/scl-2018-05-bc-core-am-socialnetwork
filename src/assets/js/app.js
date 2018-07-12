@@ -1,20 +1,19 @@
-/*const registrar = document.getElementById('registrar');
-const ingresar = document.getElementById('ingresar');
-let config = {
-  apiKey: 'AIzaSyBqGOoPiGov2tepu9YuCb7KJ423HcTTUVE',
-  authDomain: 'usuarios-1e3b0.firebaseapp.com',
-  databaseURL: 'https://usuarios-1e3b0.firebaseio.com',
-  projectId: 'usuarios-1e3b0',
-  storageBucket: 'usuarios-1e3b0.appspot.com',
-  messagingSenderId: '6033069535'
-};
-firebase.initializeApp(config);
-
 // Sección registrar
-registrar.addEventListener('click', ()=> {  
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  
+function register() {
+  const emailValue = document.getElementById('email_create_account').value;
+  const passwordValue = document.getElementById('password_create_account').value;
+  firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
+    .then(()=> {
+      console.log('Usuario registrado');
+    })
+    .catch((error)=> {
+      console.log('Error de Firebase > ' + error.code);
+      console.log('Error de Firebase, mensaje > ' + error.message);
+    });
+}
+
+
+/*  
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
     // Handle Errors here.
     let errorCode = error.code;

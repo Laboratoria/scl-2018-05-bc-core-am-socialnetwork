@@ -85,13 +85,13 @@
       <form>
         <div class="form-group">
           <label for="exampleInputEmail1">Ingresa el e-mail con el cual quieres registrarte</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa e-mail...">
+          <input type="email" class="form-control" id="email_create_account" aria-describedby="emailHelp" placeholder="Ingresa e-mail...">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Ingresa una contraseña para tu cuenta</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa contraseña...">
+          <input type="password" class="form-control" id="password_create_account" placeholder="Ingresa contraseña...">
         </div>
-          <button id="btn_registrar" type="submit" class="btn btn-primary">Registrar</button>
+          <button id="btn_registrar" onclick="register()" type="button" class="btn btn-primary">Registrar</button>
       </form>
     </div>
     <!-- modal aviso de responsabilidad -->
@@ -150,7 +150,20 @@
   
 
   <!-- script section -->
+  
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA8EWRZri5R5w4Az7zYOAsTVwPl0XWSdYg",
+    authDomain: "social-network-interpet.firebaseapp.com",
+    databaseURL: "https://social-network-interpet.firebaseio.com",
+    projectId: "social-network-interpet",
+    storageBucket: "social-network-interpet.appspot.com",
+    messagingSenderId: "154417384307"
+  };
+  firebase.initializeApp(config);
+  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
