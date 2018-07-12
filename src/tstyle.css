@@ -16,6 +16,13 @@
 .card-footer{
   text-align: center;
 }
+/*Iconos*/
+i{
+  font-size:20px;
+}
+i:hover{
+  color: black;
+}
 .icon{
   margin-left: 3%;
   margin-right: 3%;
