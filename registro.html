@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- boot -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- mis propios styles -->
+  <link rel="stylesheet" href="registro.css">
+  <title>Registro</title>
+</head>
+<body>
+  <div class="container-fluid">
+  <div class="row"><!-- comiezo row -->
+    <div class="col-12"><!-- comienzo col12 -->
+      <header>
+       <div id="nombre_rrss">
+          <img src="src/UX/imagenes/icons/carpa_icon.svg">
+          <p>Siembramigos</p>
+        </div>
+      </header>
+
+    </div><!-- fin col12 -->
+  </div><!-- fin row -->
+
+  <div class="row"><!-- comienzo row -->
+    <div class="col-12"><!-- comienzo col12 -->
+      <div class="col align-self-center" >
+        <section id="form_section">
+          <div id="title_div">
+          <p id="title">Crear una cuenta</p>
+          </div>
+          <div id="inputs_div">
+            <!--formulario para crear usuario-->
+            <p class="nombre_input">Nombre</p>
+            <input type="text" class="input_place" name="name" id="name_input" placeholder="Mariel Quezada">
+            <p class="nombre_input">Edad</p>
+            <input type="text" class="input_place" name="edad" id="edad_input" placeholder="18"> 
+            <p class="nombre_input">Email</p>
+            <input type="email" class="input_place" name="email" id="email_input" placeholder="mimail@gmail.com">
+            <p class="error" id="email_invalid"></p>
+            <p class="nombre_input">Contraseña</p>
+            <input type="password" class="input_place" name="contraseña" id="password_input" placeholder="escribe tu clave">
+            <p id="error_password" class="error"></p>
+            <p class="nombre_input">Confirmar contraseña</p>
+            <input type="text" class="input_place" name="confirm" id="confirm_password" placeholder="repite tu clave">
+            <p id="error_confirm_password" class="error"></p>
+          </div>
+          <div id="validation_div">
+            <!--check boxes y boton para crear cuenta-->
+            <div class="row">
+              <input type="checkbox" aria-label="Checkbox para recordar usuario" name="check_1" id="rememeber_check"><p class="check_text">Recordarme</p> 
+            </div>
+            <div class="row">
+              <input type="checkbox" aria-label="Checkbox para aceptar terminos y condiciones del servicio" name="check_2" id="terms_check"><p class="check_text">Acepto los terminos y condiciones </p> 
+            </div>
+            <input type="button" id="create_acount_button" value="REGISTRAR">
+            </div>
+           
+          </div>
+          </section><!-- section form -->
+        </div><!-- fin de col align self-center -->
+
+        </div>      
+    </div><!-- fin col12 -->
+  </div><!-- fin row -->
+
+</div><!-- fin de container-fluid -->
+
+
+  
+    
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>  
+  <script src="registro.js"></script>
+</body>
+</html>
