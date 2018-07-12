@@ -46,6 +46,8 @@ function signIn() {
         alert('La clave es incorrecta.')
       } if (error.code === 'auth/user-not-found') {
         alert('Usuario no registrado.')
+      } if (error.code === 'auth/invalid-email') {
+        alert('Tienes que poner un email.')
       }
     });
 }
