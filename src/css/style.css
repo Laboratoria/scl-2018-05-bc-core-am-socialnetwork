@@ -5,3 +5,7 @@
 #signUp {
   width: 100%;
 }
+
+#profile {
+  display: none;
+}
