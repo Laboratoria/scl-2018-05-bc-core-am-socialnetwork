@@ -12,24 +12,26 @@ header {
 	text-align: center;
 }
 
-header div img {
+/* Comentado porque es muy general y toma otras imagenes que hay en la pagina  */
+
+/* header div img {
 	width: 10em;
-}
+} */
 
 .photo{
 	text-align: center;
 }
 
-img{
+/* img{
 	width: 100%;
-}
+} */
 
-.img {
+/* .img {
 	text-align: center;
 	margin: 2em auto;
 	border: 5em solid #FFF;
 	box-shadow: 0 0 0.25em 0 rgba(50, 50, 50, 0.2);
-}
+} */
 
 textarea {
 	width: 70%;
@@ -106,4 +108,54 @@ textarea {
 p {
 	display: inline-block;
 	margin-left: 0.5em;
+}
+				/* Estilo de login */
+/* ============================= */
+
+/* .secion{
+  background-color: black;
+} */
+.title{
+  text-align: center;
+}
+#logo-login{
+  height: 9em;
+}
+h1{
+  text-align: center;
+  color: #da1d0f;
+}
+h3{
+  color: rgb(27, 21, 21);
+}
+.back {
+  /* background: #e2e2e2; */
+  width: 100%;
+  position: absolute;
+  top: 8%;
+  bottom: 0;
+}
+
+.div-center {
+  width: 400px;
+  height: 400px;
+  /* color: white; */
+  /* background-color:black; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: 1em 2em;
+  /* border-bottom: 2px solid #ccc; */
+  display: table;
+}
+
+div.content {
+  display: table-cell;
+  vertical-align: middle;
 }

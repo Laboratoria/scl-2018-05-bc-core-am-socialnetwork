@@ -24,7 +24,16 @@ boton.addEventListener('click', () => { /*Es igual a function ()*/
     //Evento click basura
     trash.addEventListener('click', ()=> {
       cont.removeChild(newComments);
+      if (confirm('Estas seguro de eliminar')) {
+          
+      }
+      else
+      {
+          return false;
+      }
     })
+    
+
 
     //Crear p nuevo con comentario
     const contenedorElemento = document.createElement('p');
@@ -35,4 +44,13 @@ boton.addEventListener('click', () => { /*Es igual a function ()*/
     newComments.appendChild(contenedorElemento);
     cont.appendChild(newComments);
 
+    heart.addEventListener('click', () => {
+        heart.classList.toggle('red');
+    })
+    trash.addEventListener('click', () => {
+        cont.removeChild(newComments);
+    })
+    chck.addEventListener('click', () => {
+        contenedorElemento.classList.toggle('strike-out');//linea horizontal sobre el texto
+    })
 }) 
