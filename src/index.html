@@ -61,7 +61,7 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <button id="btn_signUp" type="button" class="btn btn-light btn_registrate"><h5>Regístrate</h5></button>
+          <button id="btn_signUp" type="button" class="btn btn-light btn_registrate" data-target="#responsability_modal" data-toggle="modal"><h5>Regístrate</h5></button>
         </div>
       </div>
     </div>
@@ -69,7 +69,64 @@
 
   <!-- segunda pantalla (registro)-->
   <div id="screen2" class="container-fluid">
-    <h5>botón funciona</h5>
+    <div class="row">
+      <div class="col-12">
+        <img id="logo" src="assets/img/Screenshot_2018-07-05 Logojoy make a logo you’ll love.png" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
+    <div class="row">
+      <div class="img_mascotas">
+        <img src="assets/img/cats-and-dogs-png-hd--1246.jpg" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
+
+    <!-- caja de registro usuarios -->
+    <div class="caja_registro">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Ingresa el e-mail con el cual quieres registrarte</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa e-mail...">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Ingresa una contraseña para tu cuenta</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa contraseña...">
+        </div>
+          <button id="btn_registrar" type="submit" class="btn btn-primary">Registrar</button>
+      </form>
+    </div>
+    <!-- modal aviso de responsabilidad -->
+    <div id="responsability_modal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal_content">
+          <div class="modal-header">
+            <h5 id="modal_title" class="modal-title">Seamos responsables...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, eos at commodi quisquam quia dolores sunt iusto magnam eius sapiente. Quidem non facere dicta magnam assumenda iusto laborum ipsum mollitia. Lorem ipsum,dolor sit amet consectetur adipisicing elit. Quo, eos at commodi quisquam quia dolores sunt iusto magnam eius sapiente. Quidem non facere dicta magnam assumenda iusto laborum ipsum mollitia</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">De acuerdo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="box_responsability">
+      <div class="row">
+        <div class="col-12 ">
+          <h5>Aviso de responsabilidad</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p id="responsability">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, eos at commodi quisquam quia dolores sunt iusto magnam eius sapiente. Quidem non facere dicta magnam assumenda iusto laborum ipsum mollitia. Lorem ipsum,dolor sit amet consectetur adipisicing elit. Quo, eos at commodi quisquam quia dolores sunt iusto magnam eius sapiente. Quidem non facere dicta magnam assumenda iusto laborum ipsum mollitia.</p>
+        </div>
+      </div>
+    </div>-->
   </div>
     
  

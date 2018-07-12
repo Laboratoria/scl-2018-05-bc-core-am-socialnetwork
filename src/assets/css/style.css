@@ -74,3 +74,41 @@ body {
   margin-bottom: 2%;
   text-align: center;
 }
+
+#screen2 {
+  display: none;
+}
+
+#screen1 {
+  display: block;
+}
+
+#modal_title {
+  font-size: 14px bold;
+  text-align: center;
+  color: orangered;
+}
+
+#responsability {
+  font-size: 12px;
+  text-align: justify;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+#box_responsability {
+  text-align: center;
+  width: 100%;
+}
+
+#responsability_modal {
+  margin-top: 25%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.btn_registrar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
