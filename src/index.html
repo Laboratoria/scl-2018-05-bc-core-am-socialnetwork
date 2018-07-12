@@ -150,7 +150,52 @@
   </div>
 -->
 
+  <!--Inicio pantalla 3/publicación usuario -->
+  <div id="screen3" class="container-fluid">
+    <div class="pos-f-t">
+      <nav id="menuColor" class="navbar navbar-dark">
+        <button onclick="toggleMenu()" class="navbar-toggler" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon iconMenu"></span>
+        </button>
+      </nav>
+      <nav id="sideMenu" class="nav flex-column float-left menu closingMenu">
+        <div onclick="toggleMenu()" class="close_button">
+          <span id="closingX" aria-hidden="true">&times;</span>
+        </div>
+        <div class="menu_content">
+          <a class="nav-link" href="#">Alimentación</a>
+          <a class="nav-link" href="#">Cuidados</a>
+          <a class="nav-link" href="#">Directorio veterinario</a>
+          <a class="nav-link" href="#">Adopciones</a>
+          <a class="nav-link" href="#">Cerrar sesión</a>
+        </div>
+      </nav>
+    </div>
   
+    <section class="formPost">
+      <div>
+        <h5 id="userName">...</h5>  <!--acá irá el nombre del usuario -->
+      </div>
+      <div>
+        <h5>Bienvenido a interPets</h5>
+      </div>
+    </section>
+  
+     <!--formulario publicación -->
+    <section class="formPost">
+      <div class="form-group">
+        <textarea class="form-control" rows="5" id="post" cols="8"></textarea>
+      </div>
+    </section>
+  
+     <!--botones para publicar -->
+    <div>
+      <button type="button" class="btn btn-primary" id="btnImg">Primary</button>
+      <button type="button" class="btn btn-primary" id="btnPost">Primary</button>
+    </div>
+  
+  </div>
+  <!--Fin pantalla 3 -->
 
   <!-- script section -->
   

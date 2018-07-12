@@ -39,3 +39,14 @@ Breakpoints:
     font-size: 60px;
   }
 }
+
+/* menú */
+@media(min-width: 768px){ 
+  .menu{
+      width: 20vw; 
+  }
+
+  .menu_closed{
+      left:-20vw;
+  }
+}
