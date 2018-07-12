@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// Manejo del dom
-=======
 window.onload = () => {
->>>>>>> 9b35fb21968244c7c6f77ee19ae2e386a1a6167a
 
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
