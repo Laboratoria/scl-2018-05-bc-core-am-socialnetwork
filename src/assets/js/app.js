@@ -1,3 +1,15 @@
+window.onload = () => {
+  firebase.auth().onAuthStateChanged((user)=>{
+    if (user) {
+      // Usuario está logeado
+      console.log('User > ' + JSON.stringify(user));
+    } else {
+      // Usuario no está logeado
+      console.log('Usuario no logeado');
+    }
+  });
+};
+
 // Sección registrar
 function register() {
   const emailValue = document.getElementById('email_signUp').value;
@@ -25,17 +37,13 @@ function login() {
     });
 }
 
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    
-    // User is signed in.
-    console.log('User: ' + JSON.stringify(user));
-    // ...
-  } else {
-    // User is signed out.
-    // ...
-  }
-});
+function logout() {
+  firebase.auth().signOut()
+    .then(()=> {
+      console.log('Chao');
+    })
+    .catch();
+}
 
 
 /*  

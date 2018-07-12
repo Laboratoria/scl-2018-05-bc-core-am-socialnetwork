@@ -4,7 +4,7 @@ const ingresar = document.getElementById('btn_login'); // botón para ingresar e
 
 ingresar.addEventListener('click', () => {
   console.log('botón para login funciona');
-  //document.getElementById('screen1').style.display = 'none';
+  // document.getElementById('screen1').style.display = 'none';
 });
   
 signUp.addEventListener('click', () => {
@@ -13,6 +13,6 @@ signUp.addEventListener('click', () => {
 });
 
 createAccount.addEventListener('click', () => {
-  //document.getElementById('screen2').style.display = 'none';
+  // document.getElementById('screen2').style.display = 'none';
   console.log('evento click de botón registrar funcionando');
 });
