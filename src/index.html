@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>ConectApp Alumnos</title>
+</head>
+<body>
+  <!--Cerrar Sesion -->
+  <div id="loggedIn">
+    <p id="username"></p>     
+    <button id="logOutButton" onclick="logout()" class="btn">
+      <span class="icon is-left">
+        <i class="fas fa-sign-out-alt"></i>
+      </span>
+      <span>Cerrar Sesión</span>
+    </button>  
+  </div>
+  <!--Logo app-->
+  <div class="text-center">
+      <img src="..." class="rounded" alt="...">
+    </div>
+  <!--Inicio sesión manual-->  
+  <div class="row">
+    <div class="col-md-6 offset-md-3 section register" id="loggedOut">
+      <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="Email" id="email">
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">
+                <i class="far fa-envelope"></i>
+            </span>
+          </div>
+      </div>
+      <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Contraseña" id="password">
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">
+              <i class="fas fa-lock"></i>
+            </span>
+          </div>
+      </div>
+      <button class="btn" id="login" onclick="login()">
+          <span>Iniciar Sesión</span>
+          <span class="icon">
+            <i class="fas fa-angle-double-right"></i>          
+          </span>
+      </button>
+      <div>
+        <p>¿Aún no estás registrado?</p>
+        <!-- Button trigger modal Register -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRegister">
+    Registrate
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalRegisterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRegisterTitle">Bienvenido</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="containerModal">
+        <label for="login-user" class="form-label">Usuario</label>
+       <input id="loginUser" class="form-control" type="email" placeholder="Email"/>
+        <label for="login-pass" class="form-label">Contraseña</label>
+         <input id="loginPass" class="form-control" type="password"/>
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="register()" data-dismiss="modal">REGISTRARME</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+      <!--Inicio sesión automatico-->
+      <hr>
+      <button class="btn" id="loginFacebook" onclick="loginFacebook()">
+        <span class="icon">
+          <i class="fab fa-facebook"></i>
+        </span>
+        <span>Iniciar con Facebook</span>
+      </button>
+      <button class="btn" id="loginFacebook" onclick="loginGoogle()">
+        <span class="icon">
+          <i class="fab fa-google"></i>
+        </span>
+        <span>Iniciar con Google</span>
+      </button>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDDPfdzZ-OL-5U1ZFgYEJd40Di3WdR36Wc",
+      authDomain: "social-network-d7373.firebaseapp.com",
+      databaseURL: "https://social-network-d7373.firebaseio.com",
+      projectId: "social-network-d7373",
+      storageBucket: "social-network-d7373.appspot.com",
+      messagingSenderId: "188592192471"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>   
+</body>
+</html>
