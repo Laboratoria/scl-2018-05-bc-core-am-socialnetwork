@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--Div del login-->
+  <div id="logIn">
+    <div class="text-center p-5">
+      <img src="profileImg.png" class="rounded" alt="Profile">
+    </div>
+    <div class="container-fluid">
+      <h1 class="text-center p-3">CHAO BULLYING</h1>
+      <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil repudiandae, modi atque quis voluptatibus perferendis
+        obcaecati. Quis, excepturi perspiciatis.</p>
+    </div>
+    <div id="inputs">
+      <div class="row justify-content-center pt-5 pb-2">
+        <input id="email" type="email" placeholder="Email">
+      </div>
+      <div class="row justify-content-center pb-5">
+        <input id="password" type="password" placeholder="Contraseña">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col p-0">
+        <button onclick="signIn()" id="signIn" class="btn mb-2 rounded-0 btn-style bg-warning text-dark p-3">Sign In</button>
+      </div>
+      <div class="col p-0 pb-4">
+        <button onclick="signUp()" id="signUp" class="btn mb-2 rounded-0 btn-style text-dark p-3">Sign Up</button>
+      </div>
+    </div>
+    <div id="facebookBtn">
+      <button onclick="loginFacebook()" id="loginFacebook">Ingresa con Facebook</button>
+    </div>
+    <div class="container-fluid">
+      <a href="#">
+        ¿Olvidaste tu contraseña?
+      </a>
+    </div>
+  </div>
+  <!--Div del profile-->
+  <div id="profile">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Perfil</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contactanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cambiar mail</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cambiar clave</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="text-center p-5">
+      <img src="profileImg.png" class="rounded" alt="Profile">
+    </div>
+    <div class="container-fluid">
+      <div class="text-center p-3">
+        <button>CHAT</button>
+      </div>
+      <div class="text-center p-3">
+        <button>APOYO PROFESIONAL</button>
+      </div>
+      <div class="text-center p-3">
+        <button>DENUNCIA</button>
+      </div>
+    </div>
+    <div class="text-center p-3">
+      <button id="logout" onclick="logOut()">DESLOGEAR</button>
+    </div>
+  </div>
+  <!--Links de Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <!--Initialize Firebase-->
+  <script>
+    var config = {
+      apiKey: "AIzaSyCkeW0zjK1x9rj7MEQYe_se7vcTWS4gwNo",
+      authDomain: "redsocial-b935e.firebaseapp.com",
+      databaseURL: "https://redsocial-b935e.firebaseio.com",
+      projectId: "redsocial-b935e",
+      storageBucket: "redsocial-b935e.appspot.com",
+      messagingSenderId: "969694902586"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
