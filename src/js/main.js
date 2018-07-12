@@ -22,8 +22,15 @@ function signUp() {
       alert('Usuario registrado con éxito.');
     })
     .catch((error) => {
-      console.log("Error de firebase > " + error.code);
-      console.log("Error de firebase, mensaje > " + error.message);
+      if (error.code === 'auth/invalid-email') {
+        alert('Email inválido. Ejemplo: Ejemplo@mail.com.')
+      } if (error.code === 'auth/weak-password') {
+        alert('La clave debe tener al menos 6 carácteres de largo.');
+      } if (error.code === 'auth/network-request-failed') {
+        alert('No hay conexión a internet.')
+      } if (error.code === 'auth/user-disabled') {
+        alert('Su cuenta ha sido desactivada.')
+      }
     });
 }
 
@@ -35,8 +42,11 @@ function signIn() {
     .then(() => {
     })
     .catch((error) => {
-      console.log("Error de firebase > " + error.code);
-      console.log("Error de firebase, mensaje > " + error.message);
+      if (error.code === 'auth/wrong-password') {
+        alert('La clave es incorrecta.')
+      } if (error.code === 'auth/user-not-found') {
+        alert('Usuario no registrado.')
+      }
     });
 }
 
