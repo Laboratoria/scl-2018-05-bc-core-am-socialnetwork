@@ -9,7 +9,6 @@ body {
 
 header {
 	background-color: #FFF;
-	text-align: center;
 }
 
 /* Comentado porque es muy general y toma otras imagenes que hay en la pagina  */
@@ -17,10 +16,6 @@ header {
 /* header div img {
 	width: 10em;
 } */
-
-.photo{
-	text-align: center;
-}
 
 /* img{
 	width: 100%;
@@ -32,6 +27,9 @@ header {
 	border: 5em solid #FFF;
 	box-shadow: 0 0 0.25em 0 rgba(50, 50, 50, 0.2);
 } */
+
+				/* Estilo de perfil */
+/* ============================= */
 
 textarea {
 	width: 70%;
@@ -109,22 +107,26 @@ p {
 	display: inline-block;
 	margin-left: 0.5em;
 }
+
 				/* Estilo de login */
 /* ============================= */
 
 /* .secion{
   background-color: black;
 } */
+
 .title{
   text-align: center;
 }
 #logo-login{
   height: 9em;
 }
+
 h1{
   text-align: center;
   color: #da1d0f;
 }
+
 h3{
   color: rgb(27, 21, 21);
 }

@@ -1,10 +1,13 @@
+
+
 const boton = document.getElementById('btn');
-boton.addEventListener('click', () => { /*Es igual a function ()*/
+boton.addEventListener('click', () => {
     let comments = document.getElementById('comment').value;
     document.getElementById('comment').value = '';
     const cont = document.getElementById('cont');
     const newComments = document.createElement('div');
 
+    //Para que aparezca si o si comentario
     if(comments.length === 0 || comments === null){
       alert ('Debes ingresar un mensaje');
       return false;
@@ -23,17 +26,11 @@ boton.addEventListener('click', () => { /*Es igual a function ()*/
     trash.classList.add('fa', 'fa-trash', 'trash');
     //Evento click basura
     trash.addEventListener('click', ()=> {
-      cont.removeChild(newComments);
-      if (confirm('Estas seguro de eliminar')) {
-          
-      }
-      else
-      {
-          return false;
+        let confirmarEliminar = confirm('¿Estas seguro de eliminar?');
+      if (confirmarEliminar == true) {
+        cont.removeChild(newComments);
       }
     })
-    
-
 
     //Crear p nuevo con comentario
     const contenedorElemento = document.createElement('p');
@@ -43,14 +40,4 @@ boton.addEventListener('click', () => { /*Es igual a function ()*/
     newComments.appendChild(trash);
     newComments.appendChild(contenedorElemento);
     cont.appendChild(newComments);
-
-    heart.addEventListener('click', () => {
-        heart.classList.toggle('red');
-    })
-    trash.addEventListener('click', () => {
-        cont.removeChild(newComments);
-    })
-    chck.addEventListener('click', () => {
-        contenedorElemento.classList.toggle('strike-out');//linea horizontal sobre el texto
-    })
 }) 
