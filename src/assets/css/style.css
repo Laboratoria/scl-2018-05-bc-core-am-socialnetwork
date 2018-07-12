@@ -1,0 +1,163 @@
+body {
+	margin: 0 auto;
+	background-color: #FAFAFA;
+}
+
+.center {
+	text-align: center;
+}
+
+header {
+	background-color: #FFF;
+}
+
+/* Comentado porque es muy general y toma otras imagenes que hay en la pagina  */
+
+/* header div img {
+	width: 10em;
+} */
+
+/* img{
+	width: 100%;
+} */
+
+.img {
+	text-align: center;
+	margin: 2em auto;
+	border: 5em solid #FFF;
+	box-shadow: 0 0 0.25em 0 rgba(50, 50, 50, 0.2);
+}
+
+				/* Estilo de perfil */
+/* ============================= */
+
+textarea {
+	width: 70%;
+	height: 4em;
+	color: #4E4D53;
+	font-size: 15px;
+	padding: 1em;
+	border-radius: 1em;
+	border: none;
+	margin: 0 auto;
+}
+
+#btn {
+	background-color: #66AEC7;
+	border: 0px;
+	cursor: pointer;
+	text-align: center;
+	margin: 3em auto;
+	width: 130px;
+	height: 30px;
+	display: block;
+	color: #FFF;
+}
+
+#btn:hover {
+	background-color: #5590A6;
+}
+
+#btn:focus, textarea:focus{
+	outline: none;
+}
+
+#cont {
+	border-radius: 0.4em;
+	margin: 0 auto;
+	color: #4E4D53;
+	text-align: left;
+	margin-bottom: 6em;
+	padding: 0 16%;
+}
+
+#cont span {
+	margin-left: 1em;
+}
+
+#cont div {
+	padding: 1em 0.5em;
+	margin-bottom: 2em;
+	outline: 0.1em solid #E5E3F2;
+	background-color: #FFF;
+}
+
+.heart, .trash {
+	margin:1em;
+	float: right;
+	cursor: pointer;
+}
+
+.trash:hover {
+	color: #1DA1F2;
+	cursor: pointer;
+}
+
+.strike-out {
+	text-decoration: line-through;
+	color: #1DA1F2;
+}
+
+.red {
+	color: #FC1E26;
+	cursor: pointer;
+}
+
+p {
+	display: inline-block;
+	margin-left: 0.5em;
+}
+
+				/* Estilo de login */
+/* ============================= */
+
+/* .secion{
+  background-color: black;
+} */
+
+.title{
+  text-align: center;
+}
+#logo-login{
+  height: 9em;
+}
+
+h1{
+  text-align: center;
+  color: #da1d0f;
+}
+
+h3{
+  color: rgb(27, 21, 21);
+}
+.back {
+  /* background: #e2e2e2; */
+  width: 100%;
+  position: absolute;
+  top: 8%;
+  bottom: 0;
+}
+
+.div-center {
+  width: 400px;
+  height: 400px;
+  /* color: white; */
+  /* background-color:black; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: 1em 2em;
+  /* border-bottom: 2px solid #ccc; */
+  display: table;
+}
+
+div.content {
+  display: table-cell;
+  vertical-align: middle;
+}
