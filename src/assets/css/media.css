@@ -4,9 +4,9 @@ Breakpoints:
 376px - 666px; red
 667px - 1024px; yellow
 1025px - 1600px; blue
-*/
 
-/* @media funciona como un if condicional */
+
+@media funciona como un if condicional */
 @media (min-width: 320px) and (max-width: 375px) {
   body {
     background-color: gold;
@@ -37,16 +37,5 @@ Breakpoints:
   }
   h1 {
     font-size: 60px;
-  }
-}
-
-/* menú */
-@media(min-width: 768px){ 
-  .menu{
-      width: 20vw; 
-  }
-
-  .menu_closed{
-      left:-20vw;
   }
 }
