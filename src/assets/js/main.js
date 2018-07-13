@@ -13,7 +13,7 @@ window.onload = () => {
     }
   });
 };
-//Aquí va la función de iniciar sesión
+//Aquí va la función de iniciar sesión con email
 function login() {
   const emailValue = email.value;
   const passwordValue = password.value;

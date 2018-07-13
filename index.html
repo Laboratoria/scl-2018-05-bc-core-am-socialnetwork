@@ -12,38 +12,50 @@
 </head>
 
 <body id="loginBody">
-  <!-- Aquí comienza la solicitud de ingreso con formulario -->
-  <div class="container-fluid">
-  <div id="loginContainer" class="">
-    <div id="loggedIn" class="">
-      <button id="logOutButton" onclick="logout()">Cerrar sesión</button>
-    </div>
-    <div id="loggedOut" class="col-align-self-center">
-      <h1>Ingresa con tu cuenta</h1>
-      <label for="exampleInputEmail1">Email</label>
-      <input id="email" type="email" class="form-control" placeholder="Enter email">
-      <label for="exampleInputPassword1">Contraseña</label>
-      <input id="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      <button id="login" onclick="login()" type="button" value="LOGIN">Iniciar sesión</button>
-    </div>
+<!-- Aqui va logo de Siembramigos -->
+<section id="logoSection">
+  <div id="logo" class="row">
+<div class="col">
+  <h1>Siembramigos</h1>
+</div>
   </div>
-  <!-- Aquí termina la solicitud de ingreso con formulario -->
+</section>
+  <!-- Aquí comienza la solicitud de ingreso de usuario -->
+  <div class="container-fluid">
+    <div id="loginContainer" class="">
+      <div id="loggedIn" class="">
+        <button id="logOutButton" onclick="logout()">Cerrar sesión</button>
+      </div>
+      <div id="loggedOut" class="col-align-self-center">
+        <h2>Ingresa con tu cuenta</h2>
+        <label for="exampleInputEmail1">Email</label>
+        <input id="email" type="email" class="form-control" placeholder="Enter email">
+        <label for="exampleInputPassword1">Contraseña</label>
+        <input id="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <button id="login" onclick="login()" type="button" value="LOGIN">Iniciar sesión</button>
+      </div>
+    </div>
+    <!-- Aquí termina la solicitud de ingreso con formulario -->
   </div>
   <!-- Aquí comienza el ingreso con Facebook y Google -->
-  <div class="">
-    <div class="col-align-self-center">
+  <section>
+  <div class="row">
+    <div class="col-md">
       <button id="loginFacebookBtn" type="button" onclick="loginFacebook()" class="btn btn-primary btn-lg">Facebook</button>
       <button id="loginGoogleBtn" type="button" onclick="loginGoogle()" class="btn btn-primary btn-lg">Google</button>
       <!-- Aquí termina el ingreso con Facebook y Google -->
     </div>
   </div>
+</section>
   <!-- Aquí comienza registrar usuario -->
+  <section>
   <div>
-    <h3>¿No tienes cuenta?</h3>
-    <button id="" type="button">Registro</button>
+    <h4>¿No tienes cuenta?</h4>
+    <button id="" onclick="register()" type="button">Registro</button>
     <!-- Aquí termina registrar usuario -->
   </div>
-  
+</section>
+
   <!-- link de Firebase -->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
