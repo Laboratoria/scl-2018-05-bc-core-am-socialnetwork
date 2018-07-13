@@ -2,12 +2,12 @@ window.onload = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // Si estamos logueados esconder "registro"
-      loggedOut.style.display = 'none';
+      firstSection.style.display = 'none';
       loggedIn.style.display = 'block';
       console.log('User > ' + JSON.stringify(user));
     } else {
       // No estamos logueados esconder 'Cerrar Sesión'
-      loggedOut.style.display = 'block';
+      firstSection.style.display = 'block';
       loggedIn.style.display = 'none';
     }
   });
