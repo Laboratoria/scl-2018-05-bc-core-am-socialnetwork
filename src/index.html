@@ -15,25 +15,25 @@
 
 <body>
   <!-- Página de bienvenida -->
-  <section class="initialPage">
-    <!--Logo app-->
-    <div class="text-center">
-      <img src="..." class="rounded" alt="...">
+  <section class="initialPage" id="firstSection">
+  <!--Logo app-->
+  <div class="text-center">
+      <img src="assets/img/logo.png" class="rounded logo img-fluid" alt="logo-portada">
     </div>
-    <!--Inicio sesión manual-->
-    <div class="row">
-      <div class="col-md-6 offset-md-3 section register" id="loggedOut">
-        <div class="input-group mb-3">
+  <!--Inicio sesión manual-->  
+  <div class="row">
+    <div class="col-md-6 offset-md-3 register" id="loggedOut">
+      <div class="input-group inputRegister">
           <input type="email" class="form-control" placeholder="Email" id="email">
-          <div class="input-group-append">
+          <div class="input-group-append icon-input">
             <span class="input-group-text" id="basic-addon2">
               <i class="far fa-envelope"></i>
             </span>
           </div>
-        </div>
-        <div class="input-group mb-3">
+      </div>
+      <div class="input-group inputRegister">
           <input type="password" class="form-control" placeholder="Contraseña" id="password">
-          <div class="input-group-append">
+          <div class="input-group-append icon-input">
             <span class="input-group-text" id="basic-addon2">
               <i class="fas fa-lock"></i>
             </span>
@@ -44,12 +44,21 @@
           <span class="icon">
             <i class="fas fa-angle-double-right"></i>
           </span>
-        </button>
-        <div>
-          <p>¿Aún no estás registrado?</p>
-          <!-- Button trigger modal Register -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRegister">
-            Registrate
+      </button>
+      <div class="container-modal">
+        <p class="modalTxt">¿Aún no estás registrado?</p>
+        <!-- Button trigger modal Register -->
+<button type="button" class="btn btn-primary boton-modal" data-toggle="modal" data-target="#modalRegister">
+    Registrate
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalRegisterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRegisterTitle">Bienvenido</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
           </button>
           <!-- Modal -->
           <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalRegisterTitle" aria-hidden="true">
@@ -92,6 +101,21 @@
         </button>
       </div>
     </div>
+  </div>
+      </div>
+      <!--Inicio sesión automatico-->
+      <hr>
+      <button class="btn" id="loginFacebook" onclick="loginFacebook()">
+        <span class="icon">
+          <i class="fab fa-facebook"></i>
+        </span>
+        <span>Inicia con Facebook</span>
+      </button>
+      <button class="btn" id="loginGoogle" onclick="loginGoogle()">
+        <span class="icon">
+          <i class="fab fa-google"></i>
+        </span>
+        <span>Inicia con Google</span>
   </section>
 
   <!-- Barra de navegación -->

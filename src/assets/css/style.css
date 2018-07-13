@@ -317,9 +317,78 @@ img {
 }
 
 /* Media queries */
+/* Estilo Login */
+.logo{
+  padding: 15%;
+}
+.register{
+  margin-top: 0%;
+  padding: 0%;
+}
+.inputRegister{
+  margin: 1% 4% 0% 7%;
+  width: 90%;
+}
+.icon-input{
+  background-color: transparent;
+}
+.input-group-text{
+  background-color: #82CCD5;
+  border-radius: 1rem;
+}
+.form-control{
+  background-color: rgb(176, 201, 204);
+}
+#login{
+  width: 90%;
+  margin: 3% 4% 0% 7%;
+  border-radius: 2rem;
+  background-color: #82CCD5;
+  color: #333333;
+}
+#login:hover{
+  background-color: rgb(176, 201, 204) ;
+  color: white;
+}
+.container-modal{
+  margin: 3% 4% 0% 7%;
+  text-align: center;
+}
+.boton-modal,.modalTxt{
+  display: inline;
+  font-size: 15px;
+}
+.boton-modal{
+  padding: 0%;
+  background-color: transparent;
+  color: #268eff;
+  border: none;
+}
+#loginFacebook{
+  background-color: #3b5998;
+}
+#loginGoogle{
+  background-color: red;
 
-@media (min-width: 768px) {
-  .navbar-collapse {
-    width: 25vw;
-  }
+}
+
+
+
+/* Media queries */
+@media (min-width: 768px){
+.navbar-collapse {
+  width: 25vw;
+}
+.logo{
+  width: 25%;
+  padding: 2%;
+}
+#loginFacebook{
+  margin: 1% 1% 1% 7%;
+  width: 45%;
+}
+#loginGoogle{
+  margin: 1% 1% 1% 7%;
+  width: 45%;
+}
 }
