@@ -4,7 +4,7 @@ font-family: 'Pragati Narrow', sans-serif;
 */
 
 body {
-  background-color: #45aed1;
+  background-color: white;
 }
 
 .caja_registro {
@@ -80,7 +80,7 @@ body {
 }
 
 #screen1 {
-  display: block;
+  display: none;
 }
 
 #modal_title {
@@ -146,7 +146,7 @@ body {
 
 #screen3 {
   padding: 0;
-  display: none;
+  display: block;
 }
 
 .closingMenu{

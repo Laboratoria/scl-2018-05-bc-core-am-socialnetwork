@@ -2,9 +2,15 @@ window.onload = () => {
   firebase.auth().onAuthStateChanged((user)=>{
     if (user) {
       // Usuario está logeado
+      screen1.style.display = 'none';
+      screen2.style.display = 'none';
+      screen3.style.display = 'block';
       console.log('User > ' + JSON.stringify(user));
     } else {
       // Usuario no está logeado
+      screen1.style.display = 'block';
+      screen2.style.display = 'none';
+      screen3.style.display = 'none';
       console.log('Usuario no logeado');
     }
   });
@@ -30,17 +36,38 @@ function login() {
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
     .then(()=> {
       console.log('Usuario con login exitoso');
+      screen3.style.display = 'block';
+      screen1.style.display = 'none';
+      screen2.style.display = 'none';
     })
     .catch((error)=> {
       console.log('Error de Firebase: ' + error.code);
       console.log('Error de Firebase, mensaje: ' + error.mensaje);
+      screen1.style.display = 'block';
+      screen2.style.display = 'none';
+      screen3.style.display = 'none';
+    });
+}
+
+function loginFacebook() {
+  const provider = new firebase.auth.FacebookAuthProvider();
+  provider.setCustomParameters({
+    'display': 'popup'
+  });
+  firebase.auth().signInWithPopup(provider)
+    .then(()=> {
+      console.log('Login con facebook');
+    })
+    .catch((error) => {
+      console.log('Error de Firebase > ' + error.code);
+      console.log('Error de Firebase, mensaje > ' + error.message);
     });
 }
 
 function logout() {
   firebase.auth().signOut()
     .then(()=> {
-      console.log('Chao');
+      console.log('Cerraste sesión');
     })
     .catch();
 }

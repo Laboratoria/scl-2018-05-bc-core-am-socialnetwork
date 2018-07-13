@@ -42,7 +42,7 @@
       </form>
       <div class="row">
         <div class="col-12">
-          <button id="btn_facebook" type="button" class="btn btn-primary btn-lg"><i class="fab fa-facebook-square fa-lg"></i>
+          <button onclick="loginFacebook()" id="btn_facebook" type="button" class="btn btn-primary btn-lg"><i class="fab fa-facebook-square fa-lg"></i>
               Iniciar sesión con Facebook
           </button>
         </div>
@@ -115,41 +115,6 @@
     </div>
   </div>
 
-  
-
-
-    <!-- <div class="box_responsability">
-      <div class="row">
-        <div class="col-12 ">
-          <h5>Aviso de responsabilidad</h5>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <p id="responsability">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, eos at commodi quisquam quia dolores sunt iusto magnam eius sapiente. Quidem non facere dicta magnam assumenda iusto laborum ipsum mollitia. Lorem ipsum,dolor sit amet consectetur adipisicing elit. Quo, eos at commodi quisquam quia dolores sunt iusto magnam eius sapiente. Quidem non facere dicta magnam assumenda iusto laborum ipsum mollitia.</p>
-        </div>
-      </div>
-    </div>-->
-  
-    
- 
-    
-<!--
-    <h4>Registro de usuarios</h4>
-    <input id="email" type="email" placeholder="Ingresa e-mail">
-    <input id="password" type="password" placeholder="Ingresa contraseña">
-    <button id="registrar">Registrar</button>
-
-    <h4>Inicio sesión</h4>
-    <input id="email2" type="email" placeholder="Ingresa e-mail">
-    <input id="password2" type="password" placeholder="Ingresa contraseña">
-    <button id="ingresar">Ingresar</button>
-
-    <div id="contenido">
-    </div>
-  </div>
--->
-
   <!--Inicio pantalla 3/publicación usuario -->
   <div id="screen3" class="container-fluid">
     <div class="pos-f-t">
@@ -167,7 +132,7 @@
           <a class="nav-link" href="#">Cuidados</a>
           <a class="nav-link" href="#">Directorio veterinario</a>
           <a class="nav-link" href="#">Adopciones</a>
-          <a class="nav-link" href="#">Cerrar sesión</a>
+          <a onclick="logout()" class="nav-link" href="#">Cerrar sesión</a>
         </div>
       </nav>
     </div>
