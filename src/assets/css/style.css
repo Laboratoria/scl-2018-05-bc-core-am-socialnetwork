@@ -1,6 +1,18 @@
 #loginBody {
   background-color: #A7D9A2;
-  text-align: center;
   align-items: center;
 }
 
+#logo {
+  background-color: #59A686;
+}
+
+.btn {
+  border-radius: 50%;
+  border-color: transparent;
+  border-width: 0px;
+  padding: 0px;
+}
+
+padding-right: 15em;
+padding-left: 15em;
