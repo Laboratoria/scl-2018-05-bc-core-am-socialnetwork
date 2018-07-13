@@ -20,11 +20,13 @@ function register() {
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
       console.log('Usuario registrado');
+      emailValue = "";
+      passwordValue = "";  
     })
     .catch((error) => {
       console.log('Error de firebase > ' + error.code);
       console.log('Error de firebase, mensaje > ' + error.message);
-    });
+    }); 
 }
 
 // Funcion de ingreso
