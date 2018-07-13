@@ -13,7 +13,7 @@ body {
 .top {
   width: 100vw;
   height: 7vh;
-  background-color: rgb(38, 197, 189);
+  background-color: #82ccd5;
   z-index: 2;
 }
 
@@ -176,6 +176,7 @@ body {
   position: absolute;
   top: 72px;
   border: 8px solid rgba(255, 255, 255, 0.7);
+  background-color: #fafafa;
 }
 
 img {

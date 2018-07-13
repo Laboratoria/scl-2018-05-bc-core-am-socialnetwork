@@ -2,13 +2,13 @@ window.onload = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // Si estamos logueados esconder "registro"
-      loggedOut.style.display = "none";
-      loggedIn.style.display = "block";
-      console.log("User > " + JSON.stringify(user));
+      loggedOut.style.display = 'none';
+      loggedIn.style.display = 'block';
+      console.log('User > ' + JSON.stringify(user));
     } else {
-      // No estamos logueados esconder "Cerrar Sesión"
-      loggedOut.style.display = "block";
-      loggedIn.style.display = "none";
+      // No estamos logueados esconder 'Cerrar Sesión'
+      loggedOut.style.display = 'block';
+      loggedIn.style.display = 'none';
     }
   });
 };
@@ -19,11 +19,11 @@ function register() {
   const passwordValue = loginPass.value;
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
-      console.log("Usuario registrado");
+      console.log('Usuario registrado');
     })
     .catch((error) => {
-      console.log("Error de firebase > " + error.code);
-      console.log("Error de firebase, mensaje > " + error.message);
+      console.log('Error de firebase > ' + error.code);
+      console.log('Error de firebase, mensaje > ' + error.message);
     });
 }
 
@@ -33,11 +33,11 @@ function login() {
   const passwordValue = password.value;
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
-      console.log("Usuario con login exitoso");
+      console.log('Usuario con login exitoso');
     })
     .catch((error) => {
-      console.log("Error de firebase > " + error.code);
-      console.log("Error de firebase, mensaje > " + error.message);
+      console.log('Error de firebase > ' + error.code);
+      console.log('Error de firebase, mensaje > ' + error.message);
     });
 }
 
@@ -45,7 +45,7 @@ function login() {
 function logout() {
   firebase.auth().signOut()
     .then(() => {
-      console.log("chao");
+      console.log('chao');
     })
     .catch();
 };
@@ -59,11 +59,11 @@ function loginFacebook() {
   });
   firebase.auth().signInWithPopup(provider)
     .then(() => {
-      console.log("Login con facebook")
+      console.log('Login con facebook');
     })
     .catch((error) => {
-      console.log("Error de firebase > " + error.code);
-      console.log("Error de firebase, mensaje > " + error.message);
+      console.log('Error de firebase > ' + error.code);
+      console.log('Error de firebase, mensaje > ' + error.message);
     });
 };
 
@@ -79,42 +79,13 @@ function loginGoogle() {
       const user = result.user;
     }).catch((error) => {
       // Handle Errors here.
-      console.log("Error de Firebase " + error.code);
-      console.log("Error de Firebase, Message " + error.message);
+      console.log('Error de Firebase ' + error.code);
+      console.log('Error de Firebase, Message ' + error.message);
       // The email of the user's account used.
       const emailError = error.email;
-      console.log("Error email esta en uso " + emailError);
+      console.log('Error email esta en uso ' + emailError);
       // The firebase.auth.AuthCredential type that was used.
       const credential = error.credential;
-      console.log("Error " + credential);
+      console.log('Error ' + credential);
     });
-
 }
-
-// Manejo del estilo del botón que esconde/muestra la barra de navegación
-$(document).ready(function () {
-  $('.animated-icon1,.animated-icon3,.animated-icon4').click(function () {
-    $(this).toggleClass('open');
-  });
-});
-
-// Cambiar foto de perfil
-$(document).ready(function () {
-  var readURL = function (input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function (event) {
-        $('.profile-pic').attr('src', event.target.result);
-      };
-      reader.readAsDataURL(input.files[0]);
-    }
-  };
-
-  $('.file-upload').on('change', function () {
-    readURL(this);
-  });
-
-  $('.upload-button').on('click', function () {
-    $('.file-upload').click();
-  });
-});
