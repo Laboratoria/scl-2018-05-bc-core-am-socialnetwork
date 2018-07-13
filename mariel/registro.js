@@ -2,8 +2,11 @@
 const userName = document.getElementById("name_input" );
 const errorNombre = document.getElementById("error_nombre");
 const userAge = document.getElementById("edad_input");
-const email = document.getElementById("email_input").value;
-const password = document.getElementById("password_input").value;
+const email = document.getElementById("email");
+
+const password = document.getElementById("password"); 
+
+const password2 = document.getElementById("password");
 const errorMsg = document.getElementById("error_password")
 const confirmPassword = document.getElementById("confirm_password");
 const errorConfirmPassword = document.getElementById("error_confirm_password");
@@ -24,10 +27,10 @@ userName.addEventListener('keyup', () =>{
 })
 
 //validar que la contraseña tenga minimo 6 caracteres
-password.addEventListener('keyup', () =>{
-  if(password.value.length < 6) {
+password2.addEventListener('keyup', () =>{
+  if(password2.value.length < 6) {
     errorMsg.innerHTML = "La contraseña debe tener minimo 6 caracteres";
-  } else if(password.value.length >= 6) {
+  } else if(password2.value.length >= 6) {
     errorMsg.innerHTML = " ";
   }
 })
@@ -58,10 +61,10 @@ rememberMe.addEventListener('change', saveLocalUser, false);
   function saveLocalUser(){
     let checked = rememberMe.checked; 
     if(checked){
-      window.localStorage.setItem('password', JSON.stringify(password));
-      window.localStorage.setItem('email', JSON.stringify(email));
-      window.localStorage.setItem('nombre', JSON.stringify(userName));
-      window.localStorage.setItem('edad', JSON.stringify(userAge));
+      window.localStorage.setItem('password', JSON.stringify(password.value));
+      window.localStorage.setItem('email', JSON.stringify(email.value));
+      window.localStorage.setItem('nombre', JSON.stringify(userName.value));
+      window.localStorage.setItem('edad', JSON.stringify(userAge.value));
     }
   }
 
@@ -69,15 +72,16 @@ rememberMe.addEventListener('change', saveLocalUser, false);
 			
 //llevarme a la siguiente ventana con el boton 
 createAcountBtn.addEventListener('click', () => { 
-    
+    const emailVal = email.value; 
+    const passwordVal = password.value; 
     //crear esta cuenta en firebase (con el boton crear cuenta)
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+    firebase.auth().createUserWithEmailAndPassword(emailVal, passwordVal)
     .then(() => {
       //cambiar de seccion
     const hideSection = document.getElementById('register_section');
     hideSection.style.display = "none";
     }) 
-    .catch(() => {
-      console.log(getReason());
+    .catch((error) => {
+      console.log('fallo el registro', error);
     })
 })
