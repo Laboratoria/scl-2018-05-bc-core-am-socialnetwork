@@ -14,12 +14,16 @@ firebase.database().ref('messages')
 //Acá comenzamos a escuchar por nuevos mensajes usando el evento
 //on child_added
 firebase.database().ref('messages')
-    .limitToLast(1)
+    .limitToLast(100)
     .on('child_added', (newMessage)=>{
-        messageContainer.innerHTML += `
-            <p>Nombre : ${newMessage.val().creatorName}</p>
-            <p>${newMessage.val().text}</p>
-        `;
+        messageContainer.innerHTML = `
+        <div class="card w-75">
+            <div class="card-body">
+                <h5 class="card-title">Nombre : ${newMessage.val().creatorName}</h5>
+                <p class="card-text">${newMessage.val().text}</p>
+            </div>
+        </div>
+        ` + messageContainer.innerHTML;
     });
 // Usaremos una colección para guardar los mensajes, llamada messages
 function sendMessage(){
