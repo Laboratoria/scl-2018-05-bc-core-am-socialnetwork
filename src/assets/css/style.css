@@ -4,15 +4,15 @@ font-family: 'Pragati Narrow', sans-serif;
 */
 
 body {
-  background-color: #45aed1;
+  background-color: #FAFAFA;
 }
 
 .caja_registro {
-  background-color: #bcebeb;
+  background-color: #1edb2e93;
   border-radius: 10px 10px 10px 10px;
   -moz-border-radius: 10px 10px 10px 10px;
   -webkit-border-radius: 10px 10px 10px 10px;
-  border: 2px solid #45aed1;
+  border: 2px solid #2b9b47;
   -webkit-box-shadow: 10px 10px 15px -9px rgba(79,78,79,0.68);
   -moz-box-shadow: 10px 10px 15px -9px rgba(79,78,79,0.68);
   box-shadow: 10px 10px 15px -9px rgba(79,78,79,0.68);
@@ -20,13 +20,22 @@ body {
   padding-left: 7%;
   padding-right: 7%;
   padding-bottom: 5%;
-  margin-bottom: 10%;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 30%;
+}
+
+#brandName {
+  text-align: center;
+  font-size: 25px;
+  border-left: 30%;
+  font-family: Impact,'Arial Narrow Bold', sans-serif;
+  margin-top: 3%;
+  color: #000000;
 }
 
 #logo {
-  width: 40%;
+  width: 60%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -35,8 +44,9 @@ body {
   margin-bottom: 3%;
 }
 
-.img_mascotas {
-  margin-bottom: 10%;
+.pets {
+  margin-bottom: 5%;
+  width: 60%;
 }
 
 .btn_ingresar {
@@ -51,6 +61,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-top: 10%;
   width: 100%;
+  font-size: 12px;
 }
 
 #btn_google {
@@ -59,6 +70,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-top: 5%;
   width: 100%;
+  font-size: 12px;
 }
 
 .btn_registrate {
@@ -81,6 +93,9 @@ body {
 
 #screen1 {
   display: block;
+}
+.imgRegister {
+width: 40%;
 }
 
 #modal_title {
@@ -114,16 +129,22 @@ body {
 }
 
 /* pantalla 3*/
-.menu{
+#brand {
+  width: 40%;
+  right: 0;
+}
+
+.menu {
   position: absolute;
   top:0;
   height: 50%;
   width: 50vw;
-  transition: 0.5s ease-out
+  transition: 0.5s ease-out;
+  padding-top: 5%;
 }
 
 #menuColor {
-  background-color: #2a4eec;
+  background-color: #18e62981;
   height: 10%;
 }
 
@@ -146,45 +167,198 @@ body {
 
 #screen3 {
   padding: 0;
-  display: none;
 }
 
 .closingMenu{
   left: -90vw;
-  background-color: #1E90D0;
+  background-color: #18e62981;
 }
 
-.menu_open{
+.menu_open {
   left: 0;
 }
 
-.close_button{ /* configurando boton de cierre del navbar*/
+.close_button { /* configurando boton de cierre del navbar*/
   font-size: xx-large;
   color: white;
   position: absolute;
   right: 10px;                   
 }
 
-.menu_content{
+.menu_content {
   padding: 10px;
   margin-top: 20px;
 }
 
-.formPost{
+.formPost {
   margin: 5%;
 }
 
 #post {
   resize: none;
-  width: 50%;
-  margin-left: 25%;
+  width: 80%;
+  height: 50%;
+  margin-left: 10%;
 }
 
-h5 {
+.userName {
   text-align: center;
+  color: white;
+  font-size: 15px;
 }
 
 #btnImg {
-  margin-left: 10%;
+  margin-left: 17%;
+  background-color: #18e62981;
+  color: black;
+  border: #2b9b47;
 }
+
+#dogStanding {
+  width: 45%;
+  margin-top: 60%;
+  position: fixed;
+}
+
+
 /* cierre css pantalla 3*/
+@media(min-width: 768px) { 
+  .menu {
+    width: 20vw; /*El menú va a tomar este ancho con pantallas de 768px hacia arriba*/
+}
+
+.menu_closed {
+    left:-20vw;
+}
+
+#btnImg {
+  margin-left: 40%;
+}
+
+#post {
+width: 50%;
+height: 80%;
+margin-left: 25%;
+}
+
+#btnImg {
+margin-left: 35%;
+margin-right: 10%;
+}
+
+#brand {
+width: 20%;
+}
+
+#dogStanding {
+width: 20%;
+margin-top: -1.5%;
+position: fixed;
+}
+
+.userName {
+text-align: center;
+color: white;
+font-size: 30px;
+}
+
+.caja_registro {
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 5%;
+    padding: 3%;
+  }
+  
+  #brandName {
+    font-size: 60px;
+    display: inline-block;
+    margin-left: 20%;
+  }
+  
+  #logo {
+    width: 40%;
+    display: inline-block;
+  }
+  
+  .pets {
+    margin-bottom: 2%;
+    width: 60%;
+  }
+  
+  .btn_ingresar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #btn_facebook {
+    background-color: #5176B8;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10%;
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  #btn_google {
+    background-color: #D63E2F;
+    color:white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 5%;
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  .btn_registrate {
+    background-color: #bcebeb;
+    border:none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .no_tienes_cuenta {
+    margin-top: 10%;
+    margin-bottom: 2%;
+    text-align: center;
+  }
+  
+  #screen2 {
+    display: none;
+  }
+  
+  #screen1 {
+    display: block;
+  }
+  
+  #modal_title {
+    font-size: 14px bold;
+    text-align: center;
+    color: orangered;
+  }
+  
+  #responsability {
+    font-size: 12px;
+    text-align: justify;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  
+  #box_responsability {
+    text-align: center;
+    width: 100%;
+  }
+  
+  #responsability_modal {
+    margin-top: 25%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .btn_registrar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

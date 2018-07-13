@@ -16,12 +16,7 @@
   <div id="screen1" class="container-fluid"> 
     <div class="row">
       <div class="col-12">
-      <img id="logo" src="assets/img/Screenshot_2018-07-05 Logojoy make a logo you’ll love.png" class="img-fluid" alt="Responsive image">
-      </div>
-    </div>
-    <div class="row">
-      <div class="img_mascotas">
-        <img src="assets/img/cats-and-dogs-png-hd--1246.jpg" class="img-fluid" alt="Responsive image">
+          <p id="brandName">interPets</p><img id="logo" src="assets/img/cat-clipart-dog-free-11.png" class="img-fluid" alt="Responsive image">
       </div>
     </div>
 
@@ -42,14 +37,14 @@
       </form>
       <div class="row">
         <div class="col-12">
-          <button id="btn_facebook" type="button" class="btn btn-primary btn-lg"><i class="fab fa-facebook-square fa-lg"></i>
+          <button id="btn_facebook" type="button" class="btn btn-primary"><i class="fab fa-facebook-square fa-lg" id="faceIcon"></i>
               Iniciar sesión con Facebook
           </button>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <button id="btn_google" type="button" class="btn btn-primary btn-lg"><i class="fab fa-google-plus-square fa-lg"></i>
+          <button id="btn_google" type="button" class="btn btn-primary"><i class="fab fa-google-plus-square fa-lg" id="googleIcon"></i>
               Iniciar sesión con Google
           </button>
         </div>
@@ -71,20 +66,16 @@
   <div id="screen2" class="container-fluid">
     <div class="row">
       <div class="col-12">
-        <img id="logo" src="assets/img/Screenshot_2018-07-05 Logojoy make a logo you’ll love.png" class="img-fluid" alt="Responsive image">
+          <p id="brandName">interPets</p><img id="logo" src="assets/img/cat-clipart-dog-free-11.png" class="img-fluid" alt="Responsive image">
       </div>
     </div>
-    <div class="row">
-      <div class="img_mascotas">
-        <img src="assets/img/cats-and-dogs-png-hd--1246.jpg" class="img-fluid" alt="Responsive image">
-      </div>
-    </div>
+
 
     <!-- caja de registro usuarios -->
     <div class="caja_registro">
       <form>
         <div class="form-group">
-          <label for="exampleInputEmail1">Ingresa el e-mail con el cual quieres registrarte</label>
+          <label for="exampleInputEmail1">Ingresa el e-mail con el que quieres registrarte</label>
           <input type="email" class="form-control" id="email_signUp" aria-describedby="emailHelp" placeholder="Ingresa e-mail...">
         </div>
         <div class="form-group">
@@ -150,13 +141,13 @@
   </div>
 -->
 
-  <!--Inicio pantalla 3/publicación usuario -->
-  <div id="screen3" class="container-fluid">
+ <!--Inicio pantalla 3 -->
+ <div id="screen3" class="container-fluid">
     <div class="pos-f-t">
-      <nav id="menuColor" class="navbar navbar-dark">
-        <button onclick="toggleMenu()" class="navbar-toggler" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <nav id="menuColor" class="navbar navbar-dark" > 
+        <button onclick="toggleMenu()" class="navbar-toggler" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"> 
           <span class="navbar-toggler-icon iconMenu"></span>
-        </button>
+        </button> <img src="assets/img/cat-clipart-dog-free-11.png" id="brand" alt="">
       </nav>
       <nav id="sideMenu" class="nav flex-column float-left menu closingMenu">
         <div onclick="toggleMenu()" class="close_button">
@@ -174,26 +165,28 @@
   
     <section class="formPost">
       <div>
-        <h5 id="userName">...</h5>  <!--acá irá el nombre del usuario -->
+        <p class="userName">...</p>  <!--acá irá el nombre del usuario -->
       </div>
       <div>
-        <h5>Bienvenido a interPets</h5>
+        <p class="userName">Bienvenido a interPets</p>
       </div>
     </section>
   
      <!--formulario publicación -->
     <section class="formPost">
       <div class="form-group">
-        <textarea class="form-control" rows="5" id="post" cols="8"></textarea>
+        <textarea class="form-control" rows="3" placeholder="¿Qué quieres publicar?" id="post"></textarea>
       </div>
     </section>
   
      <!--botones para publicar -->
     <div>
-      <button type="button" class="btn btn-primary" id="btnImg">Primary</button>
-      <button type="button" class="btn btn-primary" id="btnPost">Primary</button>
+      <button type="button" class="btn btn-primary" id="btnImg">Subir imagen</button>
+      <button type="button" class="btn btn-primary" id="btnPost">Publicar</button>
     </div>
-  
+
+    <div><img src="assets/img/dog-standing-e1455445893431.png" id="dogStanding" alt=""></div>
+
   </div>
   <!--Fin pantalla 3 -->
 
