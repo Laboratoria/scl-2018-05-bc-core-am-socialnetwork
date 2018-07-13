@@ -9,6 +9,7 @@ $(document).ready(function() {
 // Cambio de páginas
 function toProfilePage() {
   profile.classList.remove('d-none');
-  pageTitle.innerHTML = 'PERFIL';
+    pageTitle.innerHTML = 'PERFIL';
 }
+
 
