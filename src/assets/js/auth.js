@@ -2,12 +2,13 @@ window.onload = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // Si estamos logueados esconder "registro"
-      loggedOut.style.display = 'none';
+      firstSection.style.display = 'none';
       loggedIn.style.display = 'block';
       console.log('User > ' + JSON.stringify(user));
+      showInfo(user);
     } else {
       // No estamos logueados esconder 'Cerrar Sesión'
-      loggedOut.style.display = 'block';
+      firstSection.style.display = 'block';
       loggedIn.style.display = 'none';
     }
   });
@@ -20,11 +21,13 @@ function register() {
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
       console.log('Usuario registrado');
+      emailValue = "";
+      passwordValue = "";  
     })
     .catch((error) => {
       console.log('Error de firebase > ' + error.code);
       console.log('Error de firebase, mensaje > ' + error.message);
-    });
+    }); 
 }
 
 // Funcion de ingreso
@@ -46,6 +49,7 @@ function logout() {
   firebase.auth().signOut()
     .then(() => {
       console.log('chao');
+      profile.classList.add('d-none');
     })
     .catch();
 };

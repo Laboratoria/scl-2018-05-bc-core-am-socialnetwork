@@ -15,25 +15,25 @@
 
 <body>
   <!-- Página de bienvenida -->
-  <section class="initialPage">
+  <section class="initialPage" id="firstSection">
     <!--Logo app-->
     <div class="text-center">
-      <img src="..." class="rounded" alt="...">
+      <img src="assets/img/logo.png" class="rounded logo img-fluid" alt="logo-portada">
     </div>
     <!--Inicio sesión manual-->
     <div class="row">
-      <div class="col-md-6 offset-md-3 section register" id="loggedOut">
-        <div class="input-group mb-3">
+      <div class="col-md-6 offset-md-3 register" id="loggedOut">
+        <div class="input-group inputRegister">
           <input type="email" class="form-control" placeholder="Email" id="email">
-          <div class="input-group-append">
+          <div class="input-group-append icon-input">
             <span class="input-group-text" id="basic-addon2">
               <i class="far fa-envelope"></i>
             </span>
           </div>
         </div>
-        <div class="input-group mb-3">
+        <div class="input-group inputRegister">
           <input type="password" class="form-control" placeholder="Contraseña" id="password">
-          <div class="input-group-append">
+          <div class="input-group-append icon-input">
             <span class="input-group-text" id="basic-addon2">
               <i class="fas fa-lock"></i>
             </span>
@@ -45,33 +45,34 @@
             <i class="fas fa-angle-double-right"></i>
           </span>
         </button>
-        <div>
-          <p>¿Aún no estás registrado?</p>
+        <!-- Inicio Registro -->
+        <div class="container-modal">
+          <p class="modalTxt">¿Aún no estás registrado?</p>
           <!-- Button trigger modal Register -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRegister">
+          <button type="button" class="btn btn-primary boton-modal" data-toggle="modal" data-target="#modalRegister">
             Registrate
           </button>
-          <!-- Modal -->
-          <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalRegisterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="modalRegisterTitle">Bienvenido</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="modalRegisterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalRegisterTitle">Bienvenido</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="containerModal">
+                  <label for="login-user" class="form-label">Usuario</label>
+                  <input id="loginUser" class="form-control" type="email" placeholder="Email" />
+                  <label for="login-pass" class="form-label">Contraseña</label>
+                  <input id="loginPass" class="form-control" type="password" />
                 </div>
-                <div class="modal-body">
-                  <div class="containerModal">
-                    <label for="login-user" class="form-label">Usuario</label>
-                    <input id="loginUser" class="form-control" type="email" placeholder="Email" />
-                    <label for="login-pass" class="form-label">Contraseña</label>
-                    <input id="loginPass" class="form-control" type="password" />
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" onclick="register()" data-dismiss="modal">REGISTRARME</button>
-                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="register()" data-dismiss="modal">REGISTRARME</button>
               </div>
             </div>
           </div>
@@ -86,7 +87,7 @@
         </button>
         <button class="btn" id="loginGoogle" onclick="loginGoogle()">
           <span class="icon">
-            <i class="fab fa-google"></i>
+            <i class="fab fa-google-plus-g"></i>
           </span>
           <span>Iniciar con Google</span>
         </button>
@@ -108,7 +109,7 @@
         </div>
       </button>
       <!-- Título de la barra -->
-      <a class="navbar-brand" href="#">PERFIL</a>
+      <a id="pageTitle" class="navbar-brand" href="#">CONECTAPP ALUMNOS</a>
     </div>
     <!-- Contenido -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
@@ -149,10 +150,10 @@
   </nav>
   <!-- Perfil de usuario -->
   <section id="profile" class="container-fluid d-none">
-    <div class="small-12 medium-2 large-2 columns">
+    <article class="small-12 medium-2 large-2 columns row">
       <div class="circle">
         <!-- User Profile Image -->
-        <img class="profile-pic" src="">
+        <img id="profilePic" class="profile-pic" src="">
         <!-- Default Image -->
         <!-- <i class="fa fa-user fa-5x"></i> -->
       </div>
@@ -160,7 +161,37 @@
         <i class="fa fa-camera upload-button"></i>
         <input class="file-upload" type="file" accept="image/*" />
       </div>
-    </div>
+    </article>
+    <article class="userInfo row">
+      <form class="form-horizontal profile-update">
+        <div class="form-group clearfix">
+          <div class="col-sm-12 control-label">
+            <label for="profile_name">NOMBRE</label>
+            <!-- Acá va el nombre -->
+          </div>
+          <label for="profile_email">CORREO</label>
+          <div id="userEmail" class="col-sm-12 profile-email clearfix">
+          </div>
+        </div>
+        <div class="form-group clearfix">
+          <div class="col-sm-12 control-label">
+            <label for="profile_password">CAMBIO DE CONTRASEÑA</label>
+            <span class="text-helper">Sólo si estás realmente seguro</span>
+          </div>
+          <div class="col-sm-12">
+            <input type="password" class="form-control" id="profile_password" name="Change password" placeholder="Ingresa tu nueva contraseña">
+          </div>
+        </div>
+        <div class="form-group clearfix">
+          <div class="col-sm-12">
+            <input type="password" class="form-control" id="profile_password_confirm" name="Confirm password" placeholder="Repite tu contraseña">
+          </div>
+        </div>
+      </form>
+      <div id="saveChanges" class="form-btns clearfix" onclick="">
+        <div class="btn btn-primary">GUARDAR</div>
+      </div>
+    </article>
   </section>
 
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
