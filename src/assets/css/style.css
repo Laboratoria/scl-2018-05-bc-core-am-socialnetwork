@@ -19,7 +19,7 @@ body {
 
 .navbar-brand {
   width: 100%;
-  margin: 0;
+  margin-left: 15px;
   align-content: center;
   text-align: center;
   font-size: 18px;
@@ -205,6 +205,116 @@ img {
   color: #999;
 }
 
+.form-horizontal .control-label {
+  text-align: left !important;
+}
+
+.form-group .control-label label {
+  font-weight: 600;
+  margin-bottom: 0px;
+  padding-top: 5px;
+}
+
+.form-control {
+  border-radius: 22px;
+  border: 1px solid transparent;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 15px;
+  -webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
+  -webkit-appearance: none;
+}
+
+.form-control:focus {
+  border: 1px solid #00BCD4;
+  -webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+
+.text-helper {
+  margin-top: 0.2em;
+  font-size: 0.8em;
+  display: block;
+}
+
+.form-group p {
+  margin: 0;
+}
+
+/** PROFILE **/
+
+.profile-holder label,
+.profile-name h3,
+.notification-legend p,
+.settings-legend p {
+  color: #333333;
+  font-weight: 600;
+}
+
+.profile-update .control-label {
+  margin-bottom: 1em;
+}
+
+.profile-update .profile-email p,
+.profile-update .profile-email .btn {
+  display: inline-block;
+  margin: 0;
+}
+
+.profile-update .profile-email .btn {
+  margin-left: 10px;
+  border-radius: 25px;
+  background-color: transparent;
+  color: #888888;
+  border: 1px solid #888888;
+  padding: 5px 10px;
+  width: auto;
+}
+
+.profile-update .profile-email .btn:active:focus,
+.profile-update .profile-email .btn:active:hover {
+  background-color: #888888;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
+.profile-picture {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #00BCD4;
+  text-align: center;
+  line-height: 75px;
+  color: #FFF;
+  margin: 0 auto;
+}
+
+.form-btns {
+  text-align: center;
+  padding-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.form-btns .btn {
+  border-radius: 25px;
+  background-color: transparent;
+  color: #00BCD4;
+  border: 2px solid #00BCD4;
+}
+
+.form-btns .btn:active {
+  background-color: #00BCD4;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+}
+
+.form-btns .btn:active:focus,
+.form-btns .btn:active:hover {
+  background-color: #00BCD4;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+}
 
 /* Estilo Login */
 .logo{
@@ -278,9 +388,6 @@ img {
   text-align: center;
   font-weight: bold;
 }
-
-
-
 
 /* Media queries */
 @media (min-width: 768px){
