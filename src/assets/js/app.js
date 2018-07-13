@@ -64,6 +64,21 @@ function loginFacebook() {
     });
 }
 
+function loginGoogle() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  provider.setCustomParameters({
+    'display': 'popup'
+  });
+  firebase.auth().signInWithPopup(provider)
+    .then(()=> {
+      console.log('Login con Google');
+    })
+    .catch((error) => {
+      console.log('Error de Firebase > ' + error.code);
+      console.log('Error de Firebase, mensaje > ' + error.message);
+    });
+}
+
 function logout() {
   firebase.auth().signOut()
     .then(()=> {
