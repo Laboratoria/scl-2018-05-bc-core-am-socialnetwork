@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ConectApp Alumnos</title>
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-light">
+    <div class="top">
+      <!-- Botón que despliega menú -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon3">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <!-- Título de la barra -->
+      <a class="navbar-brand" href="#">NOMBRE ALUMNO
+        <i class="fas fa-cog float-right"></i>
+      </a>
+    </div>
+    <!-- Contenido -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <!-- con class active el elemento oscurece su color (agregar como evento con js) -->
+          <a class="nav-link" href="#">
+            <i class="far fa-star"></i>ACTIVIDADES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="far fa-calendar-alt"></i>CALENDARIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-chalkboard-teacher"></i>CONSEJO DE CURSO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="far fa-comments"></i>CHAT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-users"></i>TABLERO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-user-graduate"></i>PERFIL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-arrow-circle-left"></i>CERRAR SESIÓN</a>
+        </li>
+      </ul>
+      <img src="assets/img/logo-noBack.png" alt="logo-noBack">
+    </div>
+  </nav>
+
+  <!-- Perfil de usuario -->
+  <section id="profile" class="container-fluid profile">
+    <div class="photo">
+      <input type="file" accept="image/*">
+      <div class="photo__helper">
+        <div class="photo__frame photo__frame--circle">
+          <canvas class="photo__canvas"></canvas>
+          <div class="message is-empty">
+            <p class="message--mobile">Tap here to select your picture.</p>
+          </div>
+          <div class="message is-loading">
+            <i class="fa fa-2x fa-spin fa-spinner"></i>
+          </div>
+          <div class="message is-dragover">
+            <i class="fa fa-2x fa-cloud-upload"></i>
+            <p>Drop your photo</p>
+          </div>
+        </div>
+      </div>
+      <div class="photo__options hide">
+        <div class="photo__zoom">
+          <input type="range" class="zoom-handler">
+        </div>
+        <a href="javascript:;" class="remove">
+          <i class="fa fa-trash"></i>
+        </a>
+      </div>
+    </div>
+    <button type="button" id="previewBtn">Preview</button>
+    <img src="" alt="" class="preview preview--rounded">
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/picture.js"></script>
+</body>
+
+</html>
