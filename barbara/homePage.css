@@ -1,0 +1,94 @@
+body {
+  background-color: #A7D9A2;
+}
+/*Estilo login*/
+#logInPage {
+  display: block;
+}
+
+#loginBody {
+  background-color: #A7D9A2;
+  align-items: center;
+}
+
+#logo {
+  background-color: #59A686;
+}
+
+#loginFacebookBtn, #loginGoogleBtn {
+  border-radius: 50%;
+  border-color: transparent;
+  border-width: 0px;
+  padding: 0px;
+}
+
+/*Estilo Registro*/
+#registerPage{
+  display: none;
+}
+.col-12{
+  background-color: #8FEA86;
+}
+#form_section{
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87);
+}
+#title{
+  font-size: large;
+}
+#inputs_div{
+
+}
+.nombre_input{
+  text-align: left;
+  margin-bottom: 0%;
+  margin-top: 3%;
+  font-size: small;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.input_place{
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  border-width: 0px;
+  margin-top: 0%;
+}
+
+#validation_div{
+  text-align: center;
+  padding: 0%;
+ 
+}
+
+.error{
+  color: red;
+  font-size: x-small;
+}
+
+#rememeber_check{
+  display: inline; 
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#terms_check{
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.check_text{
+  display: inline;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+/*Estilo homePage*/
+
+#homePage {
+  display: none;
+}

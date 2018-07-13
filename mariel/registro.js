@@ -67,8 +67,6 @@ rememberMe.addEventListener('change', saveLocalUser, false);
       window.localStorage.setItem('edad', JSON.stringify(userAge.value));
     }
   }
-
-
 			
 //llevarme a la siguiente ventana con el boton 
 createAcountBtn.addEventListener('click', () => { 
