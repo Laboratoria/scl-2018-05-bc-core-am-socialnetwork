@@ -5,6 +5,7 @@ window.onload = () => {
       loggedOut.style.display = 'none';
       loggedIn.style.display = 'block';
       console.log('User > ' + JSON.stringify(user));
+      showInfo(user);
     } else {
       // No estamos logueados esconder 'Cerrar Sesión'
       loggedOut.style.display = 'block';
@@ -46,6 +47,7 @@ function logout() {
   firebase.auth().signOut()
     .then(() => {
       console.log('chao');
+      profile.classList.add('d-none');
     })
     .catch();
 };
