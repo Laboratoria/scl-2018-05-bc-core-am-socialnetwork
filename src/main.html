@@ -33,9 +33,7 @@
         </div>
       </button>
       <!-- Título de la barra -->
-      <a class="navbar-brand" href="#">NOMBRE ALUMNO
-        <i class="fas fa-cog float-right"></i>
-      </a>
+      <a class="navbar-brand" href="#">PERFIL</a>
     </div>
     <!-- Contenido -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
@@ -76,35 +74,19 @@
   </nav>
 
   <!-- Perfil de usuario -->
-  <section id="profile" class="container-fluid profile">
-    <div class="photo">
-      <input type="file" accept="image/*">
-      <div class="photo__helper">
-        <div class="photo__frame photo__frame--circle">
-          <canvas class="photo__canvas"></canvas>
-          <div class="message is-empty">
-            <p class="message--mobile">Tap here to select your picture.</p>
-          </div>
-          <div class="message is-loading">
-            <i class="fa fa-2x fa-spin fa-spinner"></i>
-          </div>
-          <div class="message is-dragover">
-            <i class="fa fa-2x fa-cloud-upload"></i>
-            <p>Drop your photo</p>
-          </div>
+  <section id="profile" class="container-fluid">
+      <div class="small-12 medium-2 large-2 columns">
+        <div class="circle">
+          <!-- User Profile Image -->
+          <img class="profile-pic" src="assets/img/facebook-blank-face-blank-300x225-300x225-1.jpeg">
+          <!-- Default Image -->
+          <!-- <i class="fa fa-user fa-5x"></i> -->
+        </div>
+        <div class="p-image">
+          <i class="fa fa-camera upload-button"></i>
+          <input class="file-upload" type="file" accept="image/*"/>
         </div>
       </div>
-      <div class="photo__options hide">
-        <div class="photo__zoom">
-          <input type="range" class="zoom-handler">
-        </div>
-        <a href="javascript:;" class="remove">
-          <i class="fa fa-trash"></i>
-        </a>
-      </div>
-    </div>
-    <button type="button" id="previewBtn">Preview</button>
-    <img src="" alt="" class="preview preview--rounded">
   </section>
 
   <!-- Scripts -->
@@ -115,7 +97,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/picture.js"></script>
 </body>
 
 </html>
