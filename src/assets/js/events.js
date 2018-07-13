@@ -4,3 +4,8 @@ $(document).ready(function() {
     $(this).toggleClass('open');
   });
 });
+
+// Cambio de páginas
+function toProfilePage() {
+  profile.classList.remove('d-none');
+}
