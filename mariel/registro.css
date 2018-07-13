@@ -1,20 +1,9 @@
-body {
-  background-color: #A7D9A2;
-  text-align: center;
-  align-items: center;
-}
-
-/*Estilo Login*/
-
-#logIn {
-  display: block; 
-}
-
-/*Estilo registro*/
 #register_section{
   display: block;
 }
-
+.col-12{
+  background-color: #8FEA86;
+}
 #form_section{
   text-align: center;
   font-family: Roboto;
@@ -71,10 +60,4 @@ body {
   margin-top: auto;
   margin-bottom: auto;
 
-}
-
-/*Estilo posts*/
-
-#homePage {
-  display: none;
 }
