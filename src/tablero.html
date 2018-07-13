@@ -13,71 +13,26 @@
    <link rel="stylesheet" href="tstyle.css">
 </head>
 <body>
-    <!-- comienzo de container-fluid -->
-  <div class="container-fluid">
-    <!-- comienzo row -->
-    <div class="row">
-       <!-- comienzo col -->
-      <div class="col-12">
-              <!-- comienzo de tarjeta profesor pensamiento -->
-          <div class="card">
-              <div class="card text-white bg-info">
-                  <div class="card-header">
-                      <img class="card-img img-thumbnail" src="assets/img/Facebook-no-profile-picture-icon-620x389.jpg" alt="Card image cap">
-                      <h5 class="card-title">Profesora Carolina</h5>
-                  </div>
-                  <div class="card-body">
-                    <textarea name="text" id="comment" placeholder="Escribe aquí..."></textarea>
-                    <button type="button" class="btn btn-success">Publicar</button>
-                  </div>
-                  <div class="card-footer">
-                    <p class="card-minutes">Hace 3 minutos</p>
-                    <i class="fab fa-earlybirds"></i><i class="fas fa-edit icon"></i><i class="fas fa-trash"></i>
-                  </div>
-                </div>
 
 
+ <div>
+    <div id="messageContainer">
 
-
-
-
-
-
-        <!-- tarjeta profesor -->
-          <div class="card">
-              <div class="card text-white bg-info">
-                  <div class="card-header">
-                      <img class="card-img img-thumbnail" src="assets/img/Facebook-no-profile-picture-icon-620x389.jpg" alt="Card image cap">
-                      <h5 class="card-title">Profesora Carolina</h5>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">Traer la cartulina mañana miechica!</p>
-                  </div>
-                  <div class="card-footer">
-                    <p class="card-minutes">Hace 3 minutos</p>
-                    <i class="fas fa-adjust"></i><i class="fas fa-address-book icon"></i><i class="fab fa-accusoft"></i>
-                  </div>
-                </div>
-
-       
-       
-       
-       
-        <!-- fin de col-12 -->
-      </div>
-     <!-- fin de row -->
     </div>
-     
+    <input id="messageArea" type="text">
+    <input id="sendButton" type="button" value="SEND" onclick="sendMessage()">
+ </div>
 
 
-   <!-- fin de container fluid -->
-  </div>
-  
+
+
+
   <!-- bootsrap -->
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
+<!-- propio js -->
+<script src="tab.js"></script>
 </body>
 </html>
 
