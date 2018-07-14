@@ -64,15 +64,17 @@
                 </button>
               </div>
               <div class="modal-body">
-                <div class="containerModal">
+                <div class="containerModal">                 
                   <label for="login-user" class="form-label">Usuario</label>
+                  <input id="nickname" class="form-control" type="text" placeholder="Nombre Usuario" />
+                  <label for="login-mail" class="form-label">Correo Electronico</label>
                   <input id="loginUser" class="form-control" type="email" placeholder="Email" />
                   <label for="login-pass" class="form-label">Contraseña</label>
-                  <input id="loginPass" class="form-control" type="password" />
+                  <input id="loginPass" class="form-control" type="password" placeholder="Contraseña"/>
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onclick="register()" data-dismiss="modal">REGISTRARME</button>
+                <button type="button" class="btn btn-register" onclick="register()" data-dismiss="modal">REGISTRARME</button>
               </div>
             </div>
           </div>
