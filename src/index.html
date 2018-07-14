@@ -172,12 +172,13 @@
         <!-- User Profile Image -->
         <img id="profilePic" class="profile-pic" src="">
       </div>
-      <div id="cameraIcon" class="custom-file">
-        <input type="file" class="custom-file-input" id="customFile">
-        <label class="custom-file-label" for="customFile">
-          <i class="fa fa-camera upload-button"></i>
-        </label>
-      </div>
+      <form id="cameraIcon" action="#">
+        <button onclick="changePhoto()"><i class="fas fa-camera"></i></button>
+        <div id="photoChange" class="input-file-container d-none">
+          <input id="updatePic" class="input-file" id="my-file" type="file">
+        </div>
+        <p class="file-return"></p>
+      </form>
     </article>
     <article class="userInfo row">
       <form>
@@ -193,7 +194,7 @@
             <input id="userEmail" type="text" readonly class="form-control-plaintext">
           </div>
         </div>
-
+        <!-- 
         <div class="form-group clearfix">
           <div class="col-sm-12 control-label">
             <label for="profile_password">CAMBIO DE CONTRASEÑA</label>
@@ -209,10 +210,10 @@
           </div>
         </div>
       </form>
-
-      <div id="saveChanges" class="form-btns clearfix" onclick="">
-        <div class="btn btn-primary">GUARDAR</div>
-      </div>
+ -->
+        <div id="saveChanges"  class="form-btns clearfix d-none">
+          <div class="btn btn-primary" onclick="updatePhoto()">GUARDAR</div>
+        </div>
     </article>
   </section>
 

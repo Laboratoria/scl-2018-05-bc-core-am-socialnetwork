@@ -38,3 +38,9 @@ function toWallPage() {
   wall.classList.remove('d-none');
   pageTitle.innerHTML = 'TABLERO';
 }
+
+// Foto de perfil 
+function changePhoto() {
+  photoChange.classList.remove('d-none');
+  saveChanges.classList.remove('d-none');
+}

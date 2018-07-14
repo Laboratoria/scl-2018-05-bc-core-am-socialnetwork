@@ -20,6 +20,19 @@ $(document).ready(function() {
   });
 });
 */
+// Cambiar foto de perfil
+function updatePhoto() {
+  let user = firebase.auth().currentUser;
+  user.updateProfile({
+    photoURL: updatePic.value
+  }).then(function() {
+    console.log('Cambios guardados');
+    saveChanges.innerHTML = 'Cambios guardados';
+    profilePic.src = user.photoURL;
+  }).catch(function(error) {
+    console.log('Ha ocurrido un error');
+  });
+};
 
 // Mostrar información del usuario
 function showInfo() {
@@ -39,15 +52,3 @@ function showInfo() {
   userEmail.value = mail;
 }
 
-function updateProfile() {
-  let user = firebase.auth().currentUser;
-  user.updateProfile({
-    displayName: 'Jane Q. User',
-    photoURL: profilePicture.src
-  }).then(function() {
-    console.log('Cambio guardados');
-    saveChanges.innerHTML = 'Cambios guardados';
-  }).catch(function(error) {
-    console.log('Ha ocurrido un error');
-  });
-};

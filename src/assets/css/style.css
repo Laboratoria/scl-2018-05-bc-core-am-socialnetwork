@@ -156,6 +156,7 @@ body {
 /* Estilos del Perfil de Usuario */
 
 #profile {
+  padding-top: 7vh;
   width: 80%;
 }
 
@@ -187,31 +188,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.p-image {
-  position: absolute;
-  top: 110px;
-  right: 150px;
-  color: #666666;
-  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-}
-
-.p-image:hover {
-  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-}
-
-.upload-button {
-  font-size: 1.2em;
-}
-
-.upload-button:hover {
-  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-  color: #999;
-}
-
-.form-horizontal .control-label {
-  text-align: left !important;
 }
 
 .form-group .control-label label {
@@ -248,14 +224,6 @@ img {
 }
 
 /** PROFILE **/
-
-.profile-holder label,
-.profile-name h3,
-.notification-legend p,
-.settings-legend p {
-  color: #333333;
-  font-weight: 600;
-}
 
 .control-label {
   margin-bottom: 1em;
