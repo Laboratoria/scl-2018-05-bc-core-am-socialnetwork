@@ -15,6 +15,7 @@ body {
   height: 7vh;
   background-color: #82ccd5;
   z-index: 2;
+  position: fixed;
 }
 
 .navbar-brand {
@@ -124,7 +125,7 @@ body {
   width: 70%;
   padding: 0;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   top: 0;
   margin-top: 7vh;
   background-color: white;
@@ -155,12 +156,12 @@ body {
 /* Estilos del Perfil de Usuario */
 
 #profile {
-  width: 50%;
+  width: 80%;
 }
 
 .profile-pic {
-  max-width: 200px;
-  max-height: 200px;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -168,14 +169,18 @@ body {
   display: none;
 }
 
+#customFile {
+  visibility: hidden;
+}
+
 .circle {
+  margin: 0 auto;
+  margin-top: 20px;
   border-radius: 1000px !important;
   overflow: hidden;
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 72px;
-  border: 8px solid rgba(255, 255, 255, 0.7);
+  width: 125px;
+  height: 125px;
+  border: 5px solid rgba(255, 255, 255, 0.7);
   background-color: #fafafa;
 }
 
@@ -186,8 +191,8 @@ img {
 
 .p-image {
   position: absolute;
-  top: 200px;
-  right: 100px;
+  top: 110px;
+  right: 150px;
   color: #666666;
   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 }
@@ -252,44 +257,11 @@ img {
   font-weight: 600;
 }
 
-.profile-update .control-label {
+.control-label {
   margin-bottom: 1em;
 }
 
-.profile-update .profile-email p,
-.profile-update .profile-email .btn {
-  display: inline-block;
-  margin: 0;
-}
-
-.profile-update .profile-email .btn {
-  margin-left: 10px;
-  border-radius: 25px;
-  background-color: transparent;
-  color: #888888;
-  border: 1px solid #888888;
-  padding: 5px 10px;
-  width: auto;
-}
-
-.profile-update .profile-email .btn:active:focus,
-.profile-update .profile-email .btn:active:hover {
-  background-color: #888888;
-  color: #FFFFFF;
-  border: 1px solid transparent;
-}
-
-.profile-picture {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  background-color: #00BCD4;
-  text-align: center;
-  line-height: 75px;
-  color: #FFF;
-  margin: 0 auto;
-}
-
+/* Botón que guarda los cambios en el perfil */
 .form-btns {
   text-align: center;
   padding-top: 1.5em;
@@ -317,85 +289,162 @@ img {
 }
 
 /* Estilo Login */
-.logo{
+
+.logo {
   padding: 10%;
   width: 90%;
 }
-.register{
+
+.register {
   margin-top: 0%;
   padding: 0%;
 }
-.inputRegister{
+
+.inputRegister {
   margin: 1% 4% 0% 7%;
   width: 90%;
 }
-.icon-input{
+
+.icon-input {
   background-color: transparent;
 }
-.input-group-text{
+
+.input-group-text {
   background-color: #82CCD5;
   border-radius: 1rem;
 }
-.form-control{
+
+.form-control {
   background-color: rgb(176, 201, 204);
 }
-#login{
+
+#login {
   width: 90%;
   margin: 3% 4% 0% 7%;
   border-radius: 2rem;
   background-color: #82CCD5;
   color: #333333;
 }
-#login:hover{
-  background-color: rgb(176, 201, 204) ;
+
+#login:hover {
+  background-color: rgb(176, 201, 204);
   color: white;
 }
-.container-modal{
+
+.container-modal {
   margin: 3% 4% 0% 7%;
   text-align: center;
 }
-.boton-modal,.modalTxt{
+
+.boton-modal,
+.modalTxt {
   display: inline;
   font-size: 15px;
 }
-.boton-modal{
+
+.boton-modal {
   padding: 0%;
   background-color: transparent;
   color: #268eff;
   border: none;
 }
-#loginFacebook{
+
+#loginFacebook {
   background-color: #3b5998;
   color: white;
   width: 90%;
   margin-bottom: 2%;
   margin-left: 7%;
 }
-#loginFacebook:hover{
+
+#loginFacebook:hover {
   background-color: #526ca1;
 }
-#loginGoogle{
+
+#loginGoogle {
   background-color: #db3236;
   width: 90%;
   margin-left: 7%;
   color: white;
 }
-#loginGoogle:hover{
+
+#loginGoogle:hover {
   background-color: #da4c4e;
 }
+
 /*Estilo Modal*/
-.modal-title{
+
+.modal-title {
   text-align: center;
   font-weight: bold;
 }
 
+/*Cada cajita*/
+
+.card {
+  box-sizing: border-box;
+  margin-top: 2%;
+}
+
+.card-title {
+  display: inline;
+  margin-left: 2%;
+}
+
+.card-body {
+  background-color: white;
+}
+
+.card-text {
+  color: black;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+/*Iconos*/
+
+i {
+  font-size: 20px;
+}
+
+i:hover {
+  color: black;
+}
+
+.icon {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+textarea {
+  width: 100%;
+}
+
+/*Foto Perfil*/
+
+.card-img {
+  border: none;
+  border-radius: 50%;
+  display: inline;
+}
+
+.btn-success {
+  float: right;
+}
+
 /* Media queries */
-@media (min-width: 768px){
-.navbar-collapse {
-  width: 25vw;
-}
-.logo{
-  width: 20%;
-  padding: 2%;
-}
+
+@media (min-width: 768px) {
+  .navbar-collapse {
+    width: 25vw;
+    position: fixed;
+    display: block;
+  }
+
+  .logo {
+    width: 20%;
+    padding: 2%;
+  }
 }

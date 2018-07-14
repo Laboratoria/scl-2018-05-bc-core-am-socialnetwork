@@ -1,3 +1,4 @@
+/* 
 // Cambiar foto de perfil
 $(document).ready(function() {
   var readURL = function(input) {
@@ -18,22 +19,24 @@ $(document).ready(function() {
     $('.file-upload').click();
   });
 });
+*/
 
 // Mostrar información del usuario
 function showInfo() {
   let currentUser;
   let profilePicture;
-  let userMail = firebase.auth().currentUser.email;
+  let mail = firebase.auth().currentUser.email;
   if (firebase.auth().currentUser.displayName !== 'null') {
     currentUser = firebase.auth().currentUser.displayName;
     console.log(currentUser);
-    profilePicture = firebase.auth().currentUser.photoURL;
+    profilePic.src = firebase.auth().currentUser.photoURL;
     console.log(profilePicture);
   } else {
-    profilePicture = profilePicture.src;
+    profilePicture = profilePic.src;
     console.log(profilePicture);
   }
-  userEmail.innerHTML = `<p>${userMail}</p>`;
+  userName.value = currentUser;
+  userEmail.value = mail;
 }
 
 function updateProfile() {
