@@ -1,0 +1,63 @@
+#loginBody {
+  background-color: #A7D9A2;
+  align-items: center;
+}
+h1, h2, h4 {
+  text-align: center;
+}
+#logo {
+  background-color: #59A686;
+}
+
+#loggedOut {
+  margin-top: 5em;
+}
+
+.btn {
+  border-radius: 50%;
+  border-color: transparent;
+  border-width: 0px;
+  padding: 0px;
+  display: inline;
+}
+.btnBlue {
+  background: #00BCD4;
+  border-radius: 2px;
+  color: beige;
+}
+
+.btnBlueEnter {
+  background: #00BCD4;
+  border-radius: 2px;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  color: beige;
+  }
+
+  #btnLoginWith {
+  text-align: center;
+  margin-left: 0px;
+  }
+
+  #containerBtn {
+  text-align: center;
+  }
+  
+  .input_container {
+    margin-bottom: 1em;
+  }
+
+  #div_btn {
+    
+    width: 30%;
+    margin: auto;
+    
+  }
+#register_container {
+margin-top: 4em;
+}
+ 
+.btn_container {
+  margin-top: 1em;
+}
+
