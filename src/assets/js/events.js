@@ -42,5 +42,4 @@ function toWallPage() {
 // Foto de perfil 
 function changePhoto() {
   photoChange.classList.remove('d-none');
-  saveChanges.classList.remove('d-none');
 }

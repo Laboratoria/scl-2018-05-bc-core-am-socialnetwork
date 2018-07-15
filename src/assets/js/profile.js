@@ -21,16 +21,27 @@ $(document).ready(function() {
 });
 */
 // Cambiar foto de perfil
+
+updatePic.addEventListener('change', function(event) {
+  let storageRef = firebase.storage().ref().child(firebase.auth().currentUser.Nb.email + '/profilePic.jpeg');
+  let firstFile = event.target.files[0]; // upload the first file only
+  let uploadTask = storageRef.put(firstFile);
+  console.log(uploadTask);
+  saveChanges.classList.remove('d-none');
+});
+
 function updatePhoto() {
-  let user = firebase.auth().currentUser;
-  user.updateProfile({
-    photoURL: updatePic.value
-  }).then(function() {
-    console.log('Cambios guardados');
-    saveChanges.innerHTML = 'Cambios guardados';
-    profilePic.src = user.photoURL;
-  }).catch(function(error) {
-    console.log('Ha ocurrido un error');
+  firebase.storage().ref().child(firebase.auth().currentUser.Nb.email + '/profilePic.jpeg').getDownloadURL().then(function(url) {
+    firebase.auth().currentUser.updateProfile({
+      photoURL: url
+    }).then(function() {
+      console.log('Cambios guardados');
+      profilePic.src = url;
+      saveChanges.classList.add('d-none');
+      updatePic.classList.add('d-none');
+    }).catch(function(error) {
+      console.log('Ha ocurrido un error' + error);
+    });
   });
 };
 
@@ -50,5 +61,5 @@ function showInfo() {
   }
   userName.value = currentUser;
   userEmail.value = mail;
-}
+};
 
