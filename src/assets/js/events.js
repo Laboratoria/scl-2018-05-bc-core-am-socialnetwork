@@ -9,3 +9,7 @@ $(document).ready(function() {
 function toProfilePage() {
   profile.classList.remove('d-none');
 }
+
+function toChatPage() {
+  chatSection.classList.remove('d-none');
+}
