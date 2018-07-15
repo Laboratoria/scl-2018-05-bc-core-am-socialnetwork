@@ -75,13 +75,7 @@ function toProfilePage() {
   pageTitle.innerHTML = 'PERFIL';
 }
 
-<<<<<<< HEAD
-function toChatPage() {
-  chatSection.classList.remove('d-none');
-}
-=======
 // Foto de perfil 
 cam.addEventListener('click', () => {
   photoChange.classList.remove('d-none');
 });
->>>>>>> upstream/master

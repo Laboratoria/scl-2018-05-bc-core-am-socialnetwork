@@ -24,14 +24,9 @@ function register() {
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue,)
     .then(() => {
       console.log('Usuario registrado');
-<<<<<<< HEAD
       loginUser.value = "";
       loginPass.value = "";
       nickname.value = "";
-=======
-      emailValue = '';
-      passwordValue = '';  
->>>>>>> upstream/master
     })
     .catch((error) => {
       console.log('Error de firebase > ' + error.code);
