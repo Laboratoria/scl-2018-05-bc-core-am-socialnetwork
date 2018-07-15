@@ -4,97 +4,6 @@ body {
   color: #807e7e;
 }
 
-/* Estilo Login */
-
-.logo {
-  padding: 10%;
-  width: 90%;
-}
-
-.register {
-  margin-top: 0%;
-  padding: 0%;
-}
-
-.inputRegister {
-  margin: 1% 4% 0% 7%;
-  width: 90%;
-}
-
-.icon-input {
-  background-color: transparent;
-}
-
-.input-group-text {
-  background-color: #82CCD5;
-  border-radius: 1rem;
-}
-
-.form-control {
-  background-color: rgb(176, 201, 204);
-}
-
-#login {
-  width: 90%;
-  margin: 3% 4% 0% 7%;
-  border-radius: 2rem;
-  background-color: #82CCD5;
-  color: #333333;
-}
-
-#login:hover {
-  background-color: rgb(176, 201, 204);
-  color: white;
-}
-
-.container-modal {
-  margin: 3% 4% 0% 7%;
-  text-align: center;
-}
-
-.boton-modal,
-.modalTxt {
-  display: inline;
-  font-size: 15px;
-}
-
-.boton-modal {
-  padding: 0%;
-  background-color: transparent;
-  color: #268eff;
-  border: none;
-}
-
-#loginFacebook {
-  background-color: #3b5998;
-  color: white;
-  width: 90%;
-  margin-bottom: 2%;
-  margin-left: 7%;
-}
-
-#loginFacebook:hover {
-  background-color: #526ca1;
-}
-
-#loginGoogle {
-  background-color: #db3236;
-  width: 90%;
-  margin-left: 7%;
-  color: white;
-}
-
-#loginGoogle:hover {
-  background-color: #da4c4e;
-}
-
-/*Estilo Modal*/
-
-.modal-title {
-  text-align: center;
-  font-weight: bold;
-}
-
 /* Estilos de la barra de navegación */
 
 .navbar {
@@ -106,12 +15,12 @@ body {
   height: 7vh;
   background-color: #82ccd5;
   z-index: 2;
-  position: fixed;
-  box-shadow: 0px 2px 14px -3px rgba(105,105,105,1);
 }
 
 .navbar-brand {
   width: 100%;
+  margin: 0;
+  align-content: center;
   text-align: center;
   font-size: 18px;
 }
@@ -215,7 +124,7 @@ body {
   width: 70%;
   padding: 0;
   z-index: 1;
-  position: fixed;
+  position: absolute;
   top: 0;
   margin-top: 7vh;
   background-color: white;
@@ -243,35 +152,30 @@ body {
   font-size: 18px;
 }
 
-/* Estilos generales de las secciones */
-
-#wall,
-#activities,
-#calendar,
-#council,
-#chat,
-#profile {
-  padding-top: 7vh;
-  width: 90%;
-  min-height: 100vh;
-}
-
 /* Estilos del Perfil de Usuario */
 
+#profile {
+  width: 50%;
+}
+
 .profile-pic {
-  width: 100%;
-  height: auto;
+  max-width: 200px;
+  max-height: 200px;
   display: block;
 }
 
+.file-upload {
+  display: none;
+}
+
 .circle {
-  margin: 0 auto;
-  margin-top: 20px;
   border-radius: 1000px !important;
   overflow: hidden;
-  width: 125px;
-  height: 125px;
-  border: 5px solid rgba(255, 255, 255, 0.7);
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 72px;
+  border: 8px solid rgba(255, 255, 255, 0.7);
   background-color: #fafafa;
 }
 
@@ -280,154 +184,224 @@ img {
   height: auto;
 }
 
-#cameraIcon {
-  padding: 10px;
-}
-
-#cameraIcon button {
-  background: none !important;
-  color: #2b2b2b;
-  border: none;
-  padding: 0 !important;
-  font: inherit;
-  cursor: pointer;
-  vertical-align: middle;
-}
-
-#cameraIcon input {
-  font-size: 13px;
-}
-
-.userInfo form {
+.p-image {
   position: absolute;
-  left: 20px;
-  top: 280px;
-  padding: 0;
+  top: 200px;
+  right: 100px;
+  color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 }
 
-#saveChanges {
-  position: absolute;
-  left: 35%;
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 }
 
-/* Botón que guarda los cambios en el perfil */
+.upload-button {
+  font-size: 1.2em;
+}
 
-.form-btns {
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
+}
+
+
+/* Estilo Login */
+.logo{
+  padding: 10%;
+  width: 90%;
+}
+.register{
+  margin-right: 4%;
+  margin-top: 0%;
+  padding: 0%;
+}
+.inputRegister{
+  margin: 1% 4% 0% 7%;
+  width: 90%;
+}
+.icon-input{
+  background-color: transparent;
+}
+.input-group-text{
+  background-color: #82CCD5;
+  border-radius: 1rem;
+}
+.form-control{
+  background-color: rgb(176, 201, 204);
+}
+#login{
+  width: 90%;
+  margin: 3% 4% 0% 7%;
+  border-radius: 2rem;
+  background-color: #82CCD5;
+  color: #333333;
+}
+#login:hover{
+  background-color: rgb(176, 201, 204) ;
+  color: white;
+}
+.container-modal{
+  margin: 3% 4% 0% 7%;
   text-align: center;
-  padding-top: 1.5em;
-  margin-bottom: 1.5em;
 }
-
-.form-btns .btn {
-  border-radius: 25px;
-  background-color: inherit;
-  color: #82CCD5;
-  border: 2px solid #82CCD5;
-}
-
-.form-btns .btn:active {
-  background-color: #82CCD5;
-  color: #FFFFFF;
-  border: 2px solid transparent;
-}
-
-.form-btns .btn:active:focus,
-.form-btns .btn:active:hover {
-  background-color: #82CCD5;
-  color: #FFFFFF;
-  border: 2px solid transparent;
-}
-
-/*Cada cajita*/
-
-.card {
-  box-sizing: border-box;
-  margin-top: 2%;
-}
-
-.card-title {
+.boton-modal,.modalTxt{
   display: inline;
-  margin-left: 2%;
+  font-size: 15px;
 }
-
-.card-body {
-  background-color: white;
+.boton-modal{
+  padding: 0%;
+  background-color: transparent;
+  color: #268eff;
+  border: none;
 }
-
-.card-text {
-  color: black;
+#loginFacebook{
+  background-color: #3b5998;
+  color: white;
+  width: 90%;
+  margin-bottom: 2%;
+  margin-left: 7%;
 }
-
-.card-footer {
+#loginFacebook:hover{
+  background-color: #526ca1;
+}
+#loginGoogle{
+  background-color: #db3236;
+  width: 90%;
+  margin-left: 7%;
+  color: white;
+}
+#loginGoogle:hover{
+  background-color: #da4c4e;
+}
+/*Estilo Modal*/
+#modalRegister{
+  margin-right: 4%;
+}
+.modal-title{
+  font-weight: bold;
+}
+.form-label{
+  margin-top: 3%;
+  margin-bottom: 0%;
+}
+.modal-footer{
+  display: block;
   text-align: center;
 }
+.btn-register{
+  background-color: #666666;
+  color: white;
+  padding: 2%;
+}
+.btn-register:hover{
+  background-color: #616575;
+}
 
-/*Iconos*/
 
-i {
+
+.chat_window {
+  position: absolute;
+  width: 90%;
+  height: 85%;
+  border-radius: 10px;
+  background-color: #fff;
+  left: 50%;
+  top: 52%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+.top_menu {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 0 15px;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+}
+.top_menu .title {
+  text-align: center;
+  color: #bcbdc0;
   font-size: 20px;
 }
-
-i:hover {
-  color: black;
+.messagesContainer {
+  list-style: none;
+  padding: 20px 10px 0 10px;
+  margin: 0;
+  height: 347px;
+  overflow: scroll;
 }
-
-.icon {
-  margin-left: 3%;
-  margin-right: 3%;
+.messageUser{
+  background: rgb(135, 155, 158);
+  margin-bottom: 0%
 }
-
-textarea {
+.textMessage{
+  color: #2b2b2b;
+}
+.bottom_wrapper {
+  position: relative;
   width: 100%;
+  background-color: #fff;
+  padding: 2%;
+  position: absolute;
+  bottom: 0;
 }
-
+.bottom_wrapper .message_input_wrapper {
+  display: inline-block;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #bcbdc0;
+  width: 75%;
+  position: relative;
+  padding: 0 20px;
+  overflow: hidden;
+  resize:none;
+}
+.bottom_wrapper .message_input_wrapper .message-input {
+  border: none;
+  height: 100%;
+  box-sizing: border-box;
+  width: 75%;
+  position: absolute;
+  outline-width: 0;
+  color: gray;
+}
+.bottom_wrapper .send_message {
+  margin-left: 1%;
+  width: 20% ;
+  display: inline;
+  border-radius: 50px;
+  background-color: #82CCD5;
+  border: 2px solid #82CCD5;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  text-align: center;
+  float: right;
+}
+.bottom_wrapper .send_message:hover {
+  color: #82CCD5;
+  background-color: #fff;
+}
+.bottom_wrapper .send_message .text {
+  font-size: 15px;
+  display: inline-block;
+  line-height: 48px;
+}
 /* Media queries */
-
-@media (min-width: 768px) {
-  .top {
-    width: 75vw;
-    position: fixed;
-    right: 0;
-  }
-  .navbar-collapse {
-    width: 25vw;
-    position: absolute;
-    height: 100vh;
-    background: #fafafa;
-    transition: all 0.5s;
-    z-index: 2;
-    top: -7vh;
-    left: 0;
-    overflow-x: visible;
-    box-shadow: 0;
-  }
-  .collapse:not(.show) {
-    display: block;
-  }
-  .navbar-toggler {
-    display: none;
-  }
-  #wall,
-  #activities,
-  #calendar,
-  #council,
-  #chat,
-  #profile {
-    margin-left: 10px;
-    padding-left: 25vw;
-  }
-  .userInfo form {
-    left: 27vw;
-    width: 60%;
-  }
-  #saveChanges {
-    left: 50%;
-  }
-  #cameraIcon {
-    padding: 20px;
-  }
-  .logo {
-    width: 20%;
-    padding: 2%;
-  }
+@media (min-width: 768px){
+.navbar-collapse {
+  width: 25vw;
 }
+.logo{
+  width: 20%;
+  padding: 2%;
+}
+.chat_window {
+  width: 70%;
+  left: 62%;
+}
+}
+
+
+

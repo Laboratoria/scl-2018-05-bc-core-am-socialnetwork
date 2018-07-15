@@ -20,11 +20,13 @@ window.onload = () => {
 function register() {
   const emailValue = loginUser.value;
   const passwordValue = loginPass.value;
-  firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
+  const userValue = nickname.value; 
+  firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue,)
     .then(() => {
       console.log('Usuario registrado');
-      emailValue = '';
-      passwordValue = '';  
+      loginUser.value = "";
+      loginPass.value = "";
+      nickname.value = "";
     })
     .catch((error) => {
       console.log('Error de firebase > ' + error.code);
