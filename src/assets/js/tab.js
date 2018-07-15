@@ -23,8 +23,8 @@ firebase.database().ref('messages')
                 <h6 class="card-title">Nombre : ${newMessage.val().creatorName}</h6>
                 <p class="card-text">${newMessage.val().text}</p>
             </div>
-            <div id="footerI">
-              
+            <div class="card-footer text-muted">
+            <i class="fab fa-earlybirds"></i><i class="fas fa-comment"></i><i class="fas fa-edit"></i><i class="fas fa-trash"></i>
             </div>
         </div>
         ` + messageContainer.innerHTML;
