@@ -13,23 +13,44 @@
    <link rel="stylesheet" href="tstyle.css">
 </head>
 <body>
+  
+  <!-- div container -->
+<div class="container-fluid">
 
+    <!-- div Row -->
+    <div class="row">
+        <!-- div col-12 -->
+        <div class="col-12">
+         <div class="card">
+           <div class="card-body">
+             <div id="messageContainer"></div>
+           </div>
+         </div>
+         <!-- fin de col-12 -->
+       </div>
+       <!-- fin de row -->
+     </div>
 
-
-
-<div class="card w-75">
-  <div class="card-body">
-     <input id="messageArea"class="form-control" type="text">
-     <input id="sendButton" type="button" value="SEND" onclick="sendMessage()">
+  <!-- div row -->
+ <div class="row">
+   <!-- div col-12 -->
+   <div class="col-12">
+     <!-- Caja de comentarios -->
+     <div class="card">
+       <div class="card-body">
+         <input id="messageArea"class="form-control" type="text" placeholder="Escribe tu mensaje">
+         <input id="sendButton" type="button" value="Publicar" onclick="sendMessage()">
+       </div>
+     </div>
+        <!-- fin de col 12 -->
+   </div>
+     <!-- fin de row -->
   </div>
-</div>
 
-<div class="card w-75">
-  <div class="card-body">
-    <div id="messageContainer"></div>
-  </div>
-</div>
 
+
+<!-- fin de container fluid -->
+</div>
 
 <!-- firebase -->
 

@@ -1,8 +1,6 @@
-
-
 //mensajes
 firebase.database().ref('messages')
-        .limitToLast(20) // Filtro para no obtener todos los mensajes
+        .limitToLast(5) // Filtro para no obtener todos los mensajes
         .once('value')
         .then((messages)=>{
             console.log("Mensajes > "+JSON.stringify(messages));
@@ -11,16 +9,22 @@ firebase.database().ref('messages')
 
         });
 
-//Acá comenzamos a escuchar por nuevos mensajes usando el evento
+//Acá comenzamos a escuchar por 
 //on child_added
 firebase.database().ref('messages')
-    .limitToLast(100)
+    .limitToLast(5)
     .on('child_added', (newMessage)=>{
         messageContainer.innerHTML = `
-        <div class="card w-75">
+        <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Nombre : ${newMessage.val().creatorName}</h5>
+                <div class="col-1 avatar">
+                    <img class="img-fluid img-rounded" src=${newMessage.creatorAvatar}/>
+                </div>
+                <h6 class="card-title">Nombre : ${newMessage.val().creatorName}</h6>
                 <p class="card-text">${newMessage.val().text}</p>
+            </div>
+            <div id="footerI">
+              
             </div>
         </div>
         ` + messageContainer.innerHTML;
@@ -39,3 +43,7 @@ function sendMessage(){
             text : messageAreaText
         });
     }
+
+
+    
+
