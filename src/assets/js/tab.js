@@ -17,8 +17,14 @@ firebase.database().ref('messages')
     messageContainer.innerHTML = `
         <div class="card w-75">
             <div class="card-body">
-                <h5 class="card-title">Nombre : ${newMessage.val().creatorName}</h5>
+                <div class="col-1 avatar">
+                    <img class="img-fluid img-rounded" src=${newMessage.creatorAvatar}/>
+                </div>
+                <h6 class="card-title">Nombre : ${newMessage.val().creatorName}</h6>
                 <p class="card-text">${newMessage.val().text}</p>
+            </div>
+            <div id="footerI">
+              
             </div>
         </div>
         ` + messageContainer.innerHTML;
