@@ -50,7 +50,7 @@
           <p class="modalTxt">¿Aún no estás registrado?</p>
           <!-- Button trigger modal Register -->
           <button type="button" class="btn btn-primary boton-modal" data-toggle="modal" data-target="#modalRegister">
-            Registrate
+            REGÍSTRATE
           </button>
         </div>
         <!-- Modal -->
@@ -99,11 +99,11 @@
 
   <!-- Barra de navegación -->
   <nav id="loggedIn" class="navbar navbar-light">
-    <div class="top">
+    <div class="top md-col-9">
       <!-- Botón que despliega menú -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
         aria-expanded="false" aria-label="Toggle navigation">
-        <div class="animated-icon3">
+        <div id="animatedBtn" class="animated-icon3">
           <span></span>
           <span></span>
           <span></span>
@@ -111,32 +111,32 @@
         </div>
       </button>
       <!-- Título de la barra -->
-      <a class="navbar-brand" href="#">PERFIL</a>
+      <a id="pageTitle" class="navbar-brand align-middle" href="#">CONECTAPP ALUMNOS</a>
     </div>
     <!-- Contenido -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    <div class="collapse navbar-collapse md-col-3" id="navbarSupportedContent1">
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
+          <a class="nav-link" href="#" onclick="toWallPage()">
+            <i class="fas fa-users"></i>TABLERO</a>
+        </li>
+        <li class="nav-item">
           <!-- con class active el elemento oscurece su color (agregar como evento con js) -->
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#" onclick="toActivitiesPage()">
             <i class="far fa-star"></i>ACTIVIDADES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#" onclick="toCalendarPage()">
             <i class="far fa-calendar-alt"></i>CALENDARIO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#" onclick="toCouncilPage()">
             <i class="fas fa-chalkboard-teacher"></i>CONSEJO DE CURSO</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" onclick="toChatPage()">
             <i class="far fa-comments"></i>CHAT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-users"></i>TABLERO</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" onclick="toProfilePage()">
@@ -151,6 +151,7 @@
     </div>
   </nav>
 
+<<<<<<< HEAD
   <!-- Perfil de usuario -->
   <section id="profile" class="container-fluid d-none">
     <div class="small-12 medium-2 large-2 columns">
@@ -159,14 +160,25 @@
         <img class="profile-pic" src="">
         <!-- Default Image -->
         <!-- <i class="fa fa-user fa-5x"></i> -->
+=======
+  <!-- Tablero -->
+  <section id="wall" class="sections md-col-9 d-none">
+    <div class="card w-75">
+      <div class="card-body">
+        <input id="messageArea" class="form-control" type="text">
+        <input id="sendButton" type="button" value="SEND" onclick="sendMessage()">
+>>>>>>> upstream/master
       </div>
-      <div class="p-image">
-        <i class="fa fa-camera upload-button"></i>
-        <input class="file-upload" type="file" accept="image/*" />
+    </div>
+
+    <div class="card w-75">
+      <div class="card-body">
+        <div id="messageContainer"></div>
       </div>
     </div>
   </section>
 
+<<<<<<< HEAD
   <!-- Inicio Chat-->
   <section class="chat_window d-none" id="chatSection">
     <div class="top_menu">
@@ -185,6 +197,65 @@
     </div>
   </section>
   <!-- Fin Chat -->
+=======
+  <!-- Actividades -->
+  <section id="activities" class="sections md-col-9 d-none">
+    <h1>Hola aquí van las actividades xD</h1>
+  </section>
+
+  <!-- Calendario -->
+  <section id="calendar" class="sections md-col-9 d-none">
+    <h1>Hola aquí va un calendario bonito
+      <3</h1>
+  </section>
+
+  <!-- Consejo de Curso -->
+  <section id="council" class="sections md-col-9 d-none">
+    <h1>Profe, ponga acá lo que quiera xD</h1>
+  </section>
+
+  <!-- Chat -->
+  <section id="chat" class="sections md-col-9 d-none">
+    <h1>Acá se mandan los mensajes xD</h1>
+  </section>
+
+  <!-- Perfil de usuario -->
+  <section id="profile" class="container-fluid md-col-9 sections d-none">
+    <article class="small-12 medium-2 large-2">
+      <div class="circle row">
+        <!-- User Profile Image -->
+        <img id="profilePic" class="profile-pic" src="">
+      </div>
+      <form id="cameraIcon" action="#" class="float-left row">
+        <button id="cam">
+          <i class="fas fa-camera"></i>
+        </button>
+        <div id="photoChange" class="input-file-container d-none">
+          <input id="updatePic" accept="image/*" class="input-file" id="my-file" type="file" capture="camera">
+        </div>
+      </form>
+    </article>
+    <article class="userInfo small-12 medium-2 large-2 row">
+      <form>
+        <div class="form-group row">
+          <label for="userName" class="col-sm-2 col-form-label">NOMBRE</label>
+          <div class="col-sm-10">
+            <input id="userName" type="text" readonly class="form-control-plaintext">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="userEmail" class="col-sm-2 col-form-label">CORREO</label>
+          <div class="col-sm-10">
+            <input id="userEmail" type="text" readonly class="form-control-plaintext">
+          </div>
+        </div>
+        <div id="saveChanges" class="form-btns row d-none">
+          <div class="btn btn-primary" onclick="updatePhoto()">GUARDAR</div>
+        </div>
+      </form>
+    </article>
+  </section>
+>>>>>>> upstream/master
 
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
