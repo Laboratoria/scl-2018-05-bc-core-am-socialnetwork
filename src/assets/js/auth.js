@@ -21,12 +21,12 @@ function register() {
   const emailValue = loginUser.value;
   const passwordValue = loginPass.value;
   const userValue = nickname.value; 
-  firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue,)
+  firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
       console.log('Usuario registrado');
-      loginUser.value = "";
-      loginPass.value = "";
-      nickname.value = "";
+      loginUser.value = '';
+      loginPass.value = '';
+      nickname.value = '';
     })
     .catch((error) => {
       console.log('Error de firebase > ' + error.code);
