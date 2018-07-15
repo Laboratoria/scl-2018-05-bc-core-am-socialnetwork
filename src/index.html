@@ -50,7 +50,7 @@
           <p class="modalTxt">¿Aún no estás registrado?</p>
           <!-- Button trigger modal Register -->
           <button type="button" class="btn btn-primary boton-modal" data-toggle="modal" data-target="#modalRegister">
-            Registrate
+            REGÍSTRATE
           </button>
         </div>
         <!-- Modal -->
@@ -101,7 +101,7 @@
       <!-- Botón que despliega menú -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
         aria-expanded="false" aria-label="Toggle navigation">
-        <div class="animated-icon3">
+        <div id="animatedBtn" class="animated-icon3">
           <span></span>
           <span></span>
           <span></span>
@@ -116,25 +116,25 @@
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
+          <a class="nav-link" href="#" onclick="toWallPage()">
+            <i class="fas fa-users"></i>TABLERO</a>
+        </li>
+        <li class="nav-item">
           <!-- con class active el elemento oscurece su color (agregar como evento con js) -->
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#" onclick="toActivitiesPage()">
             <i class="far fa-star"></i>ACTIVIDADES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#" onclick="toCalendarPage()">
             <i class="far fa-calendar-alt"></i>CALENDARIO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#" onclick="toCouncilPage()">
             <i class="fas fa-chalkboard-teacher"></i>CONSEJO DE CURSO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#" onclick="toChatPage()">
             <i class="far fa-comments"></i>CHAT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" onclick="toWallPage()">
-            <i class="fas fa-users"></i>TABLERO</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" onclick="toProfilePage()">
@@ -165,6 +165,26 @@
     </div>
   </section>
 
+  <!-- Actividades -->
+  <section id="activities" class="d-none">
+    <h1>Hola aquí van las actividades xD</h1>
+  </section>
+
+  <!-- Calendario -->
+  <section id="calendar" class="d-none">
+    <h1>Hola aquí va un calendario bonito <3</h1>
+  </section>
+
+  <!-- Consejo de Curso -->
+  <section id="council" class="d-none">
+    <h1>Profe, ponga acá lo que quiera xD</h1>
+  </section>
+
+  <!-- Chat -->
+  <section id="chat" class="d-none">
+    <h1>Acá se mandan los mensajes xD</h1>
+  </section>
+
   <!-- Perfil de usuario -->
   <section id="profile" class="container-fluid d-none">
     <article class="small-12 medium-2 large-2 columns row">
@@ -173,11 +193,12 @@
         <img id="profilePic" class="profile-pic" src="">
       </div>
       <form id="cameraIcon" action="#">
-        <button onclick="changePhoto()"><i class="fas fa-camera"></i></button>
+        <button id="cam">
+          <i class="fas fa-camera"></i>
+        </button>
         <div id="photoChange" class="input-file-container d-none">
           <input id="updatePic" accept="image/*" class="input-file" id="my-file" type="file" capture="camera">
         </div>
-        <p class="file-return"></p>
       </form>
     </article>
     <article class="userInfo row">
@@ -194,24 +215,7 @@
             <input id="userEmail" type="text" readonly class="form-control-plaintext">
           </div>
         </div>
-        <!-- 
-        <div class="form-group clearfix">
-          <div class="col-sm-12 control-label">
-            <label for="profile_password">CAMBIO DE CONTRASEÑA</label>
-            <span class="text-helper">Sólo si estás realmente seguro</span>
-          </div>
-          <div class="col-sm-12">
-            <input type="password" class="form-control" id="profile_password" name="Change password" placeholder="Ingresa tu nueva contraseña">
-          </div>
-        </div>
-        <div class="form-group clearfix">
-          <div class="col-sm-12">
-            <input type="password" class="form-control" id="profile_password_confirm" name="Confirm password" placeholder="Repite tu contraseña">
-          </div>
-        </div>
-      </form>
- -->
-        <div id="saveChanges"  class="form-btns clearfix d-none">
+        <div id="saveChanges" class="form-btns clearfix d-none">
           <div class="btn btn-primary" onclick="updatePhoto()">GUARDAR</div>
         </div>
     </article>

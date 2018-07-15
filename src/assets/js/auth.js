@@ -39,7 +39,6 @@ function login() {
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
       console.log('Usuario con login exitoso');
-      userName.readOnly = false;
     })
     .catch((error) => {
       console.log('Error de firebase > ' + error.code);
@@ -52,8 +51,10 @@ function logout() {
   firebase.auth().signOut()
     .then(() => {
       console.log('chao');
+      navbarSupportedContent1.classList.remove('show');
       profile.classList.add('d-none');
       wall.classList.add('d-none');
+      location.reload();
     })
     .catch();
 };

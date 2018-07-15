@@ -47,19 +47,14 @@ function updatePhoto() {
 
 // Mostrar información del usuario
 function showInfo() {
-  let currentUser;
-  let profilePicture;
-  let mail = firebase.auth().currentUser.email;
   if (firebase.auth().currentUser.displayName !== 'null') {
-    currentUser = firebase.auth().currentUser.displayName;
-    console.log(currentUser);
+    userName.value = firebase.auth().currentUser.displayName;
+    userEmail.value = firebase.auth().currentUser.email;
     profilePic.src = firebase.auth().currentUser.photoURL;
-    console.log(profilePicture);
   } else {
-    profilePicture = profilePic.src;
-    console.log(profilePicture);
+    userName.value = 'Indefinido';
+    userEmail.value = firebase.auth().currentUser.email;
+    profilePic.src = firebase.auth().currentUser.photoURL;
   }
-  userName.value = currentUser;
-  userEmail.value = mail;
 };
 

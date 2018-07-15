@@ -1,45 +1,81 @@
+/*
 // Manejo del estilo del botón que esconde/muestra la barra de navegación
 $(document).ready(function() {
-  $('.animated-icon1,.animated-icon3,.animated-icon4').click(function(event) {
+  $('.animated-icon3').click(function(event) {
     $(this).toggleClass('open');
   });
 });
 
-/*
-// Funcionalidad del side Menú
-function toggleMenu() { 
-  if (sideMenu.className.indexOf('closedMenu') >= 0) { 
-    openMenu(); 
-  } else {
-    closeMenu(); 
-  }
-}
-
-function openMenu() {
-  sidebar.classList.remove('closedMenu'); 
-  sidebar.classList.add('openMenu');
-}
-
-function closeMenu() {
-  sidebar.classList.add('closedMenu');
-  sidebar.classList.remove('openMenu');
-}
 */
 
 // Cambio de páginas
-function toProfilePage() {
-  wall.classList.add('d-none');
-  profile.classList.remove('d-none');
-  pageTitle.innerHTML = 'PERFIL';
-}
-
 function toWallPage() {
+  navbarSupportedContent1.classList.remove('show');
+  activities.classList.add('d-none');
+  calendar.classList.add('d-none');
+  council.classList.add('d-none');
+  chat.classList.add('d-none');
   profile.classList.add('d-none');
   wall.classList.remove('d-none');
   pageTitle.innerHTML = 'TABLERO';
 }
 
-// Foto de perfil 
-function changePhoto() {
-  photoChange.classList.remove('d-none');
+function toActivitiesPage() {
+  navbarSupportedContent1.classList.remove('show');
+  wall.classList.add('d-none');
+  calendar.classList.add('d-none');
+  council.classList.add('d-none');
+  chat.classList.add('d-none');
+  profile.classList.add('d-none');
+  activities.classList.remove('d-none');
+  pageTitle.innerHTML = 'ACTIVIDADES';
 }
+
+function toCalendarPage() {
+  navbarSupportedContent1.classList.remove('show');
+  wall.classList.add('d-none');
+  activities.classList.add('d-none');
+  council.classList.add('d-none');
+  chat.classList.add('d-none');
+  profile.classList.add('d-none');
+  calendar.classList.remove('d-none');
+  pageTitle.innerHTML = 'CALENDARIO';
+}
+
+function toCouncilPage() {
+  navbarSupportedContent1.classList.remove('show');
+  wall.classList.add('d-none');
+  activities.classList.add('d-none');
+  calendar.classList.add('d-none');
+  chat.classList.add('d-none');
+  profile.classList.add('d-none');
+  council.classList.remove('d-none');
+  pageTitle.innerHTML = 'CONSEJO DE CURSO';
+}
+
+function toChatPage() {
+  navbarSupportedContent1.classList.remove('show');
+  wall.classList.add('d-none');
+  activities.classList.add('d-none');
+  calendar.classList.add('d-none');
+  council.classList.add('d-none');
+  profile.classList.add('d-none');
+  chat.classList.remove('d-none');
+  pageTitle.innerHTML = 'CHAT';
+}
+
+function toProfilePage() {
+  navbarSupportedContent1.classList.remove('show');
+  wall.classList.add('d-none');
+  activities.classList.add('d-none');
+  calendar.classList.add('d-none');
+  council.classList.add('d-none');
+  chat.classList.add('d-none');
+  profile.classList.remove('d-none');
+  pageTitle.innerHTML = 'PERFIL';
+}
+
+// Foto de perfil 
+cam.addEventListener('click', () => {
+  photoChange.classList.remove('d-none');
+});

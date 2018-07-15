@@ -4,6 +4,96 @@ body {
   color: #807e7e;
 }
 
+/* Estilo Login */
+
+.logo {
+  padding: 10%;
+  width: 90%;
+}
+
+.register {
+  margin-top: 0%;
+  padding: 0%;
+}
+
+.inputRegister {
+  margin: 1% 4% 0% 7%;
+  width: 90%;
+}
+
+.icon-input {
+  background-color: transparent;
+}
+
+.input-group-text {
+  background-color: #82CCD5;
+  border-radius: 1rem;
+}
+
+.form-control {
+  background-color: rgb(176, 201, 204);
+}
+
+#login {
+  width: 90%;
+  margin: 3% 4% 0% 7%;
+  border-radius: 2rem;
+  background-color: #82CCD5;
+  color: #333333;
+}
+
+#login:hover {
+  background-color: rgb(176, 201, 204);
+  color: white;
+}
+
+.container-modal {
+  margin: 3% 4% 0% 7%;
+  text-align: center;
+}
+
+.boton-modal,
+.modalTxt {
+  display: inline;
+  font-size: 15px;
+}
+
+.boton-modal {
+  padding: 0%;
+  background-color: transparent;
+  color: #268eff;
+  border: none;
+}
+
+#loginFacebook {
+  background-color: #3b5998;
+  color: white;
+  width: 90%;
+  margin-bottom: 2%;
+  margin-left: 7%;
+}
+
+#loginFacebook:hover {
+  background-color: #526ca1;
+}
+
+#loginGoogle {
+  background-color: #db3236;
+  width: 90%;
+  margin-left: 7%;
+  color: white;
+}
+
+#loginGoogle:hover {
+  background-color: #da4c4e;
+}
+
+/*Estilo Modal*/
+
+.modal-title {
+  text-align: center;
+  font-weight: bold;
+}
 /* Estilos de la barra de navegación */
 
 .navbar {
@@ -190,45 +280,6 @@ img {
   height: auto;
 }
 
-.form-group .control-label label {
-  font-weight: 600;
-  margin-bottom: 0px;
-  padding-top: 5px;
-}
-
-.form-control {
-  border-radius: 22px;
-  border: 1px solid transparent;
-  height: 44px;
-  line-height: 44px;
-  padding: 0 15px;
-  -webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
-  -webkit-appearance: none;
-}
-
-.form-control:focus {
-  border: 1px solid #00BCD4;
-  -webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
-}
-
-.text-helper {
-  margin-top: 0.2em;
-  font-size: 0.8em;
-  display: block;
-}
-
-.form-group p {
-  margin: 0;
-}
-
-/** PROFILE **/
-
-.control-label {
-  margin-bottom: 1em;
-}
-
 /* Botón que guarda los cambios en el perfil */
 .form-btns {
   text-align: center;
@@ -254,97 +305,6 @@ img {
   background-color: #00BCD4;
   color: #FFFFFF;
   border: 2px solid transparent;
-}
-
-/* Estilo Login */
-
-.logo {
-  padding: 10%;
-  width: 90%;
-}
-
-.register {
-  margin-top: 0%;
-  padding: 0%;
-}
-
-.inputRegister {
-  margin: 1% 4% 0% 7%;
-  width: 90%;
-}
-
-.icon-input {
-  background-color: transparent;
-}
-
-.input-group-text {
-  background-color: #82CCD5;
-  border-radius: 1rem;
-}
-
-.form-control {
-  background-color: rgb(176, 201, 204);
-}
-
-#login {
-  width: 90%;
-  margin: 3% 4% 0% 7%;
-  border-radius: 2rem;
-  background-color: #82CCD5;
-  color: #333333;
-}
-
-#login:hover {
-  background-color: rgb(176, 201, 204);
-  color: white;
-}
-
-.container-modal {
-  margin: 3% 4% 0% 7%;
-  text-align: center;
-}
-
-.boton-modal,
-.modalTxt {
-  display: inline;
-  font-size: 15px;
-}
-
-.boton-modal {
-  padding: 0%;
-  background-color: transparent;
-  color: #268eff;
-  border: none;
-}
-
-#loginFacebook {
-  background-color: #3b5998;
-  color: white;
-  width: 90%;
-  margin-bottom: 2%;
-  margin-left: 7%;
-}
-
-#loginFacebook:hover {
-  background-color: #526ca1;
-}
-
-#loginGoogle {
-  background-color: #db3236;
-  width: 90%;
-  margin-left: 7%;
-  color: white;
-}
-
-#loginGoogle:hover {
-  background-color: #da4c4e;
-}
-
-/*Estilo Modal*/
-
-.modal-title {
-  text-align: center;
-  font-weight: bold;
 }
 
 /*Cada cajita*/
@@ -388,18 +348,6 @@ i:hover {
 
 textarea {
   width: 100%;
-}
-
-/*Foto Perfil*/
-
-.card-img {
-  border: none;
-  border-radius: 50%;
-  display: inline;
-}
-
-.btn-success {
-  float: right;
 }
 
 /* Media queries */
