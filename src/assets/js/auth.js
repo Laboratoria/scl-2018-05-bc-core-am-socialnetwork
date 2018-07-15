@@ -4,7 +4,9 @@ window.onload = () => {
       // Si estamos logueados esconder "registro"
       firstSection.style.display = 'none';
       loggedIn.style.display = 'block';
+      wall.classList.remove('d-none');
       console.log('User > ' + JSON.stringify(user));
+      userName.readOnly = false;
       showInfo(user);
     } else {
       // No estamos logueados esconder 'Cerrar Sesión'
@@ -18,11 +20,13 @@ window.onload = () => {
 function register() {
   const emailValue = loginUser.value;
   const passwordValue = loginPass.value;
-  firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
+  const userValue = nickname.value; 
+  firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue,)
     .then(() => {
       console.log('Usuario registrado');
-      emailValue = "";
-      passwordValue = "";  
+      loginUser.value = "";
+      loginPass.value = "";
+      nickname.value = "";
     })
     .catch((error) => {
       console.log('Error de firebase > ' + error.code);
@@ -49,7 +53,12 @@ function logout() {
   firebase.auth().signOut()
     .then(() => {
       console.log('chao');
+      if (window.innerWidth <= 768) {  
+        navbarSupportedContent1.classList.remove('show');
+      }
       profile.classList.add('d-none');
+      wall.classList.add('d-none');
+      location.reload();
     })
     .catch();
 };
@@ -64,6 +73,7 @@ function loginFacebook() {
   firebase.auth().signInWithPopup(provider)
     .then(() => {
       console.log('Login con facebook');
+      cameraIcon.classList.add('d-none');
     })
     .catch((error) => {
       console.log('Error de firebase > ' + error.code);
@@ -81,6 +91,7 @@ function loginGoogle() {
       const token = result.credential.accessToken;
       // The signed-in user info.
       const user = result.user;
+      cameraIcon.classList.add('d-none');
     }).catch((error) => {
       // Handle Errors here.
       console.log('Error de Firebase ' + error.code);

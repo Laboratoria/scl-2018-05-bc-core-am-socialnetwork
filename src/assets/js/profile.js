@@ -1,3 +1,4 @@
+/* 
 // Cambiar foto de perfil
 $(document).ready(function() {
   var readURL = function(input) {
@@ -18,33 +19,42 @@ $(document).ready(function() {
     $('.file-upload').click();
   });
 });
+*/
+// Cambiar foto de perfil
+
+updatePic.addEventListener('change', function(event) {
+  let storageRef = firebase.storage().ref().child(firebase.auth().currentUser.Nb.email + '/profilePic.jpeg');
+  let firstFile = event.target.files[0]; // upload the first file only
+  let uploadTask = storageRef.put(firstFile);
+  console.log(uploadTask);
+  saveChanges.classList.remove('d-none');
+});
+
+function updatePhoto() {
+  firebase.storage().ref().child(firebase.auth().currentUser.Nb.email + '/profilePic.jpeg').getDownloadURL().then(function(url) {
+    firebase.auth().currentUser.updateProfile({
+      photoURL: url
+    }).then(function() {
+      console.log('Cambios guardados');
+      profilePic.src = url;
+      saveChanges.classList.add('d-none');
+      updatePic.classList.add('d-none');
+    }).catch(function(error) {
+      console.log('Ha ocurrido un error' + error);
+    });
+  });
+};
 
 // Mostrar información del usuario
 function showInfo() {
-  let currentUser;
-  let profilePicture;
-  let userMail = firebase.auth().currentUser.email;
   if (firebase.auth().currentUser.displayName !== 'null') {
-    currentUser = firebase.auth().currentUser.displayName;
-    console.log(currentUser);
-    profilePicture = firebase.auth().currentUser.photoURL;
-    console.log(profilePicture);
+    userName.value = firebase.auth().currentUser.displayName;
+    userEmail.value = firebase.auth().currentUser.email;
+    profilePic.src = firebase.auth().currentUser.photoURL;
   } else {
-    profilePicture = profilePicture.src;
-    console.log(profilePicture);
+    userName.value = 'Indefinido';
+    userEmail.value = firebase.auth().currentUser.email;
+    profilePic.src = firebase.auth().currentUser.photoURL;
   }
-  userEmail.innerHTML = `<p>${userMail}</p>`;
-}
-
-function updateProfile() {
-  let user = firebase.auth().currentUser;
-  user.updateProfile({
-    displayName: 'Jane Q. User',
-    photoURL: profilePicture.src
-  }).then(function() {
-    console.log('Cambio guardados');
-    saveChanges.innerHTML = 'Cambios guardados';
-  }).catch(function(error) {
-    console.log('Ha ocurrido un error');
-  });
 };
+

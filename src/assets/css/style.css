@@ -19,7 +19,7 @@ body {
 
 .navbar-brand {
   width: 100%;
-  margin-left: 15px;
+  margin: 0;
   align-content: center;
   text-align: center;
   font-size: 18px;
@@ -205,116 +205,6 @@ img {
   color: #999;
 }
 
-.form-horizontal .control-label {
-  text-align: left !important;
-}
-
-.form-group .control-label label {
-  font-weight: 600;
-  margin-bottom: 0px;
-  padding-top: 5px;
-}
-
-.form-control {
-  border-radius: 22px;
-  border: 1px solid transparent;
-  height: 44px;
-  line-height: 44px;
-  padding: 0 15px;
-  -webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
-  -webkit-appearance: none;
-}
-
-.form-control:focus {
-  border: 1px solid #00BCD4;
-  -webkit-box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.15);
-}
-
-.text-helper {
-  margin-top: 0.2em;
-  font-size: 0.8em;
-  display: block;
-}
-
-.form-group p {
-  margin: 0;
-}
-
-/** PROFILE **/
-
-.profile-holder label,
-.profile-name h3,
-.notification-legend p,
-.settings-legend p {
-  color: #333333;
-  font-weight: 600;
-}
-
-.profile-update .control-label {
-  margin-bottom: 1em;
-}
-
-.profile-update .profile-email p,
-.profile-update .profile-email .btn {
-  display: inline-block;
-  margin: 0;
-}
-
-.profile-update .profile-email .btn {
-  margin-left: 10px;
-  border-radius: 25px;
-  background-color: transparent;
-  color: #888888;
-  border: 1px solid #888888;
-  padding: 5px 10px;
-  width: auto;
-}
-
-.profile-update .profile-email .btn:active:focus,
-.profile-update .profile-email .btn:active:hover {
-  background-color: #888888;
-  color: #FFFFFF;
-  border: 1px solid transparent;
-}
-
-.profile-picture {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  background-color: #00BCD4;
-  text-align: center;
-  line-height: 75px;
-  color: #FFF;
-  margin: 0 auto;
-}
-
-.form-btns {
-  text-align: center;
-  padding-top: 1.5em;
-  margin-bottom: 1.5em;
-}
-
-.form-btns .btn {
-  border-radius: 25px;
-  background-color: transparent;
-  color: #00BCD4;
-  border: 2px solid #00BCD4;
-}
-
-.form-btns .btn:active {
-  background-color: #00BCD4;
-  color: #FFFFFF;
-  border: 2px solid transparent;
-}
-
-.form-btns .btn:active:focus,
-.form-btns .btn:active:hover {
-  background-color: #00BCD4;
-  color: #FFFFFF;
-  border: 2px solid transparent;
-}
 
 /* Estilo Login */
 .logo{
@@ -322,6 +212,7 @@ img {
   width: 90%;
 }
 .register{
+  margin-right: 4%;
   margin-top: 0%;
   padding: 0%;
 }
@@ -384,11 +275,119 @@ img {
   background-color: #da4c4e;
 }
 /*Estilo Modal*/
+#modalRegister{
+  margin-right: 4%;
+}
 .modal-title{
-  text-align: center;
   font-weight: bold;
 }
+.form-label{
+  margin-top: 3%;
+  margin-bottom: 0%;
+}
+.modal-footer{
+  display: block;
+  text-align: center;
+}
+.btn-register{
+  background-color: #666666;
+  color: white;
+  padding: 2%;
+}
+.btn-register:hover{
+  background-color: #616575;
+}
 
+
+
+.chat_window {
+  position: absolute;
+  width: 90%;
+  height: 85%;
+  border-radius: 10px;
+  background-color: #fff;
+  left: 50%;
+  top: 52%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+.top_menu {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 0 15px;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+}
+.top_menu .title {
+  text-align: center;
+  color: #bcbdc0;
+  font-size: 20px;
+}
+.messagesContainer {
+  list-style: none;
+  padding: 20px 10px 0 10px;
+  margin: 0;
+  height: 347px;
+  overflow: scroll;
+}
+.messageUser{
+  background: rgb(135, 155, 158);
+  margin-bottom: 0%
+}
+.textMessage{
+  color: #2b2b2b;
+}
+.bottom_wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  padding: 2%;
+  position: absolute;
+  bottom: 0;
+}
+.bottom_wrapper .message_input_wrapper {
+  display: inline-block;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #bcbdc0;
+  width: 75%;
+  position: relative;
+  padding: 0 20px;
+  overflow: hidden;
+  resize:none;
+}
+.bottom_wrapper .message_input_wrapper .message-input {
+  border: none;
+  height: 100%;
+  box-sizing: border-box;
+  width: 75%;
+  position: absolute;
+  outline-width: 0;
+  color: gray;
+}
+.bottom_wrapper .send_message {
+  margin-left: 1%;
+  width: 20% ;
+  display: inline;
+  border-radius: 50px;
+  background-color: #82CCD5;
+  border: 2px solid #82CCD5;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  text-align: center;
+  float: right;
+}
+.bottom_wrapper .send_message:hover {
+  color: #82CCD5;
+  background-color: #fff;
+}
+.bottom_wrapper .send_message .text {
+  font-size: 15px;
+  display: inline-block;
+  line-height: 48px;
+}
 /* Media queries */
 @media (min-width: 768px){
 .navbar-collapse {
@@ -398,4 +397,11 @@ img {
   width: 20%;
   padding: 2%;
 }
+.chat_window {
+  width: 70%;
+  left: 62%;
 }
+}
+
+
+
