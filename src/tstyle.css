@@ -17,28 +17,77 @@
   text-align: center;
 }
 /*Iconos*/
-i{
-  font-size:20px;
-}
-i:hover{
-  color: black;
-}
-.icon{
-  margin-left: 3%;
-  margin-right: 3%;
-}
-textarea{
-  width: 100%;
-}
-/*Foto Perfil*/
-.card-img{
-  border: none;
-  border-radius: 50%;
-  width:30%;
-  display: inline;
-  float: left;
-} 
 
-.btn-success{
+
+/*PROBANDO*/
+#comment {
+	width: 100%;
+	height: 4em;
+	color:  #807e7e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 1em;
+  border: 1px solid  #807e7e;
+  border-radius: 5px;
+	margin-top: 10%;
+}
+
+#btn {
   float: right;
+  background-color:  #82ccd5;
+  border: none;
+  color: white;
+  width: 30%;
+  padding: 8px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#btn:hover {
+  background-color: #5590A6;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+#cont {
+	margin-top: 5%;
+	width: 100%;
+	height: 4em;
+	color:  #807e7e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+
+#cont div {
+	padding: 1em;
+  margin-bottom: 2em;
+  border-radius: 5px;
+	border: 1px solid #807e7e;
+	background-color: #FFF;
+}
+
+.heart, .trash, .fa-pencil-alt {
+	margin:1em;
+	float: right;
+	cursor: pointer;
+}
+
+.heart:hover, .trash:hover, .fa-pencil-alt:hover {
+	color: greenyellow;
+	cursor: pointer;
+}
+
+.blue {
+	color: #5590A6;
+	cursor: pointer;
+}
+
+p {
+	display: inline-block;
+	margin-left: 0.5em;
 }

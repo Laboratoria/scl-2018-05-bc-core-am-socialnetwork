@@ -2,7 +2,7 @@
 let contadorPublicacion = [];
 const heart = document.querySelector('i');
 heart.addEventListener('click', ()=> {
-  if (heart.classList.toggle('red')){
+  if (heart.classList.toggle('blue')){
     contadorPublicacion++;
   }else{
     contadorPublicacion--;
