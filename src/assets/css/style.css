@@ -94,6 +94,7 @@ body {
   text-align: center;
   font-weight: bold;
 }
+
 /* Estilos de la barra de navegación */
 
 .navbar {
@@ -106,12 +107,11 @@ body {
   background-color: #82ccd5;
   z-index: 2;
   position: fixed;
+  box-shadow: 0px 2px 14px -3px rgba(105,105,105,1);
 }
 
 .navbar-brand {
   width: 100%;
-  margin-left: 15px;
-  align-content: center;
   text-align: center;
   font-size: 18px;
 }
@@ -243,25 +243,25 @@ body {
   font-size: 18px;
 }
 
-/* Estilos del Perfil de Usuario */
+/* Estilos generales de las secciones */
 
+#wall,
+#activities,
+#calendar,
+#council,
+#chat,
 #profile {
   padding-top: 7vh;
-  width: 80%;
+  width: 90%;
+  min-height: 100vh;
 }
+
+/* Estilos del Perfil de Usuario */
 
 .profile-pic {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.file-upload {
-  display: none;
-}
-
-#customFile {
-  visibility: hidden;
 }
 
 .circle {
@@ -280,7 +280,38 @@ img {
   height: auto;
 }
 
+#cameraIcon {
+  padding: 10px;
+}
+
+#cameraIcon button {
+  background: none !important;
+  color: #2b2b2b;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+#cameraIcon input {
+  font-size: 13px;
+}
+
+.userInfo form {
+  position: absolute;
+  left: 20px;
+  top: 280px;
+  padding: 0;
+}
+
+#saveChanges {
+  position: absolute;
+  left: 35%;
+}
+
 /* Botón que guarda los cambios en el perfil */
+
 .form-btns {
   text-align: center;
   padding-top: 1.5em;
@@ -289,20 +320,20 @@ img {
 
 .form-btns .btn {
   border-radius: 25px;
-  background-color: transparent;
-  color: #00BCD4;
-  border: 2px solid #00BCD4;
+  background-color: inherit;
+  color: #82CCD5;
+  border: 2px solid #82CCD5;
 }
 
 .form-btns .btn:active {
-  background-color: #00BCD4;
+  background-color: #82CCD5;
   color: #FFFFFF;
   border: 2px solid transparent;
 }
 
 .form-btns .btn:active:focus,
 .form-btns .btn:active:hover {
-  background-color: #00BCD4;
+  background-color: #82CCD5;
   color: #FFFFFF;
   border: 2px solid transparent;
 }
@@ -353,12 +384,48 @@ textarea {
 /* Media queries */
 
 @media (min-width: 768px) {
+  .top {
+    width: 75vw;
+    position: fixed;
+    right: 0;
+  }
   .navbar-collapse {
     width: 25vw;
-    position: fixed;
+    position: absolute;
+    height: 100vh;
+    background: #fafafa;
+    transition: all 0.5s;
+    z-index: 2;
+    top: -7vh;
+    left: 0;
+    overflow-x: visible;
+    box-shadow: 0;
+  }
+  .collapse:not(.show) {
     display: block;
   }
-
+  .navbar-toggler {
+    display: none;
+  }
+  #wall,
+  #activities,
+  #calendar,
+  #council,
+  #chat,
+  #profile {
+    margin-left: 10px;
+    padding-left: 25vw;
+  }
+  .userInfo form {
+    left: 27vw;
+    width: 60%;
+  }
+  #saveChanges {
+    left: 50%;
+  }
+  #cameraIcon {
+    padding: 20px;
+  }
   .logo {
     width: 20%;
     padding: 2%;

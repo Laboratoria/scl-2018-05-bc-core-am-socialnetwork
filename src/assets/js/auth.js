@@ -51,7 +51,9 @@ function logout() {
   firebase.auth().signOut()
     .then(() => {
       console.log('chao');
-      navbarSupportedContent1.classList.remove('show');
+      if (window.innerWidth <= 768) {  
+        navbarSupportedContent1.classList.remove('show');
+      }
       profile.classList.add('d-none');
       wall.classList.add('d-none');
       location.reload();

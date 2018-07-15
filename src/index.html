@@ -97,7 +97,7 @@
 
   <!-- Barra de navegación -->
   <nav id="loggedIn" class="navbar navbar-light">
-    <div class="top">
+    <div class="top md-col-9">
       <!-- Botón que despliega menú -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -109,10 +109,10 @@
         </div>
       </button>
       <!-- Título de la barra -->
-      <a id="pageTitle" class="navbar-brand" href="#">CONECTAPP ALUMNOS</a>
+      <a id="pageTitle" class="navbar-brand align-middle" href="#">CONECTAPP ALUMNOS</a>
     </div>
     <!-- Contenido -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    <div class="collapse navbar-collapse md-col-3" id="navbarSupportedContent1">
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -150,7 +150,7 @@
   </nav>
 
   <!-- Tablero -->
-  <section id="wall" class="d-none">
+  <section id="wall" class="sections md-col-9 d-none">
     <div class="card w-75">
       <div class="card-body">
         <input id="messageArea" class="form-control" type="text">
@@ -166,33 +166,34 @@
   </section>
 
   <!-- Actividades -->
-  <section id="activities" class="d-none">
+  <section id="activities" class="sections md-col-9 d-none">
     <h1>Hola aquí van las actividades xD</h1>
   </section>
 
   <!-- Calendario -->
-  <section id="calendar" class="d-none">
-    <h1>Hola aquí va un calendario bonito <3</h1>
+  <section id="calendar" class="sections md-col-9 d-none">
+    <h1>Hola aquí va un calendario bonito
+      <3</h1>
   </section>
 
   <!-- Consejo de Curso -->
-  <section id="council" class="d-none">
+  <section id="council" class="sections md-col-9 d-none">
     <h1>Profe, ponga acá lo que quiera xD</h1>
   </section>
 
   <!-- Chat -->
-  <section id="chat" class="d-none">
+  <section id="chat" class="sections md-col-9 d-none">
     <h1>Acá se mandan los mensajes xD</h1>
   </section>
 
   <!-- Perfil de usuario -->
-  <section id="profile" class="container-fluid d-none">
-    <article class="small-12 medium-2 large-2 columns row">
-      <div class="circle">
+  <section id="profile" class="container-fluid md-col-9 sections d-none">
+    <article class="small-12 medium-2 large-2">
+      <div class="circle row">
         <!-- User Profile Image -->
         <img id="profilePic" class="profile-pic" src="">
       </div>
-      <form id="cameraIcon" action="#">
+      <form id="cameraIcon" action="#" class="float-left row">
         <button id="cam">
           <i class="fas fa-camera"></i>
         </button>
@@ -201,7 +202,7 @@
         </div>
       </form>
     </article>
-    <article class="userInfo row">
+    <article class="userInfo small-12 medium-2 large-2 row">
       <form>
         <div class="form-group row">
           <label for="userName" class="col-sm-2 col-form-label">NOMBRE</label>
@@ -215,9 +216,10 @@
             <input id="userEmail" type="text" readonly class="form-control-plaintext">
           </div>
         </div>
-        <div id="saveChanges" class="form-btns clearfix d-none">
+        <div id="saveChanges" class="form-btns row d-none">
           <div class="btn btn-primary" onclick="updatePhoto()">GUARDAR</div>
         </div>
+      </form>
     </article>
   </section>
 
