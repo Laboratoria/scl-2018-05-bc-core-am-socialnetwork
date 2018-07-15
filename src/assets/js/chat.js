@@ -1,4 +1,4 @@
-window.onload = () => {
+
   firebase.database().ref('chat')
   .limitToLast(20)
   .once('value')
@@ -9,27 +9,13 @@ window.onload = () => {
 });
 
 firebase.database().ref('chat')
-  .limitToLast(20)
+  .limitToLast(2)
   .on('child_added', (newMessage) => {
-    const liMessage = document.createElement('li');
-    let textMessage = document.createTextNode(newMessage.val().text)
-    const textMessageContainer = document.createElement('div');
-      textMessageContainer.appendChild(textMessage);
-      liMessage.appendChild(textMessageContainer);
-      messagesContainer.appendChild(liMessage);
-    let avatarMessage = document.createTextNode(newMessage.val().creatorName);
-    const avatarCont = document.createElement('div');
-      avatarCont.appendChild(avatarMessage);
-      liMessage.appendChild(avatarCont);
-      messagesContainer.appendChild(liMessage);
-
-    textMessage.className += 'text';
-    liMessage.className+= "message";
-    textMessageContainer .className+= 'text_wrapper';
-    avatarCont.className += 'avatar';
+    messagesContainer.innerHTML += `
+    <p class="messageUser">${newMessage.val().creatorName}</p>
+    <p class="textMessage">Dice: ${newMessage.val().text}</p>
+  `;
   });
-}
-
 
 function sendMessage() {
   const currentUser = firebase.auth().currentUser; 
@@ -42,3 +28,4 @@ function sendMessage() {
     text : messageAreaText
   });
 };
+
