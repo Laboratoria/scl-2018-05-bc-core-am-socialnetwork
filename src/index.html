@@ -81,18 +81,18 @@
         </div>
         <!--Inicio sesión automatico-->
         <hr>
-          <button class="btn" id="loginFacebook" onclick="loginFacebook()">
-            <span class="icon">
-              <i class="fab fa-facebook"></i>
-            </span>
-            <span>Iniciar con Facebook</span>
-          </button>
-          <button class="btn" id="loginGoogle" onclick="loginGoogle()">
-            <span class="icon">
-              <i class="fab fa-google-plus-g"></i>
-            </span>
-            <span>Iniciar con Google</span>
-          </button>
+        <button class="btn" id="loginFacebook" onclick="loginFacebook()">
+          <span class="icon">
+            <i class="fab fa-facebook"></i>
+          </span>
+          <span>Iniciar con Facebook</span>
+        </button>
+        <button class="btn" id="loginGoogle" onclick="loginGoogle()">
+          <span class="icon">
+            <i class="fab fa-google-plus-g"></i>
+          </span>
+          <span>Iniciar con Google</span>
+        </button>
       </div>
     </div>
   </section>
@@ -152,8 +152,27 @@
   </nav>
 
   <!-- Tablero -->
-  <section id="wall" class="sections md-col-9 d-none">
-    <h1>Hola aquí van las actividades xD</h1>
+  <section id="wall" class="sections md-col-9 container-fluid d-none">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div id="messageContainer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <!-- Caja de comentarios -->
+        <div class="card">
+          <div class="card-body">
+            <input id="messageArea" class="form-control" type="text" placeholder="Escribe tu mensaje">
+            <input id="sendButton" type="button" value="Publicar" onclick="sendMessage()">
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Actividades -->
@@ -253,6 +272,7 @@
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/profile.js"></script>
   <script src="assets/js/chat.js"></script>
+  <script src="assets/js/tab.js"></script>
 </body>
 
 </html>
