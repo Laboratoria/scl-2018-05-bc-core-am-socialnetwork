@@ -221,6 +221,10 @@ width: 40%;
   position: fixed;
 }
 
+#screenAlimentacion {
+  display: none;
+}
+
 
 /* cierre css pantalla 3*/
 @media(min-width: 768px) { 
@@ -228,42 +232,42 @@ width: 40%;
     width: 20vw; /*El menú va a tomar este ancho con pantallas de 768px hacia arriba*/
 }
 
-.menu_closed {
+  .menu_closed {
     left:-20vw;
-}
+  }
 
-#btnImg {
-  margin-left: 40%;
-}
+  #btnImg {
+    margin-left: 40%;
+  }
 
-#post {
-width: 50%;
-height: 80%;
-margin-left: 25%;
-}
+  #post {
+    width: 50%;
+    height: 80%;
+    margin-left: 25%;
+  }
 
-#btnImg {
-margin-left: 35%;
-margin-right: 10%;
-}
+  #btnImg {
+    margin-left: 35%;
+    margin-right: 10%;
+  }
 
-#brand {
-width: 20%;
-}
+  #brand {
+    width: 20%;
+  }
 
-#dogStanding {
-width: 20%;
-margin-top: -1.5%;
-position: fixed;
-}
+  #dogStanding {
+    width: 20%;
+    margin-top: -1.5%;
+    position: fixed;
+  }
 
-.userName {
-text-align: center;
-color: white;
-font-size: 30px;
-}
+  .userName {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+  }
 
-.caja_registro {
+  .caja_registro {
     margin-left: 35%;
     margin-right: 35%;
     margin-bottom: 5%;
