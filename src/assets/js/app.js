@@ -1,11 +1,21 @@
 window.onload = () => {
   firebase.auth().onAuthStateChanged((user)=>{
     if (user) {
+      toShowScreen3(user);
       // Usuario está logeado
-      screen1.style.display = 'none';
-      screen2.style.display = 'none';
-      screen3.style.display = 'block';
-      console.log('User > ' + JSON.stringify(user));
+      var displayName = user.displayName;
+      var email = user.email;
+
+      console.log('>>>>>>>>>>>>>>>');
+      console.log(user.emailVerified);
+      console.log('>>>>>>>>>>>>>>>');
+
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      console.log(user);
     } else {
       // Usuario no está logeado
       screen1.style.display = 'block';
@@ -16,15 +26,24 @@ window.onload = () => {
   });
 };
 
+function toShowScreen3(user) {
+  if (user.emailVerified) {
+    document.getElementById('screen1').style.display = 'none';
+    document.getElementById('screen2').style.display = 'none';
+    document.getElementById('screen3').style.display = 'block';
+  }
+}
+
 // Sección registrar
 function register() {
   const emailValue = document.getElementById('email_signUp').value;
   const passwordValue = document.getElementById('password_signUp').value;
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
-    .then(()=> {
+    .then(function() {
+      check();
       console.log('Usuario registrado');
     })
-    .catch((error)=> {
+    .catch(function(error) {
       console.log('Error de Firebase: ' + error.code);
       console.log('Error de Firebase, mensaje: ' + error.message);
     });
@@ -34,13 +53,11 @@ function login() {
   const emailValue = document.getElementById('email_login').value;
   const passwordValue = document.getElementById('password_login').value;
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
-    .then(()=> {
+    /*.then(function() {
       console.log('Usuario con login exitoso');
-      screen3.style.display = 'block';
-      screen1.style.display = 'none';
-      screen2.style.display = 'none';
-    })
-    .catch((error)=> {
+      toShowScreen3(user);
+    })*/
+    .catch(function(error) {
       console.log('Error de Firebase: ' + error.code);
       console.log('Error de Firebase, mensaje: ' + error.mensaje);
       screen1.style.display = 'block';
@@ -48,6 +65,7 @@ function login() {
       screen3.style.display = 'none';
     });
 }
+
 
 function loginFacebook() {
   const provider = new firebase.auth.FacebookAuthProvider();
@@ -87,7 +105,20 @@ function logout() {
     .catch();
 }
 
-//Función del menú lateral
+function check() {
+  var user = firebase.auth().currentUser;
+  user.sendEmailVerification()
+    .then(function() {
+    // Email sent.
+      console.log('Enviando correo....');
+    })
+    .catch(function(error) {
+    // An error happened.
+      console.log(error);
+    });
+}
+
+// Función del menú lateral
 function toggleMenu() { 
   if (sideMenu.className.indexOf("menu_closed") >= 0) { 
     openMenu();  

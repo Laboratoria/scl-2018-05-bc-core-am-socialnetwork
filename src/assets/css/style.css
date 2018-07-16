@@ -92,7 +92,7 @@ body {
 }
 
 #screen1 {
-  display: none;
+  display: block;
 }
 .imgRegister {
 width: 40%;
@@ -167,7 +167,7 @@ width: 40%;
 
 #screen3 {
   padding: 0;
-  display: block;
+  display: none;
 }
 
 .closingMenu{
