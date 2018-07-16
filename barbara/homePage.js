@@ -11,18 +11,17 @@ window.onload = () => {
       //No estamos logueados
       loggedOut.style.display = "block";
       loggedIn.style.display = "none";
-    }
-  });
 
-  firebase.database().ref('posts')
-  .on('child_added',(newPost) => { // suscribiendo a la colección de posts
-  postUserContainer.innerHTML +=
-      <p>Nombre : ${newPost.val().createName}</p>
-      <p>${newPost.val().text}</p>
-
-})
-
-};
+      firebase.database().ref('posts')
+      .on('child_added',(newPost) => { // suscribiendo a la colección de posts
+      postUserContainer.innerHTML +=
+          <p>Nombre : ${newPost.val().createName}</p>
+          <p>${newPost.val().text}</p>
+    
+    })
+    
+    };
+    
 //Aquí va la función de iniciar sesión con email
 function login() {
   const emailValue = email.value;
@@ -61,6 +60,7 @@ function loginFacebook() {
     });
 }
 //funcion login google
+
 function loginGoogle() {
 
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -83,15 +83,25 @@ function loginGoogle() {
   });
 }
 
+/*
+$('#loginGoogleBtn').click(function(){
+  firebase.auth()
+  .signInWhitPopup(provider)
+  .then(function(result) {
+    console.log(result.user);
+    $('#logInPage').hide();
+    $('#root').append("<img src'"+result.user.photoURL+"' />") //agregando etiqueta imagen al div root en el muro
+});
+m
+*/
+
 // Mariel (Registro)
 //tomar valores del DOM
 const userName = document.getElementById("name_input" );
 const errorNombre = document.getElementById("error_nombre");
 const userAge = document.getElementById("edad_input");
 const email = document.getElementById("email");
-
 const password = document.getElementById("password"); 
-
 const password2 = document.getElementById("password");
 const errorMsg = document.getElementById("error_password")
 const confirmPassword = document.getElementById("confirm_password");
@@ -99,7 +109,6 @@ const errorConfirmPassword = document.getElementById("error_confirm_password");
 const rememberMe = document.getElementById("rememeber_check");
 const agree = document.getElementById("terms_check");
 const createAcountBtn = document.getElementById("create_acount_button");
-
 
 //validar que el nombre sean solo letras 
 userName.addEventListener('keyup', () =>{
@@ -125,7 +134,7 @@ confirmPassword.addEventListener('keyup', () => {
   if(password.value === confirmPassword.value){
     errorConfirmPassword.innerHTML = " ";
   } else {
-    errorConfirmPassword.innerHTML = "Porfavor revisa la contraseña debe coincidir";
+    errorConfirmPassword.innerHTML = "Por favor revisa, la contraseña debe coincidir";
   }
 })
 
@@ -152,8 +161,7 @@ rememberMe.addEventListener('change', saveLocalUser, false);
       window.localStorage.setItem('edad', JSON.stringify(userAge.value));
     }
   }
-
-
+			
 //llevarme a la siguiente ventana con el boton 
 createAcountBtn.addEventListener('click', () => { 
     const emailVal = email.value; 
@@ -164,9 +172,10 @@ createAcountBtn.addEventListener('click', () => {
       //cambiar de seccion
     const hideSection = document.getElementById('registerPage');
     hideSection.style.display = "none";
-
+    
     const showSection = document.getElementById('homePage');
-    showSection.style.display = "block";
+    showSectio.style.display = "block";
+
     }) 
     .catch((error) => {
       console.log('fallo el registro', error);
