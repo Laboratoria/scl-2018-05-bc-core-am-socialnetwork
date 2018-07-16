@@ -5,6 +5,7 @@ window.onload = () => {
       firstSection.style.display = 'none';
       wall.classList.remove('d-none');
       loggedIn.classList.remove('d-none');
+      
       console.log('User > ' + JSON.stringify(user));
       firebase.database().ref(`users/${user.uid}`).set({
         mail: user.email,
