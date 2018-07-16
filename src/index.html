@@ -81,18 +81,18 @@
         </div>
         <!--Inicio sesión automatico-->
         <hr>
-          <button class="btn" id="loginFacebook" onclick="loginFacebook()">
-            <span class="icon">
-              <i class="fab fa-facebook"></i>
-            </span>
-            <span>Iniciar con Facebook</span>
-          </button>
-          <button class="btn" id="loginGoogle" onclick="loginGoogle()">
-            <span class="icon">
-              <i class="fab fa-google-plus-g"></i>
-            </span>
-            <span>Iniciar con Google</span>
-          </button>
+        <button class="btn" id="loginFacebook" onclick="loginFacebook()">
+          <span class="icon">
+            <i class="fab fa-facebook"></i>
+          </span>
+          <span>Iniciar con Facebook</span>
+        </button>
+        <button class="btn" id="loginGoogle" onclick="loginGoogle()">
+          <span class="icon">
+            <i class="fab fa-google-plus-g"></i>
+          </span>
+          <span>Iniciar con Google</span>
+        </button>
       </div>
     </div>
   </section>
@@ -175,19 +175,25 @@
   <!-- Chat -->
   <section id="chat" class="sections md-col-9 d-none">
     <!-- Inicio Chat-->
-    <div class="chat_window d-none" id="chatSection">
+    <div class="chat_window">
       <div class="top_menu">
-        <div class="title">Chat</div>
+        <img class="avatar-pic" src="">
+        <div class="title">
+          <div class="chat-name">Usuario</div>
+          <div class="chat-num">Escribiendo...</div>
+        </div>
       </div>
       <!-- Contenedor Mensajes -->
       <div class="messagesContainer" id="messagesContainer"></div>
       <!-- Area de envio -->
       <div class="bottom_wrapper clearfix">
         <div class="message_input_wrapper">
-          <textarea class="message-input" placeholder="Escribiendo..." id="messageInput" /> </textarea>
+          <textarea class="message-input" id="messageInput" /> </textarea>
         </div>
-        <div class="send_message">
-          <div class="text" onclick="sendMessage()">Enviar</div>
+        <div class="send_message"  onclick="sendMessage()">
+          <div class="text">
+            <i class="far fa-paper-plane"></i>
+          </div>
         </div>
       </div>
     </div>

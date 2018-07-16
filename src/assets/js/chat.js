@@ -9,11 +9,14 @@
 });
 
 firebase.database().ref('chat')
-  .limitToLast(2)
+  .limitToLast(20)
   .on('child_added', (newMessage) => {
     messagesContainer.innerHTML += `
-    <p class="messageUser">${newMessage.val().creatorName}</p>
-    <p class="textMessage">Dice: ${newMessage.val().text}</p>
+    <div class="message-data">
+    <span class="message-data-name">${newMessage.val().creatorName}</span>
+    <span class="message-data-time">${newMessage.val().time}</span>
+    </div>
+    <div class="message my-message">${newMessage.val().text}</div>
   `;
   });
 
@@ -25,7 +28,9 @@ function sendMessage() {
   firebase.database().ref(`chat/${newMessageKey}`).set({
     creator : currentUser.uid,
     creatorName : currentUser.displayName,
-    text : messageAreaText
+    text : messageAreaText,
+    time : Date.now()
   });
+  messageInput.value = "";
 };
 
