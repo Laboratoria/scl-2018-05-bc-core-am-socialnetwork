@@ -79,3 +79,9 @@ function toProfilePage() {
 cam.addEventListener('click', () => {
   photoChange.classList.remove('d-none');
 });
+
+// Cambiar nombre de usuario
+function changeName() {
+  userName.removeAttribute('readonly');
+  saveBtn.classList.remove('d-none');
+}

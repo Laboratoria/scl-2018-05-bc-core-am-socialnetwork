@@ -14,7 +14,7 @@ function updatePhoto() {
       photoURL: url
     }).then(function() {
       console.log('Cambios guardados');
-      firebase.database().ref(`users/${firebase.auth().currentUser.uid}`).push({
+      firebase.database().ref(`users/${firebase.auth().currentUser.uid}`).update({
         profilePicture: firebase.auth().currentUser.photoURL
       });
       profilePic.src = url;
@@ -33,11 +33,22 @@ function showInfo(user) {
     userEmail.value = user.email;
     profilePic.src = user.photoURL;
   } else {
-    firebase.database().ref(`users/${user.uid}/name`).on('value', function(snapshot) {
-      userName.value = snapshot.val();
-      console.log(snapshot.val());
-    });
+    userEmail.value = 'Indefinido';
     userEmail.value = user.email;
     profilePic.src = user.photoURL;
   };
 }
+
+// Cambiar nombre de usuario
+saveBtn.addEventListener('click', () => {
+  firebase.database().ref(`users/${firebase.auth().currentUser.uid}`).update({
+    name: userName.value
+  });
+  firebase.auth().currentUser.updateProfile({
+    displayName: userName.value
+  }).then(function() {
+    console.log('Cambios guardados');
+    $('#userName').attr('readonly', true);
+    saveBtn.classList.add('d-none');
+  });
+});

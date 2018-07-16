@@ -5,13 +5,16 @@ window.onload = () => {
       firstSection.style.display = 'none';
       wall.classList.remove('d-none');
       loggedIn.classList.remove('d-none');
-      
       console.log('User > ' + JSON.stringify(user));
-      firebase.database().ref(`users/${user.uid}`).set({
-        mail: user.email,
-        name: nickname.value
-      });
-      showInfo(user);
+      if (firebase.database().ref(`users/${user.uid}`)) {
+        showInfo(user);  
+      } else {
+        firebase.database().ref(`users/${user.uid}`).set({
+          mail: user.email,
+          role: 'student'
+        });
+        showInfo(user);
+      }
     } else {
       // No estamos logueados esconder 'Cerrar Sesión'
       loggedIn.classList.add('d-none');
@@ -27,10 +30,8 @@ function register() {
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
     .then(function() {
       console.log('Usuario registrado');
-      /*     
       loginUser.value = '';
       loginPass.value = '';
-      nickname.value = ''; */
     })
     .catch((error) => {
       console.log('Error de firebase > ' + error.code);

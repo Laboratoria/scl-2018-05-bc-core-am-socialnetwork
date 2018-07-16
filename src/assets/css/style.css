@@ -321,6 +321,8 @@ img {
   left: 25px;
 }
 
+#diskBtn,
+#saveBtn,
 #cameraIcon button {
   background: none !important;
   color: #2b2b2b;
@@ -377,48 +379,61 @@ img {
 /* Estilos de Tablero */
 
 /*Cada cajita*/
-.card{
+
+.card {
   box-sizing: border-box;
   margin-top: 10%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border: 1px solid #5590A6;
   border-radius: 10px;
   background-color: #5590A6;
-} 
+}
+
 /*Donde esta el nombre*/
-.card-title{
+
+.card-title {
   display: inline;
   margin-left: 2%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.card-body{
+.card-body {
   background-color: white;
-  padding:2%;
+  padding: 2%;
 }
+
 /*Texto que se pone*/
-.card-text{
-  color:#2F4F4F;
+
+.card-text {
+  color: #2F4F4F;
   font-weight: 700;
 }
+
 /*donde estan los iconos */
-.card-footer{
+
+.card-footer {
   background-color: #99cccc;
   font-size: 20px;
-  text-align: center; 
+  text-align: center;
 }
+
 /*iconos para luego q luego funcionen*/
-i{
+
+i {
   margin: 2%;
 }
-i:hover{
+
+i:hover {
   color: white;
 }
-#messageContainer{
-  margin:2%;
+
+#messageContainer {
+  margin: 2%;
 }
+
 /*boton para enviar mensaje*/
-#sendButton{
+
+#sendButton {
   float: right;
   background-color: #82ccd5;
   border: none;
@@ -428,89 +443,88 @@ i:hover{
   text-align: center;
   font-size: 16px;
   margin-top: 3%;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#sendButton:hover{
+#sendButton:hover {
   background-color: #5590A6;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 /*PROBANDO lo de chatpost*/
+
 #comment {
-	width: 100%;
-	height: 4em;
-	color:  #807e7e;
+  width: 100%;
+  height: 4em;
+  color: #807e7e;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   padding: 1em;
-  border: 1px solid  #807e7e;
+  border: 1px solid #807e7e;
   border-radius: 5px;
-	margin-top: 10%;
+  margin-top: 10%;
 }
 
 #btn {
   float: right;
-  background-color:  #82ccd5;
+  background-color: #82ccd5;
   border: none;
   color: white;
   width: 30%;
   padding: 8px;
   text-align: center;
   font-size: 16px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #btn:hover {
   background-color: #5590A6;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 #cont {
-	margin-top: 5%;
-	width: 100%;
-	height: 4em;
-	color:  #807e7e;
+  margin-top: 5%;
+  width: 100%;
+  height: 4em;
+  color: #807e7e;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   padding: 1em;
   border-radius: 5px;
 }
 
-
 #cont div {
-	padding: 1em;
+  padding: 1em;
   margin-bottom: 2em;
   border-radius: 5px;
-	border: 1px solid #807e7e;
-	background-color: #FFF;
+  border: 1px solid #807e7e;
+  background-color: #FFF;
 }
 
-.heart, .trash, .fa-pencil-alt {
-	margin:1em;
-	float: right;
-	cursor: pointer;
+.heart,
+.trash,
+.fa-pencil-alt {
+  margin: 1em;
+  float: right;
+  cursor: pointer;
 }
 
-.heart:hover, .trash:hover, .fa-pencil-alt:hover {
-	color: greenyellow;
-	cursor: pointer;
+.heart:hover,
+.trash:hover,
+.fa-pencil-alt:hover {
+  color: greenyellow;
+  cursor: pointer;
 }
 
 .blue {
-	color: #5590A6;
-	cursor: pointer;
+  color: #5590A6;
+  cursor: pointer;
 }
 
 p {
-	display: inline-block;
-	margin-left: 0.5em;
+  display: inline-block;
+  margin-left: 0.5em;
 }
-
-
-
 
 /* Estilos del chat */
 
@@ -527,25 +541,29 @@ p {
   background-color: #f8f8f8;
   overflow: hidden;
 }
+
 .top_menu {
   padding: 2%;
   background-color: white;
 }
-.avatar-pic{
+
+.avatar-pic {
   float: left;
   margin-right: 2%;
-    width:50px;
-    height: 50px;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    background-color: #8d8c8c;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  background-color: #8d8c8c;
 }
-.chat-name{
+
+.chat-name {
   font-weight: bold;
   font-size: 16px;
 }
+
 .messagesContainer {
   list-style: none;
   padding: 20px 10px 0 10px;
@@ -553,6 +571,7 @@ p {
   height: 347px;
   overflow: scroll;
 }
+
 .message-data {
   margin-bottom: 15px;
 }
@@ -562,29 +581,30 @@ p {
   padding-left: 6px;
 }
 
-.message {      
+.message {
   color: white;
   margin-left: 2%;
-  padding: 18px ;
+  padding: 18px;
   line-height: 26px;
   font-size: 16px;
   border-radius: 18px;
   margin-bottom: 30px;
   width: 90%;
   position: relative;
-}  
+}
+
 .message:after {
-    bottom: 98%;
-    left: 10%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-bottom-color: #84b0bd;
-    border-width: 10px;
-    margin-left: -10px;
+  bottom: 98%;
+  left: 10%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #84b0bd;
+  border-width: 10px;
+  margin-left: -10px;
 }
 
 .my-message {
@@ -599,17 +619,19 @@ p {
   position: absolute;
   bottom: 0;
 }
+
 .bottom_wrapper .message_input_wrapper {
   display: inline-block;
   height: 50px;
   border-radius: 25px;
-  border: 2px solid #82CCD5 ;
+  border: 2px solid #82CCD5;
   width: 75%;
   position: relative;
   padding: 0 20px;
   overflow: hidden;
-  resize:none;
+  resize: none;
 }
+
 .bottom_wrapper .message_input_wrapper .message-input {
   border: none;
   height: 100%;
@@ -620,9 +642,9 @@ p {
   color: gray;
   resize: none;
 }
+
 .bottom_wrapper .send_message {
   margin-left: 1%;
-  width: 20% ;
   display: inline;
   border-radius: 50px;
   background-color: rgb(255, 255, 255);
@@ -631,17 +653,19 @@ p {
   cursor: pointer;
   transition: all 0.2s linear;
   text-align: center;
-  float: right;
 }
+
 .bottom_wrapper .send_message:hover {
   color: rgb(255, 255, 255);
   background-color: #82ccd5;
 }
+
 .bottom_wrapper .send_message .text {
   font-size: 15px;
   display: inline-block;
   line-height: 48px;
 }
+
 /* Media queries */
 
 @media (min-width: 768px) {
@@ -680,6 +704,9 @@ p {
   }
   .userInfo form {
     left: 27vw;
+    width: 50%;
+  }
+  #userName, #userEmail {
     width: 60%;
   }
   #saveChanges {
