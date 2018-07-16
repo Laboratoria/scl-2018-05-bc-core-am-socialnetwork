@@ -255,6 +255,7 @@ body {
 
 .nav-link {
   font-size: 14px;
+  padding: 0;
 }
 
 .nav-item {
@@ -618,6 +619,7 @@ p {
     width: 75vw;
     position: fixed;
     right: 0;
+    top: 0;
   }
   .navbar-collapse {
     width: 25vw;

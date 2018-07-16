@@ -18,7 +18,7 @@ firebase.database().ref('messages')
         <div class="card w-75">
             <div class="card-body">
                 <div class="col-1 avatar">
-                    <img class="img-fluid img-rounded" src=${newMessage.creatorAvatar}/>
+                    <img class="img-fluid img-rounded" src=${firebase.auth().currentUser.photoURL}/>
                 </div>
                 <h6 class="card-title">Nombre : ${newMessage.val().creatorName}</h6>
                 <p class="card-text">${newMessage.val().text}</p>

@@ -1,25 +1,3 @@
-/* 
-// Cambiar foto de perfil
-$(document).ready(function() {
-  var readURL = function(input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function(event) {
-        $('.profile-pic').attr('src', event.target.result);
-      };
-      reader.readAsDataURL(input.files[0]);
-    }
-  };
-
-  $('.file-upload').on('change', function() {
-    readURL(this);
-  });
-
-  $('.upload-button').on('click', function() {
-    $('.file-upload').click();
-  });
-});
-*/
 // Cambiar foto de perfil
 
 updatePic.addEventListener('change', function(event) {
@@ -36,6 +14,9 @@ function updatePhoto() {
       photoURL: url
     }).then(function() {
       console.log('Cambios guardados');
+      firebase.database().ref(`users/${firebase.auth().currentUser.uid}`).push({
+        profilePicture: firebase.auth().currentUser.photoURL
+      });
       profilePic.src = url;
       saveChanges.classList.add('d-none');
       updatePic.classList.add('d-none');
@@ -46,15 +27,17 @@ function updatePhoto() {
 };
 
 // Mostrar información del usuario
-function showInfo() {
-  if (firebase.auth().currentUser.displayName !== 'null') {
-    userName.value = firebase.auth().currentUser.displayName;
-    userEmail.value = firebase.auth().currentUser.email;
-    profilePic.src = firebase.auth().currentUser.photoURL;
+function showInfo(user) {
+  if (user.displayName !== null) {
+    userName.value = user.displayName;
+    userEmail.value = user.email;
+    profilePic.src = user.photoURL;
   } else {
-    userName.value = 'Indefinido';
-    userEmail.value = firebase.auth().currentUser.email;
-    profilePic.src = firebase.auth().currentUser.photoURL;
-  }
-};
-
+    firebase.database().ref(`users/${user.uid}/name`).on('value', function(snapshot) {
+      userName.value = snapshot.val();
+      console.log(snapshot.val());
+    });
+    userEmail.value = user.email;
+    profilePic.src = user.photoURL;
+  };
+}

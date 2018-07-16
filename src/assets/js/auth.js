@@ -3,15 +3,18 @@ window.onload = () => {
     if (user) {
       // Si estamos logueados esconder "registro"
       firstSection.style.display = 'none';
-      loggedIn.style.display = 'block';
       wall.classList.remove('d-none');
+      loggedIn.classList.remove('d-none');
       console.log('User > ' + JSON.stringify(user));
-      userName.readOnly = false;
+      firebase.database().ref(`users/${user.uid}`).set({
+        mail: user.email,
+        name: nickname.value
+      });
       showInfo(user);
     } else {
       // No estamos logueados esconder 'Cerrar Sesión'
+      loggedIn.classList.add('d-none');
       firstSection.style.display = 'block';
-      loggedIn.style.display = 'none';
     }
   });
 };
@@ -20,18 +23,18 @@ window.onload = () => {
 function register() {
   const emailValue = loginUser.value;
   const passwordValue = loginPass.value;
-  const userValue = nickname.value; 
   firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
-    .then(() => {
+    .then(function() {
       console.log('Usuario registrado');
+      /*     
       loginUser.value = '';
       loginPass.value = '';
-      nickname.value = '';
+      nickname.value = ''; */
     })
     .catch((error) => {
       console.log('Error de firebase > ' + error.code);
       console.log('Error de firebase, mensaje > ' + error.message);
-    }); 
+    });
 }
 
 // Funcion de ingreso
@@ -40,6 +43,7 @@ function login() {
   const passwordValue = password.value;
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
     .then(() => {
+      loggedIn.classList.remove('d-none');
       console.log('Usuario con login exitoso');
     })
     .catch((error) => {
@@ -53,11 +57,9 @@ function logout() {
   firebase.auth().signOut()
     .then(() => {
       console.log('chao');
-      if (window.innerWidth <= 768) {  
-        navbarSupportedContent1.classList.remove('show');
-      }
       profile.classList.add('d-none');
       wall.classList.add('d-none');
+      loggedIn.classList.add('d-none');
       location.reload();
     })
     .catch();
