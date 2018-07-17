@@ -12,11 +12,11 @@ window.onload = () => {
     }
   });
 
-  firebase.database().ref('post')
-    .limitToLast(10) // Filtro para no obtener todos los mensajes
+  firebase.database().ref('messages')
+    .limitToLast(2) // Filtro para no obtener todos los mensajes
     .once('value')
     .then((messages) => {
-      console.log("Post" + JSON.stringify(messages));
+      console.log("Posts" + JSON.stringify(messages));
     })
     .catch(() => {
 
@@ -25,10 +25,10 @@ window.onload = () => {
   //Acá comenzamos a escuchar por nuevos mensajes usando el evento
   //on child_added
   firebase.database().ref('messages')
-    .limitToLast(10)//cuántos post aparecerán antes de ser borrados
+    .limitToLast(1)//cuántos post aparecerán antes de ser borrados
     .on('child_added', (newMessage) => {
       addPostUser.innerHTML += `
-            <div>Nombre : ${newMessage.val().creatorName}</div>
+            <div>${newMessage.val().creatorName}</div>
             <div>${newMessage.val().text}</div>
         `;
     });
@@ -95,8 +95,50 @@ function loginGoogle() {
 }
 //========================================HOME========================================
 // Homepage
+const btnPost = document.getElementById('btnSendPost');
+btnPost.addEventListener('click', () => {
+  //Limpiar textarea
+  document.getElementById('postArea').value = ' ';
+  //Acá se guarda el post ingresado
+  let post = document.getElementById('postArea').value;
+  //validación de textarea con contenido
+  if (post.length === 0 || post === null) {
+    return alert('Ingrese un comentario');
+  };
 
-function sendMessage(){
+  //Acá se imprimirán los post ingresados 
+  const postsContainer = document.getElementById('addPostUser');
+  //Se crea un div contenedor para nuevos elementos
+  const newPosts = document.createElement('div');
+  //crear ícono de comentario
+  const commentIcon = document.createElement('i');
+  commentIcon.classList.add('far', 'fa-comment-alt');
+  //crear ícono de me gusta
+  const likeIcon = document.createElement('i');
+  likeIcon.classList.add('fas', 'fa-heart', 'heart');
+  //crear ícono de agregar a amigos
+  const addUserIcon = document.createElement('i');
+  addUserIcon.classList.add('fas', 'fa-user-plus');
+
+  //Parentesco de los nodos creados
+  let textNewPosts = document.createTextNode(post);
+  const containerElements = document.createElement('div');
+  containerElements.appendChild(textNewPosts);
+  newPosts.appendChild(commentIcon);
+  newPosts.appendChild(likeIcon);
+  newPosts.appendChild(addUserIcon);
+  newPosts.appendChild(containerElements);
+  postsContainer.appendChild(newPosts);
+
+  //Función para eliminar post
+  //function removePost() { 
+  //  .parentNode.removeChild();
+  //}
+
+  //al ingresar post aparecerán estos elementos
+});
+//funcion de enviar post
+function sendMessage() {
   const currentUser = firebase.auth().currentUser;
   const PostAreaText = postArea.value;
 
@@ -104,13 +146,8 @@ function sendMessage(){
   const newMessageKey = firebase.database().ref().child('messages').push().key;
 
   firebase.database().ref(`messages/${newMessageKey}`).set({
-      creator : currentUser.uid,
-      creatorName : currentUser.displayName,
-      text : PostAreaText
+    creator: currentUser.uid,
+    creatorName: currentUser.displayName,
+    text: PostAreaText
   });
 }
-
-//Función para eliminar post
-//function removePost() { 
-//  .parentNode.removeChild();
-//}
