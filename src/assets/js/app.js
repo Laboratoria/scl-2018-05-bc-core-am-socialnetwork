@@ -148,32 +148,37 @@ function closeMenu() {
   sideMenu.classList.remove('menu_open');
 }
 
-/*
 // Publicar, eliminar, editar y guardar cambios (CRUD)
 // Agregar documentos (create)
 let db = firebase.firestore();
 
-function userPost() {
+function userPost()
+{
   let message = document.getElementById('messageArea').value;
 
-  db.collection('users').add({
-    textMessage: message
-   
-  })
-    .then(function(docRef) {
+  db.collection('users').add(
+    {
+      textMessage: message
+
+    })
+    .then(function(docRef)
+    {
       console.log('Document written with ID: ', docRef.id);
       document.getElementById('messageArea').value = '';
     })
-    .catch(function(error) {
+    .catch(function(error)
+    {
       console.error('Error adding document: ', error);
     });
 }
 
 // Leer documentos (read)
 let container = document.getElementById('messageContainer');
-db.collection('users').onSnapshot((querySnapshot) => {
+db.collection('users').onSnapshot((querySnapshot) =>
+{
   container.innerHTML = '';
-  querySnapshot.forEach((doc) => {
+  querySnapshot.forEach((doc) =>
+  {
     console.log(`${doc.id} => ${doc.data().textMessage}`);
     container.innerHTML += `
       <p>${doc.data().textMessage}</p>
@@ -184,37 +189,45 @@ db.collection('users').onSnapshot((querySnapshot) => {
 });
 
 // Borrar documentos (delete)
-function deletePost(id) {
-  db.collection('users').doc(id).delete().then(function() {
+function deletePost(id)
+{
+  db.collection('users').doc(id).delete().then(function()
+  {
     console.log('Document successfully deleted!');
-  }).catch(function(error) {
-    console.error('Error removing document: ', error); 
+  }).catch(function(error)
+  {
+    console.error('Error removing document: ', error);
   });
 }
 
 // Editar documentos (update)
-function edit(id, message) {
+function edit(id, message)
+{
   document.getElementById('messageArea').value = message;
   let btnPost = document.getElementById('btnPost');
   btnPost.innerHTML = 'Guardar cambios';
 
-  btnPost.onclick = function() {
+  btnPost.onclick = function()
+  {
     let editPost = db.collection('users').doc(id);
 
-    let message = document.getElementById('messageArea').value; 
+    let message = document.getElementById('messageArea').value;
 
-    return editPost.update({
-      textMessage: message
-    })
-      .then(function() {
+    return editPost.update(
+      {
+        textMessage: message
+      })
+      .then(function()
+      {
         console.log('Document successfully updated!');
         btnPost.innerHTML = 'Publicar';
         btnPost.onclick = userPost;
         document.getElementById('messageArea').value = '';
       })
-      .catch(function(error) {
+      .catch(function(error)
+      {
         // The document probably doesn't exist.
         console.error('Error updating document: ', error);
       });
   };
-} */
+}
