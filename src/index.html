@@ -128,9 +128,10 @@
       </nav>
     </div>
   
+    <!-- sección para publicaciones de usuario -->
     <section class="formPost">
       <div>
-        <p class="userName">...</p>  <!--acá irá el nombre del usuario -->
+        <p id="registerName" class="userName">...</p>  <!--acá irá el nombre del usuario -->
       </div>
       <div>
         <p class="userName">Bienvenido a interPets</p>
@@ -147,11 +148,10 @@
      <!--botones para publicar -->
     <div>
       <button type="button" class="btn btn-primary" id="btnImg">Subir imagen</button>
-      <button type="button" class="btn btn-primary" id="btnPost">Publicar</button>
+      <button onclick="userPost()" type="button" class="btn btn-primary" id="btnPost">Publicar</button>
     </div>
 
-    <div id="messageContainer">
-
+    <div id="messageContainer"> <!-- Acá estará contenido el mensaje publicado por usuario -->
     </div>
 
     <div><img src="assets/img/dog-standing-e1455445893431.png" id="dogStanding" alt=""></div>
