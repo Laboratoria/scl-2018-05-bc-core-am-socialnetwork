@@ -5,10 +5,14 @@ window.onload = () => {
       // Usuario está logeado
       var displayName = user.displayName;
       var email = user.email;
+      console.log('>>>>>>>>>>>>>>>>');
+      console.log(displayName);
+      document.getElementById('name').innerHTML = 'Bienvenid@ ' + displayName;
 
       console.log('>>>>>>>>>>>>>>>');
       console.log(user.emailVerified);
       console.log('>>>>>>>>>>>>>>>');
+     
 
       var emailVerified = user.emailVerified;
       var photoURL = user.photoURL;
@@ -27,13 +31,14 @@ window.onload = () => {
 };
 
 function toShowScreen3(user) {
-  let userFacebook = user.providerData;
+  let providerData = user.providerData;
   let userGoogle = user.providerData;
+  let nameFacebook = providerData[0].displayName;
   if (user.emailVerified) {
     document.getElementById('screen1').style.display = 'none';
     document.getElementById('screen2').style.display = 'none';
     document.getElementById('screen3').style.display = 'block';
-  } else if (userFacebook[0].providerId === 'facebook.com') {
+  } else if (providerData[0].providerId === 'facebook.com') {
     document.getElementById('screen1').style.display = 'none';
     document.getElementById('screen2').style.display = 'none';
     document.getElementById('screen3').style.display = 'block';
@@ -181,9 +186,11 @@ db.collection('users').onSnapshot((querySnapshot) =>
   {
     console.log(`${doc.id} => ${doc.data().textMessage}`);
     container.innerHTML += `
+      <div class="col-12" id="divContainer">
       <p>${doc.data().textMessage}</p>
-      <button onclick="edit('${doc.id}','${doc.data().textMessage}')"> Editar </button>
-      <button onclick="deletePost('${doc.id}')"> Eliminar </button> 
+      <i type="button" class="far fa-edit 2x" onclick="edit('${doc.id}','${doc.data().textMessage}')"> </i>
+      <i type="button" class="fas fa-trash-alt 2x" onclick="deletePost('${doc.id}')"></i>
+      </div>
       `;
   });
 });
