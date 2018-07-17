@@ -42,6 +42,15 @@ window.onload = () => {
                     <div>Nombre : ${doc.data().nombre}</div> 
                     <div>Mensaje : ${doc.data().texto}</div>
                     </div>`;
+                    //crear ícono de comentario
+  const commentIcon = document.createElement('i');
+  commentIcon.classList.add('far', 'fa-comment-alt');
+  //crear ícono de me gusta
+  const likeIcon = document.createElement('i');
+  likeIcon.classList.add('fas', 'fa-heart', 'heart');
+  //crear ícono de agregar a amigos
+  const addUserIcon = document.createElement('i');
+  addUserIcon.classList.add('fas', 'fa-user-plus');
                     //console.log(`${doc.id} => ${doc.data().texto}`);
                 });
             })
