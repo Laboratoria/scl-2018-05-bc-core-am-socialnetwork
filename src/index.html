@@ -112,7 +112,7 @@
       <nav id="menuColor" class="navbar navbar-dark" > 
         <button onclick="toggleMenu()" class="navbar-toggler" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"> 
           <span class="navbar-toggler-icon iconMenu"></span>
-        </button> <img src="assets/img/cat-clipart-dog-free-11.png" id="brand" alt="">
+        </button><img src="assets/img/cat-clipart-dog-free-11.png" id="brand" alt="">
       </nav>
       <nav id="sideMenu" class="nav flex-column float-left menu closingMenu">
         <div onclick="toggleMenu()" class="close_button">
@@ -129,9 +129,12 @@
     </div>
   
     <!-- sección para publicaciones de usuario -->
+    <div class="row">
+      <div class="col-11" id="name"></div>
+    </div>
     <section class="formPost">
       <div>
-        <p id="registerName" class="userName">...</p>  <!--acá irá el nombre del usuario -->
+        <p class="userName">...</p>  <!--acá irá el nombre del usuario -->
       </div>
       <div>
         <p class="userName">Bienvenido a interPets</p>
@@ -151,8 +154,11 @@
       <button onclick="userPost()" type="button" class="btn btn-primary" id="btnPost">Publicar</button>
     </div>
 
+    
     <div id="messageContainer"> <!-- Acá estará contenido el mensaje publicado por usuario -->
+      
     </div>
+    
 
     <div><img src="assets/img/dog-standing-e1455445893431.png" id="dogStanding" alt=""></div>
 
