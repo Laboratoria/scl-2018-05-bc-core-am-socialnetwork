@@ -148,25 +148,28 @@ function closeMenu() {
   sideMenu.classList.remove('menu_open');
 }
 
-/*
+
 // Publicar, eliminar, editar y guardar cambios (CRUD)
 // Agregar documentos (create)
 let db = firebase.firestore();
 
 function userPost() {
   let message = document.getElementById('messageArea').value;
-
-  db.collection('users').add({
-    textMessage: message
+  if (message === '') {
+    alert('Por favor ingrese un mensaje válido');
+  } else {
+    db.collection('users').add({
+      textMessage: message
    
-  })
-    .then(function(docRef) {
-      console.log('Document written with ID: ', docRef.id);
-      document.getElementById('messageArea').value = '';
     })
-    .catch(function(error) {
-      console.error('Error adding document: ', error);
-    });
+      .then(function(docRef) {
+        console.log('Document written with ID: ', docRef.id);
+        document.getElementById('messageArea').value = '';
+      })
+      .catch(function(error) {
+        console.error('Error adding document: ', error);
+      });
+  }
 }
 
 // Leer documentos (read)
@@ -217,4 +220,4 @@ function edit(id, message) {
         console.error('Error updating document: ', error);
       });
   };
-} */
+} 
