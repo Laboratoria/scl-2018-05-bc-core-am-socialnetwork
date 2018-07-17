@@ -1,5 +1,10 @@
-//tomar valores del DOM
+
+
+// Initialize Cloud Firestore through Firebase
+var db = firebase.firestore();
+
 const userName = document.getElementById("name_input" );
+//tomar valores del DOM
 const errorNombre = document.getElementById("error_nombre");
 const userAge = document.getElementById("edad_input");
 const email = document.getElementById("email");
@@ -78,8 +83,25 @@ createAcountBtn.addEventListener('click', () => {
       //cambiar de seccion
     const hideSection = document.getElementById('register_section');
     hideSection.style.display = "none";
+    //crear coleccion de usuarios
+    const user = firebase.auth().currentUser;
+
+    db.collection("users").add({
+      nombre:  userName.value,
+      id: user.uid,
+      email: user.email,
+      edad : userAge.value
+    })
+    .then(function(docRef) {
+      //console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
     }) 
     .catch((error) => {
       console.log('fallo el registro', error);
     })
 })
+
+    
