@@ -1,6 +1,5 @@
 // Daniela (Login)
 window.onload = () => {
-
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       //Si estamos logueados
@@ -11,17 +10,29 @@ window.onload = () => {
       //No estamos logueados
       loggedOut.style.display = "block";
       loggedIn.style.display = "none";
+    }
+  });
 
-      firebase.database().ref('posts')
-      .on('child_added',(newPost) => { // suscribiendo a la colección de posts
-      postUserContainer.innerHTML +=
-          <p>Nombre : ${newPost.val().createName}</p>
-          <p>${newPost.val().text}</p>
-    
+  firebase.database().ref('messages')
+    .limitToLast(2) // Filtro para no obtener todos los mensajes
+    .once('value')
+    .then((messages) => {
+      console.log("Posts" + JSON.stringify(messages));
     })
+    .catch(() => {
+
+    });
+
+    const entrar = document.getElementById('btn-entrar');
+
+    entrar.addEventListener('click', () => {
+      landingPage.style.display= "none";
+      loginPage.style.display= "block";
+    }
+
+
     
-    };
-    
+//===============================LOGIN========================================
 //Aquí va la función de iniciar sesión con email
 function login() {
   const emailValue = email.value;
@@ -55,12 +66,11 @@ function loginFacebook() {
       console.log("Login con facebook");
     })
     .catch((error) => {
-      console.log("Error de firebase > " + error.code);
-      console.log("Error de firebase, mensaje > " + error.message);
+      console.log("Error de firebase" + error.code);
+      console.log("Error de firebase, mensaje" + error.message);
     });
 }
 //funcion login google
-
 function loginGoogle() {
 
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -82,18 +92,91 @@ function loginGoogle() {
 
   });
 }
+//========================================HOME========================================
+// Homepage
+const btnPost = document.getElementById('btnSendPost');
+btnPost.addEventListener('click', () => {
+  //Limpiar textarea
+  document.getElementById('postArea').value = ' ';
+  //Acá se guarda el post ingresado
+  let post = document.getElementById('postArea').value;
+  //validación de textarea con contenido
+  if (post.length === 0 || post === null) {
+    return alert('Ingrese un comentario');
+  };
+
+  //Acá se imprimirán los post ingresados 
+  const postsContainer = document.getElementById('addPostUser');
+  //Se crea un div contenedor para nuevos elementos
+  const newPosts = document.createElement('div');
+  //crear ícono de comentario
+  const commentIcon = document.createElement('i');
+  commentIcon.classList.add('far', 'fa-comment-alt');
+  //crear ícono de me gusta
+  const likeIcon = document.createElement('i');
+  likeIcon.classList.add('fas', 'fa-heart', 'heart');
+  //crear ícono de agregar a amigos
+  const addUserIcon = document.createElement('i');
+  addUserIcon.classList.add('fas', 'fa-user-plus');
+
+  //Parentesco de los nodos creados
+  let textNewPosts = document.createTextNode(post);
+  const containerElements = document.createElement('div');
+  containerElements.appendChild(textNewPosts);
+  newPosts.appendChild(commentIcon);
+  newPosts.appendChild(likeIcon);
+  newPosts.appendChild(addUserIcon);
+  newPosts.appendChild(containerElements);
+  postsContainer.appendChild(newPosts);
+
+  //Función para eliminar post
+  //function removePost() { 
+  //  .parentNode.removeChild();
+  //}
+
+  //al ingresar post aparecerán estos elementos
+});
+//funcion de enviar post
+function sendMessage() {
+  const currentUser = firebase.auth().currentUser;
+  const PostAreaText = postArea.value;
+
+  //Para tener una nueva llave en la colección messages
+  const newMessageKey = firebase.database().ref().child('messages').push().key;
+
+  firebase.database().ref(`messages/${newMessageKey}`).set({
+    creator: currentUser.uid,
+    creatorName: currentUser.displayName,
+    text: PostAreaText
+  });
+}
 
 /*
+
 $('#loginGoogleBtn').click(function(){
   firebase.auth()
   .signInWhitPopup(provider)
   .then(function(result) {
     console.log(result.user);
+    guardaDatos(result.user);
     $('#logInPage').hide();
     $('#root').append("<img src'"+result.user.photoURL+"' />") //agregando etiqueta imagen al div root en el muro
-});
-m
+  });
+
+// Guardando datos automáticamente
+
+function guardaDatos(user) {
+  const usuario = {
+    uid: user.uid,
+    nombre: user.displayName,
+    email: user.email,
+    foto: user.photoURL
+  }
+  firebase.datebase().ref("perfil")
+  .push(usuario)
+}
 */
+
 
 // Mariel (Registro)
 //tomar valores del DOM
