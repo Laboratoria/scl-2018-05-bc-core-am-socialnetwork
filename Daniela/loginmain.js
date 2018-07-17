@@ -1,5 +1,4 @@
 window.onload = () => {
-
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       //Si estamos logueados
@@ -12,7 +11,29 @@ window.onload = () => {
       loggedIn.style.display = "none";
     }
   });
+
+  firebase.database().ref('post')
+    .limitToLast(10) // Filtro para no obtener todos los mensajes
+    .once('value')
+    .then((messages) => {
+      console.log("Post" + JSON.stringify(messages));
+    })
+    .catch(() => {
+
+    });
+
+  //Acá comenzamos a escuchar por nuevos mensajes usando el evento
+  //on child_added
+  firebase.database().ref('messages')
+    .limitToLast(10)//cuántos post aparecerán antes de ser borrados
+    .on('child_added', (newMessage) => {
+      addPostUser.innerHTML += `
+            <div>Nombre : ${newMessage.val().creatorName}</div>
+            <div>${newMessage.val().text}</div>
+        `;
+    });
 };
+//===============================LOGIN========================================
 //Aquí va la función de iniciar sesión con email
 function login() {
   const emailValue = email.value;
@@ -46,8 +67,8 @@ function loginFacebook() {
       console.log("Login con facebook");
     })
     .catch((error) => {
-      console.log("Error de firebase > " + error.code);
-      console.log("Error de firebase, mensaje > " + error.message);
+      console.log("Error de firebase" + error.code);
+      console.log("Error de firebase, mensaje" + error.message);
     });
 }
 //funcion login google
@@ -72,3 +93,24 @@ function loginGoogle() {
 
   });
 }
+//========================================HOME========================================
+// Homepage
+
+function sendMessage(){
+  const currentUser = firebase.auth().currentUser;
+  const PostAreaText = postArea.value;
+
+  //Para tener una nueva llave en la colección messages
+  const newMessageKey = firebase.database().ref().child('messages').push().key;
+
+  firebase.database().ref(`messages/${newMessageKey}`).set({
+      creator : currentUser.uid,
+      creatorName : currentUser.displayName,
+      text : PostAreaText
+  });
+}
+
+//Función para eliminar post
+//function removePost() { 
+//  .parentNode.removeChild();
+//}

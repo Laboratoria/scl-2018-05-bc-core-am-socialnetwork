@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="homePage.css">
+</head>
+
+<!--Inicio Home Page (Muro)-->
+<section id="homePage">
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Mi perfil</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Muro
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Amigos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Chat</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Acá aparecerá una foto con el nombre del usuario-->
+  <div id="root"></div>
+
+  <div>
+    <img src="../src/assets/img/usuario.png">
+    <textarea class="txt" id="postArea" placeholder="¿Qué quieres publicar?"></textarea>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div>
+          <div id="btn-image">
+            <button type="button">
+              <img src="../src/asset/img/picture.png">
+            </button>
+          </div>
+          <div id="tags">
+            <form>
+              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                <option selected>TAGS...</option>
+                <option value="1">Compost</option>
+                <option value="3">Ecología</option>
+                <option value="3">Energías renovables</option>
+                <option value="3">Lombricultura</option>
+                <option value="3">Reciclaje</option>
+                <option value="3">Outdoor</option>
+                <option value="2">Vida sana</option>
+              </select>
+            </form>
+          </div>
+          <div>
+            <button  id="btn-post" type="button" class="btn btn-primary">Publicar</button>
+          </div>
+
+          <!-- Acá aparecerá la publicación del usuario-->
+          <div id="postUserContainer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Link Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+  crossorigin="anonymous"></script>
+
+<!--Link Firebase-->
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB6ioQDzhvfZ-TFJ0mI00IvnWZN0ITk41g",
+    authDomain: "socialnetwork-dfea4.firebaseapp.com",
+    databaseURL: "https://socialnetwork-dfea4.firebaseio.com",
+    projectId: "socialnetwork-dfea4",
+    storageBucket: "socialnetwork-dfea4.appspot.com",
+    messagingSenderId: "812330302829"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!--Link js local-->
+<script src="edit_post.js"></script>
+</body>
+
+</html>

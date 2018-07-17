@@ -3,8 +3,8 @@
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
 
-//tomar valores del DOM
 const userName = document.getElementById("name_input" );
+//tomar valores del DOM
 const errorNombre = document.getElementById("error_nombre");
 const userAge = document.getElementById("edad_input");
 const email = document.getElementById("email");
@@ -72,9 +72,6 @@ rememberMe.addEventListener('change', saveLocalUser, false);
       window.localStorage.setItem('edad', JSON.stringify(userAge.value));
     }
   }
-
-
-
 			
 //llevarme a la siguiente ventana con el boton 
 createAcountBtn.addEventListener('click', () => { 
