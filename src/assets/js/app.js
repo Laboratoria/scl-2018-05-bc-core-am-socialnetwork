@@ -211,7 +211,7 @@ db.collection('users').onSnapshot((querySnapshot) => {
 // Borrar documentos (delete)
 function deletePost(id)
 {
-  let removeMessage = confirm('¿Quiere eliminar la pulbilación?');
+  let removeMessage = confirm('¿Quiere eliminar la publicación?');
   if (removeMessage ==true) {
     db.collection('users').doc(id).delete().then(function()
     {
