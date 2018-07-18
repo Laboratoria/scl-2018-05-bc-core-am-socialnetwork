@@ -2,17 +2,27 @@
 font-family: 'Wendy One', sans-serif;
 font-family: 'Pragati Narrow', sans-serif;
 */
+.container-fluid {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
 
 body {
   background-color: #FAFAFA;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  visibility: hidden;
 }
 
 .caja_registro {
-  background-color: #1edb2e93;
+  background-color: #FAFAFA;
   border-radius: 10px 10px 10px 10px;
   -moz-border-radius: 10px 10px 10px 10px;
   -webkit-border-radius: 10px 10px 10px 10px;
-  border: 2px solid #2b9b47;
+
   -webkit-box-shadow: 10px 10px 15px -9px rgba(79,78,79,0.68);
   -moz-box-shadow: 10px 10px 15px -9px rgba(79,78,79,0.68);
   box-shadow: 10px 10px 15px -9px rgba(79,78,79,0.68);
@@ -25,17 +35,21 @@ body {
   height: 30%;
 }
 
+#screen1 {
+  display: block;
+}
+
 #brandName {
   text-align: center;
-  font-size: 25px;
+  font-size: 35px;
   border-left: 30%;
-  font-family: Impact,'Arial Narrow Bold', sans-serif;
+  font-family: 'Knewave', bold;
   margin-top: 3%;
   color: #000000;
 }
 
 #logo {
-  width: 60%;
+  width: 50%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -74,7 +88,7 @@ body {
 }
 
 .btn_registrate {
-  background-color: #bcebeb;
+  background-color: #bcebeb00;
   border:none;
   display: block;
   margin-left: auto;
@@ -85,15 +99,13 @@ body {
   margin-top: 10%;
   margin-bottom: 2%;
   text-align: center;
+  color: black;
 }
 
 #screen2 {
   display: none;
 }
 
-#screen1 {
-  display: block;
-}
 .imgRegister {
 width: 40%;
 }
@@ -138,14 +150,15 @@ width: 40%;
   position: absolute;
   top:0;
   height: 50%;
-  width: 50vw;
+  width: 70vw;
   transition: 0.5s ease-out;
   padding-top: 5%;
 }
 
 #menuColor {
-  background-color: #18e62981;
+  background-color: #ED6F00;
   height: 10%;
+  z-index: 2;
 }
 
 .iconMenu {
@@ -168,11 +181,16 @@ width: 40%;
 #screen3 {
   padding: 0;
   display: none;
+  z-index: -1;
+}
+
+nav {
+  z-index:1; 
 }
 
 .closingMenu{
   left: -90vw;
-  background-color: #18e62981;
+  background-color: #ED6F00;
 }
 
 .menu_open {
@@ -189,6 +207,7 @@ width: 40%;
 .menu_content {
   padding: 10px;
   margin-top: 20px;
+  z-index: 2;
 }
 
 .formPost {
@@ -215,25 +234,63 @@ width: 40%;
 
 .userName {
   text-align: center;
-  color: white;
+  color: black;
   font-size: 15px;
 }
 
-#btnImg {
-  margin-left: 17%;
-  background-color: #18e62981;
-  color: black;
-  border: #2b9b47;
+#userName {
+  margin-bottom: 2%;
 }
 
-#dogStanding {
-  width: 45%;
-  margin-top: 60%;
-  position: fixed;
+#btnImg {
+  width: 70%;
+  background-color: #444343;
+  color: #FAFAFA;
+  border: #444343;
+  z-index: 1;
+}
+
+.btnSubirImg {
+  text-align: center;
+}
+
+.btnSubirPublicacion {
+  text-align: center;
+}
+
+#dogsAndCats {
+  width: 100%;
+  margin-bottom: 0%;
+  position: relative;
+  bottom: 0%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  margin-bottom: 0px;
+}
+
+#btnPost {
+  width: 70%;
+  background-color: #444343;
+  color: #FAFAFA;
+  border: #444343;
 }
 
 #screenAlimentacion {
   display: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+#screenCuidados {
+  display: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  text-align: center;
 }
 
 #divContainer {
@@ -282,10 +339,17 @@ margin-left: 25%;
     width: 20%;
   }
 
-  #dogStanding {
-    width: 20%;
-    margin-top: -1.5%;
-    position: fixed;
+  #dogsAndCats {
+    width: 100%;
+    margin-bottom: 0%;
+    position: relative;
+    bottom: 0%;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0%;
+    margin-bottom: 0%;
   }
 
   .userName {

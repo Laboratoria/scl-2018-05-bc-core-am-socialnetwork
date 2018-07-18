@@ -7,7 +7,7 @@ window.onload = () => {
       var email = user.email;
       console.log('>>>>>>>>>>>>>>>>');
       console.log(displayName);
-      document.getElementById('name').innerHTML = 'Bienvenid@ ' + displayName;
+      document.getElementById('userName').innerHTML = displayName;
 
       console.log('>>>>>>>>>>>>>>>');
       console.log(user.emailVerified);
@@ -38,10 +38,13 @@ function toShowScreen3(user) {
     document.getElementById('screen1').style.display = 'none';
     document.getElementById('screen2').style.display = 'none';
     document.getElementById('screen3').style.display = 'block';
+    document.getElementById('menuNav').style.visibility = 'visible';
+    let displayName = email;
   } else if (providerData[0].providerId === 'facebook.com') {
     document.getElementById('screen1').style.display = 'none';
     document.getElementById('screen2').style.display = 'none';
     document.getElementById('screen3').style.display = 'block';
+    document.getElementById('menuNav').style.visibility = 'visible';
   } else if (userGoogle[0].providerId === 'google.com') {
     document.getElementById('screen1').style.display = 'none';
     document.getElementById('screen2').style.display = 'none';
@@ -49,6 +52,17 @@ function toShowScreen3(user) {
   }
 }
 
+function toShowScreenAlimentacion() {
+  document.getElementById('screen3').style.display = 'none';
+  document.getElementById('screenAlimentacion').style.display = 'block';
+  closeMenu();
+}
+
+function toShowScreenCuidados() {
+  document.getElementById('screenAlimentacion').style.display = 'none';
+  document.getElementById('screenCuidados').style.display = 'block';
+  closeMenu();
+}
 // Sección registrar
 function register() {
   const emailValue = document.getElementById('email_signUp').value;
@@ -117,6 +131,7 @@ function logout() {
   firebase.auth().signOut()
     .then(()=> {
       console.log('Cerraste sesión');
+      document.getElementById('menuNav').style.visibility = 'hidden';
     })
     .catch();
 }
