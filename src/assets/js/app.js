@@ -209,15 +209,18 @@ db.collection('users').onSnapshot((querySnapshot) => {
 });
 
 // Borrar documentos (delete)
-function deletePost(id) {
-  if (onclick = 'deletePost') {
-    alert('¿Quiere eliminar la publicación?');
-  }
-  db.collection('users').doc(id).delete().then(function() {
-    console.log('Document successfully deleted!');
-  }).catch(function(error) {
-    console.error('Error removing document: ', error);
-  });
+function deletePost(id)
+{
+  let removeMessage = confirm('¿Quiere eliminar la pulbilación?');
+  if (removeMessage ==true) {
+    db.collection('users').doc(id).delete().then(function()
+    {
+      console.log('Document successfully deleted!');
+    }).catch(function(error)
+    {
+      console.error('Error removing document: ', error);
+    });
+    }
 }
 
 // Editar documentos (update)
