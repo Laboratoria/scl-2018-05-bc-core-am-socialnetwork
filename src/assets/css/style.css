@@ -195,11 +195,22 @@ width: 40%;
   margin: 5%;
 }
 
-#messageArea {
-  resize: none;
-  width: 80%;
+#divContainer {
+  border: solid grey 1px;
+  width: 70%;
+  margin: 5% auto 1% auto;
+  display: block;
   height: 50%;
-  margin-left: 10%;
+  background-color: white;
+  border-radius: 3px;
+}
+
+#pawIcon{ 
+  margin-left: 70%;
+}
+
+#pawIcon:hover {
+  color: rgb(37, 48, 192);
 }
 
 .userName {
@@ -228,10 +239,12 @@ width: 40%;
 #divContainer {
   border: solid grey 1px;
   width: 90%;
-  margin-top: 2%;
+  margin-top: 1%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
+  border-radius: 2%;
 }
 
 #name {
@@ -378,6 +391,14 @@ margin-left: 25%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #divContainer {
+    width: 45%;
+  }
+
+  #pawIcon{ 
+    margin-left: 68%;
   }
 
 }
