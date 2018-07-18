@@ -198,6 +198,9 @@ db.collection('users').onSnapshot((querySnapshot) =>
 // Borrar documentos (delete)
 function deletePost(id)
 {
+  if (onclick='deletePost') {
+    alert('¿Quiere eliminar la publicación?');
+  }
   db.collection('users').doc(id).delete().then(function()
   {
     console.log('Document successfully deleted!');
