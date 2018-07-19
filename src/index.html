@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>InterPets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Oswald|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header id="menuNav">
+      <div class="pos-f-t">
+        <nav id="menuColor" class="navbar navbar-dark" > 
+          <button onclick="toggleMenu()" class="navbar-toggler" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon iconMenu"></span>
+          </button><img src="assets/img/cat-clipart-dog-free-11.png" id="brand" alt="">
+        </nav>
+        <nav id="sideMenu" class="nav flex-column float-left menu closingMenu">
+          <div onclick="toggleMenu()" class="close_button">
+            <span id="closingX" aria-hidden="true">&times;</span>
+          </div>
+          <div class="menu_content">
+            <a onclick="toShowScreenAlimentacion()"class="nav-link" href="#">Alimentación</a>
+            <a onclick="toShowScreenCuidados()"class="nav-link" href="#">Cuidados</a>
+            <a onclick="toShowScreenDirectorio()"class="nav-link" href="#">Directorio veterinario</a>
+            <a onclick="toShowScreenAdopciones()"class="nav-link" href="#">Adopciones</a>
+            <a onclick="logout()" class="nav-link" href="#">Cerrar sesión</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- primera pantalla -->
+    <div id="screen1" class="container-fluid screen1"> 
+      <div class="row">
+        <div class="col-12">
+            <p id="brandName">interPets</p><img id="logo" src="assets/img/cat-clipart-dog-free-11.png" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+
+      <!-- aquí va la caja de login y botón para registro -->
+      <div class="caja_registro">
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control email-login" id="email_login" aria-describedby="emailHelp" placeholder="Ingresa tu e-mail">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="password_login" placeholder="Ingresa tu contraseña">
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <button id="btn_login" onclick="login()" type="button" class="btn btn-dark btn_ingresar">Ingresar</button>
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-12">
+            <button onclick="loginFacebook()" id="btn_facebook" type="button" class="btn btn-primary btn-lg"><i class="fab fa-facebook-square fa-lg"></i>
+                Iniciar sesión con Facebook
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button onclick="loginGoogle()" id="btn_google" type="button" class="btn btn-primary"><i class="fab fa-google-plus-square fa-lg" id="googleIcon"></i>
+                Iniciar sesión con Google
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 no_tienes_cuenta">
+            <h5>¿No tienes cuenta?</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button id="btn_signUp" type="button" class="btn btn-light btn_registrate" data-target="#responsability_modal" data-toggle="modal"><h5>Regístrate</h5></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- segunda pantalla (registro)-->
+    <div id="screen2" class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+            <p id="brandName">interPets</p><img id="logo" src="assets/img/cat-clipart-dog-free-11.png" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+
+      <!-- caja de registro usuarios -->
+      <div class="caja_registro">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Ingresa el e-mail con el que quieres registrarte</label>
+            <input type="email" class="form-control" id="email_signUp" aria-describedby="emailHelp" placeholder="Ingresa e-mail...">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Ingresa una contraseña para tu cuenta</label>
+            <input type="password" class="form-control" id="password_signUp" placeholder="Ingresa contraseña...">
+          </div>
+            <button id="btn_registrar" onclick="register()" type="button" class="btn btn-primary">Registrar</button>
+        </form>
+      </div>
+      <!-- modal aviso de responsabilidad -->
+      <div id="responsability_modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content modal_content">
+            <div class="modal-header">
+              <h5 id="modal_title" class="modal-title">Seamos responsables...</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, eos at commodi quisquam quia dolores sunt iusto magnam eius sapiente. Quidem non facere dicta magnam assumenda iusto laborum ipsum mollitia. Lorem ipsum,dolor sit amet consectetur adipisicing elit. Quo, eos at commodi quisquam quia dolores sunt iusto magnam eius sapiente. Quidem non facere dicta magnam assumenda iusto laborum ipsum mollitia</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">De acuerdo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!--Inicio pantalla 3 -->
+    <div id="screen3" class="container-fluid">
+      <!-- sección para publicaciones de usuario -->
+      <div class="row">
+        <div class="col-11" id="name"></div>
+      </div>
+      <section class="formPost">
+        <div>
+          <p id="userName" class="userName">...</p>  <!--acá irá el nombre del usuario -->
+        </div>
+        <div>
+          <p class="userName">Bienvenido a interPets</p>
+        </div>
+      </section>
+    
+      <!--formulario publicación -->
+      <section class="formPost">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" placeholder="¿Qué quieres publicar?" id="messageArea"></textarea>
+        </div>
+      </section>
+    
+      <!--botones para publicar -->
+      <div id="botones" class="row">
+        <div class="col-6 btnSubirImg">
+          <button type="button" class="btn btn-primary" id="btnImg">Subir imagen</button>
+        </div>
+        <div class="col-6 btnSubirPublicacion">
+          <button onclick="userPost()" type="button" class="btn btn-primary" id="btnPost">Publicar</button>
+        </div>
+      </div>
+
+      <div id="messageContainer"></div> <!-- Acá estará contenido el mensaje publicado por usuario -->
+
+      <footer><img id="dogsAndCats" src="assets/img/cats-and-dogs-png-hd--1246.jpg" class="img-fluid" alt="Responsive image"></footer>
+    
+    </div>
+  <!--Fin pantalla 3 -->
+  
+  
+  <div id="screenAlimentacion" class="container-fluid">
+    <h2>Alimentación</h2>
+  </div>
+
+  <div id="screenCuidados" class="container-fluid">
+    <h2>Cuidados</h2>
+  </div>
+
+  <div id="screenDirectorio" class="container-fluid">
+    <h2>Directorio Veterinario</h2>
+  </div>
+
+  <div id="screenAdopciones" class="container-fluid">
+    <h2>Adopciones</h2>
+  </div>
+
+
+  <!-- script section -->
+  
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA8EWRZri5R5w4Az7zYOAsTVwPl0XWSdYg",
+      authDomain: "social-network-interpet.firebaseapp.com",
+      databaseURL: "https://social-network-interpet.firebaseio.com",
+      projectId: "social-network-interpet",
+      storageBucket: "social-network-interpet.appspot.com",
+      messagingSenderId: "154417384307"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
