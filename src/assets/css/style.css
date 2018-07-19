@@ -10,7 +10,7 @@ font-family: 'Pragati Narrow', sans-serif;
 
 body {
   background-color: #FAFAFA;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 header {
@@ -43,7 +43,7 @@ header {
   text-align: center;
   font-size: 35px;
   border-left: 30%;
-  font-family: 'Knewave', bold;
+  font-family: 'Chewy', cursive;
   margin-top: 3%;
   color: #000000;
 }
@@ -181,7 +181,7 @@ width: 40%;
 #screen3 {
   padding: 0;
   display: none;
-  z-index: -1;
+  z-index: 1;
 }
 
 nav {
@@ -281,14 +281,28 @@ footer {
 
 #screenAlimentacion {
   display: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   text-align: center;
 }
 
 #screenCuidados {
   display: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+#screenDirectorio {
+  display: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+#screenAdopciones {
+  display: none;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   text-align: center;
 }
@@ -464,5 +478,4 @@ margin-left: 25%;
   #pawIcon{ 
     margin-left: 68%;
   }
-
 }
